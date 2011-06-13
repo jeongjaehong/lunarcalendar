@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<resources>
+	<string name="app_name">Calendar</string>
+	<string name="app_korname">Calendar</string>
+	<string name="main_title">Calendar</string>
+	<string name="about_label">정보</string>
+	<string name="exit_label">Exit</string>
+	<string name="add_schedule">일정추가</string>
+
+
+	<string name="schedule_date">● 날짜 </string>
+	<string name="schedule_title">● 제목</string>
+	<string name="schedule_contents">● 내용 </string>
+	<string name="schedule_repeat">반복 알람 설정</string>
+	<string name="schedule_repeatvalue">●</string>
+	<string name="eventsearch_label">일정검색</string>
+
+	<string name="schedule_date_viewer">● 날짜 : </string>
+	<string name="schedule_title_viewer">● 제목 : </string>
+	<string name="schedule_contents_viewer">● 내용 : </string>
+	<string name="schedule_repeat_viewer">● 알람 : </string>
+	<string name="schedule_repeatvalue_viewer">● </string>
+
+	<string name="dday_displayyn_viewer">● D-day : </string>
+
+	<string name="schedule_dayname_viewer">일</string>
+	<string name="schedule_dayname2_viewer">일마다</string>
+	<string name="dday_info_label">D-day를</string>
+	<string name="dday_fromto_label">일 부터 </string>
+	<string name="goto_today">오늘로 이동</string>
+	
+
+	<string name="every_day_label">매일</string>
+	<string name="every_week_label">매주</string>
+	<string name="every_month_label">매달</string>
+	<string name="every_year_label">매년</string>
+	<string name="gregorian">양력</string>
+	<string name="lunar">음력</string>
+	<string name="alarm_none">알람없음.</string>
+	<string name="schedule_anniversary_label">기념일</string>
+	<string name="schedule_holiday_label">휴일</string>
+	<string name="onlinecalendar_label">온라인 구독달력 보기</string>
+
+
+
+
+
+
+	<string name="alarm_service_started">Alarm Start</string>
+	<string name="activity_alarm_service">Alarm Service</string>
+	<string name="alarm_service">Alarm Service</string>
+	<string name="start_alarm_service">Start</string>
+	<string name="stop_alarm_service">Stop</string>
+	<string name="alarm_service_label">알람 알림...</string>
+	<string name="alarm_service_finished">Alarm Service Cancel</string>
+
+
+
+	<string name="alarm_title">알람설정</string>
+	<string name="alarm_summary">알람설정을 확인하고 표시할까요?</string>
+
+	<string name="animation_title">효과설정</string>
+	<string name="animation_summary">년도, 월 변경시 회전효과를 사용할까요?</string>
+
+	<string name="anniversary_title">기념일표시</string>
+	<string name="anniversary_summary">일정목록에 기념일을 포함할까요?</string>
+
+	<string name="anniversary_label">기념일</string>
+
+
+	<string name="btn_repeatalarm">다시알림</string>
+	<string name="btn_stopalarm">알림중지</string>
+	<string name="btn_ok">확인</string>
+	<string name="btn_editalarm">수정</string>
+	<string name="work_cancel_label">취소</string>
+
+
+	<string name="specialday_title">제목</string>
+	<string name="specialday_alarmyn">D-day 설정</string>
+	<string name="specialday_date">기준일</string>
+	<string name="specialday_add_label">D-day 설정</string>
+	<string name="specialday_displayyn">D-day 표시</string>
+	<string name="specialday_modify_label">D-day 편집</string>
+	<string name="specialday_displayposigion">표시위치</string>
+	<string name="specialday_ddayvalue">계산방법</string>
+
+
+
+	<string name="schedule_modify_action">일정 편집</string>
+	<string name="schedule_add_label">일정 추가</string>
+	<string name="schedule_delete_label">일정 삭제</string>
+	<string name="schedule_modify_label">일정 편집</string>
+	<string name="schedule_viewer_label">일정 보기</string>
+
+	<string name="allday_label">종일</string>
+	<string name="check_lunar_label">음력</string>
+	<string name="check_anniversary_label">기념일</string>
+	<string name="schedule_list_label">일정 목록</string>
+	<string name="schedule_alllist_label">전체 일정</string>
+	<string name="schedule_todaylist_label">일간 일정</string>
+	<string name="schedule_weeklist_label">주간 일정</string>
+	<string name="schedule_monthlist_label">월간 일정</string>
+
+	<string name="schedule_gcaladdevent_label">일정 복사</string>
+	<string name="schedule_gcalimport_label">가져오기</string>
+	<string name="schedule_gcalimport_menu">가져오기</string>
+
+
+
+	<string name="layout_animation_name">Name:</string>
+	<string name="layout_animation_lastname">Last Name:</string>
+	<string name="layout_animation_phone">Phone:</string>
+	<string name="layout_animation_address">Address:</string>
+
+
+	<string name="settings_label">설정</string>
+	<string name="makecal_label">음력일정일괄생성</string>
+	<string name="settings_title">설정</string>
+	<string name="settings_shortcut">s</string>
+	<string name="lunaicon_title">달의 변화 모양</string>
+	<string name="lunaicon_summary">달의 변화모양을 표시하려면 선택하십시오.</string>
+	<string name="lunadays_title">음력표시</string>
+	<string name="lunadays_summary">음력날짜를 5일간격으로 표시하려면 선택하십시오.</string>
+
+	<string name="calendar_title">Calendar</string>
+
+	<string name="empty_str"></string>
+	<string name="year_label">년</string>
+	<string name="month_label">월</string>
+	<string name="day_label">일</string>
+
+
+	<string name="backup_label">백업</string>
+	<string name="restore_label">복원</string>
+
+
+	<string name="about_title">Lunar Scheduler</string>
+	<string name="about_text">
+		\
+		Lunar Scheduler 주요기능\n 1. 음력 및 양력 표시 달력\n 2. 스케쥴러
+		(알람 및 D-day)\n 3. 구글 캘린더 이벤트 연동\n \n 요구사항은 블로그에 남겨주세요.^^; \n
+		jeongjaehong@gmail.com \n Twitter: @nilriri2 \n
+		http://nilriri.blogspot.com/ \t\t\n
+		2010.04.02\n	
+	</string>
+
+	<string name="widget_label_1x1">Calendar Widget(1x1)</string>
+	<string name="widget_label_1x2">Calendar Widget(2x1)</string>
+	<string name="widget_label_3x1">Calendar Widget(3x1)</string>
+	<string name="widget_label_2x2">Calendar Widget(2x2)</string>
+
+	<string name="sdcarduse">메모리사용</string>
+	<string name="sdcarduse_summary">데이터를 외부 메모리에 저장하시겠습니까?</string>
+	<string name="sdcarduse_notinstall">외부 메모리를 사용할 수 없는 상태입니다.</string>
+
+	<string name="title_list_preference">Widget Color</string>
+	<string name="summary_list_preference">Widget Color</string>
+	<string name="dialog_title_list_preference">Widget Color</string>
+
+	
+</resources>

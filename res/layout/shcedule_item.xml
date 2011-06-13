@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:id="@+id/schedule_item" android:layout_width="fill_parent"
+	android:layout_height="fill_parent" android:orientation="horizontal">
+
+	<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+		android:orientation="vertical" android:layout_gravity="center_horizontal"
+		android:paddingLeft="5dip" android:layout_width="fill_parent"
+		android:layout_height="wrap_content">
+
+		<LinearLayout android:layout_width="fill_parent"
+			android:layout_gravity="center_vertical" android:layout_height="wrap_content"
+			android:orientation="horizontal" android:layout_marginTop="5dip"
+			android:layout_marginBottom="5dip" android:layout_marginLeft="5dip"
+			android:layout_marginRight="5dip" android:gravity="center_vertical">
+
+
+
+			<ImageView android:layout_height="wrap_content" android:id="@+id/flags"
+				android:src="@drawable/flag0" android:adjustViewBounds="true"
+				android:layout_width="wrap_content" android:maxWidth="16dip"
+				android:maxHeight="16dip" android:paddingRight="5dip"
+				android:scaleType="centerInside" />
+
+			<TextView android:id="@+id/schedule_date"
+				android:layout_width="20dip" android:layout_height="wrap_content"
+				android:gravity="center_vertical" android:textColor="@color/today_schedule_list"
+				android:textStyle="italic" android:textSize="10sp"
+				android:visibility="gone" />
+
+			<TextView android:id="@+id/schedule_title"
+				android:layout_width="wrap_content" android:layout_height="wrap_content"
+				android:singleLine="true" android:textSize="17sp"
+				android:textColor="@color/today_schedule_list" android:ellipsize="marquee" android:paddingRight="10dip" />
+
+			<ImageView android:layout_height="wrap_content" android:id="@+id/clock_flags"
+				android:src="@drawable/clock" android:adjustViewBounds="true"
+				android:layout_width="wrap_content"
+				android:maxWidth="16dip" android:maxHeight="16dip"
+				android:scaleType="fitCenter"  android:layout_gravity="right" />
+		</LinearLayout>
+	</LinearLayout>
+
+</RelativeLayout>

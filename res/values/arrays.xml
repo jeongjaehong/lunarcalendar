@@ -1,0 +1,232 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<resources>
+	<string-array name="search_operation">
+		<item>AND (모두포함)</item>
+		<item>OR (하나라도포함)</item>
+		<item>NOT (첫번째포함 두번째없음)</item>
+	</string-array>
+
+	<string-array name="specialday_alarmyn">
+		<item>없음</item>
+		<item>D-day 알람</item>
+	</string-array>
+	<string-array name="specialday_sign">
+		<item>일 전으로 설정</item>
+		<item>일 후로 설정</item>
+	</string-array>
+	<string-array name="specialday_displayyn">
+		<item>스케쥴 목록에 표시</item>
+		<item>목록과 달력 상단에 표시</item>
+		<item>항상 목록에 표시</item>
+	</string-array>
+	<string-array name="schedule_repeat">
+		<item>없음</item>
+		<item>지정된 일시에 한번만</item>
+		<item>매일 지정된 시간마다</item>
+		<item>매주 지정된 요일마다 </item>
+		<item>매달 지정된 날짜마다</item>
+		<item>매년 지정된 일시마다</item>
+		<item>지정된 일수 마다</item>
+	</string-array>
+	<string-array name="repeat_lunasolar">
+		<item>양력</item>
+		<item>음력</item>
+	</string-array>
+	<string-array name="luna_daylist">
+		<item>1일</item>
+		<item>2일</item>
+		<item>3일</item>
+		<item>4일</item>
+		<item>5일</item>
+		<item>6일</item>
+		<item>7일</item>
+		<item>8일</item>
+		<item>9일</item>
+		<item>10일</item>
+		<item>11일</item>
+		<item>12일</item>
+		<item>13일</item>
+		<item>14일</item>
+		<item>15일</item>
+		<item>16일</item>
+		<item>17일</item>
+		<item>18일</item>
+		<item>19일</item>
+		<item>20일</item>
+		<item>21일</item>
+		<item>22일</item>
+		<item>23일</item>
+		<item>24일</item>
+		<item>25일</item>
+		<item>26일</item>
+		<item>27일</item>
+		<item>28일</item>
+		<item>29일</item>
+		<item>30일</item>
+	</string-array>
+	<string-array name="repeat_days">
+		<item>요일</item>
+		<item>일(日)</item>
+		<item>월(月)</item>
+		<item>화(火)</item>
+		<item>수(水)</item>
+		<item>목(木)</item>
+		<item>금(金)</item>
+		<item>토(土)</item>
+	</string-array>
+	<string-array name="days_label">
+		<item>일(日)</item>
+		<item>월(月)</item>
+		<item>화(火)</item>
+		<item>수(水)</item>
+		<item>목(木)</item>
+		<item>금(金)</item>
+		<item>토(土)</item>
+	</string-array>
+	<string-array name="array_sipgan">
+		<item>경</item>
+		<item>신</item>
+		<item>임</item>
+		<item>계</item>
+		<item>갑</item>
+		<item>을</item>
+		<item>병</item>
+		<item>정</item>
+		<item>무</item>
+		<item>기</item>
+	</string-array>
+	<string-array name="array_sipejiji">
+		<item>신</item>
+		<item>유</item>
+		<item>술</item>
+		<item>해</item>
+		<item>자</item>
+		<item>축</item>
+		<item>인</item>
+		<item>묘</item>
+		<item>진</item>
+		<item>사</item>
+		<item>오</item>
+		<item>미</item>
+	</string-array>
+	<string-array name="array_ddi">
+		<item>원숭이</item>
+		<item>닭</item>
+		<item>개</item>
+		<item>돼지</item>
+		<item>쥐</item>
+		<item>소</item>
+		<item>범</item>
+		<item>토끼</item>
+		<item>용</item>
+		<item>뱀</item>
+		<item>말</item>
+		<item>양</item>
+	</string-array>
+	<string-array name="array_anniversary">
+		<item><![CDATA["insert into schedule (schedule_date, schedule_title, schedule_repeat, alarm_lunasolar, alarm_date, alarm_time, alarm_day, dday_alarmyn, dday_alarmday, dday_displayyn, anniversary) values ('1900-01-01', '신년', 9, 0, '01-01', '00:00', 0, 0, 0, 0, 'Y')"]]></item>
+		<item><![CDATA["insert into schedule (schedule_date, schedule_title, schedule_repeat, alarm_lunasolar, alarm_date, alarm_time, alarm_day, dday_alarmyn, dday_alarmday, dday_displayyn, anniversary) values ('1900-01-01', '설날', 9, 1, '12-30', '00:00', 0, 0, 0, 0, 'Y')"]]></item>
+		<item><![CDATA["insert into schedule (schedule_date, schedule_title, schedule_repeat, alarm_lunasolar, alarm_date, alarm_time, alarm_day, dday_alarmyn, dday_alarmday, dday_displayyn, anniversary) values ('1900-01-01', '설날', 9, 1, '12-31', '00:00', 0, 0, 0, 0, 'Y')"]]></item>
+		<item><![CDATA["insert into schedule (schedule_date, schedule_title, schedule_repeat, alarm_lunasolar, alarm_date, alarm_time, alarm_day, dday_alarmyn, dday_alarmday, dday_displayyn, anniversary) values ('1900-01-01', '설날', 9, 1, '01-01', '00:00', 0, 0, 0, 0, 'Y')"]]></item>
+		<item><![CDATA["insert into schedule (schedule_date, schedule_title, schedule_repeat, alarm_lunasolar, alarm_date, alarm_time, alarm_day, dday_alarmyn, dday_alarmday, dday_displayyn, anniversary) values ('1900-01-01', '설날', 9, 1, '01-02', '00:00', 0, 0, 0, 0, 'Y')"]]></item>
+		<item><![CDATA["insert into schedule (schedule_date, schedule_title, schedule_repeat, alarm_lunasolar, alarm_date, alarm_time, alarm_day, dday_alarmyn, dday_alarmday, dday_displayyn, anniversary) values ('1900-01-01', '대보름', 9, 1, '01-15', '00:00', 1, 0, 0, 0, 'Y')"]]></item>
+		<item><![CDATA["insert into schedule (schedule_date, schedule_title, schedule_repeat, alarm_lunasolar, alarm_date, alarm_time, alarm_day, dday_alarmyn, dday_alarmday, dday_displayyn, anniversary) values ('1900-01-01', '삼일절', 9, 0, '03-01', '00:00', 0, 0, 0, 0, 'Y')"]]></item>
+		<item><![CDATA["insert into schedule (schedule_date, schedule_title, schedule_repeat, alarm_lunasolar, alarm_date, alarm_time, alarm_day, dday_alarmyn, dday_alarmday, dday_displayyn, anniversary) values ('1900-01-01', '식목일', 9, 0, '04-05', '00:00', 1, 0, 0, 0, 'Y')"]]></item>
+		<item><![CDATA["insert into schedule (schedule_date, schedule_title, schedule_repeat, alarm_lunasolar, alarm_date, alarm_time, alarm_day, dday_alarmyn, dday_alarmday, dday_displayyn, anniversary) values ('1900-01-01', '4.19혁명기념일', 9, 0, '04-19', '00:00', 1, 0, 0, 0, 'Y')"]]></item>
+		<item><![CDATA["insert into schedule (schedule_date, schedule_title, schedule_repeat, alarm_lunasolar, alarm_date, alarm_time, alarm_day, dday_alarmyn, dday_alarmday, dday_displayyn, anniversary) values ('1900-01-01', '노동자의날', 9, 0, '05-01', '00:00', 1, 0, 0, 0, 'Y')"]]></item>
+		<item><![CDATA["insert into schedule (schedule_date, schedule_title, schedule_repeat, alarm_lunasolar, alarm_date, alarm_time, alarm_day, dday_alarmyn, dday_alarmday, dday_displayyn, anniversary) values ('1900-01-01', '어린이날', 9, 0, '05-05', '00:00', 0, 0, 0, 0, 'Y')"]]></item>
+		<item><![CDATA["insert into schedule (schedule_date, schedule_title, schedule_repeat, alarm_lunasolar, alarm_date, alarm_time, alarm_day, dday_alarmyn, dday_alarmday, dday_displayyn, anniversary) values ('1900-01-01', '석가탄신일', 9, 1, '04-08', '00:00', 0, 0, 0, 0, 'Y')"]]></item>
+		<item><![CDATA["insert into schedule (schedule_date, schedule_title, schedule_repeat, alarm_lunasolar, alarm_date, alarm_time, alarm_day, dday_alarmyn, dday_alarmday, dday_displayyn, anniversary) values ('1900-01-01', '어버이날', 9, 0, '05-08', '00:00', 1, 0, 0, 0, 'Y')"]]></item>
+		<item><![CDATA["insert into schedule (schedule_date, schedule_title, schedule_repeat, alarm_lunasolar, alarm_date, alarm_time, alarm_day, dday_alarmyn, dday_alarmday, dday_displayyn, anniversary) values ('1900-01-01', '스승의날', 9, 0, '05-15', '00:00', 1, 0, 0, 0, 'Y')"]]></item>
+		<item><![CDATA["insert into schedule (schedule_date, schedule_title, schedule_repeat, alarm_lunasolar, alarm_date, alarm_time, alarm_day, dday_alarmyn, dday_alarmday, dday_displayyn, anniversary) values ('1900-01-01', '성년의날', 9, 0, '05-17', '00:00', 1, 0, 0, 0, 'Y')"]]></item>
+		<item><![CDATA["insert into schedule (schedule_date, schedule_title, schedule_repeat, alarm_lunasolar, alarm_date, alarm_time, alarm_day, dday_alarmyn, dday_alarmday, dday_displayyn, anniversary) values ('1900-01-01', '5.18민주화운동기념일', 9, 0, '05-18', '00:00', 1, 0, 0, 0, 'Y')"]]></item>
+		<item><![CDATA["insert into schedule (schedule_date, schedule_title, schedule_repeat, alarm_lunasolar, alarm_date, alarm_time, alarm_day, dday_alarmyn, dday_alarmday, dday_displayyn, anniversary) values ('1900-01-01', '부부의날', 9, 0, '05-21', '00:00', 1, 0, 0, 0, 'Y')"]]></item>
+		<item><![CDATA["insert into schedule (schedule_date, schedule_title, schedule_repeat, alarm_lunasolar, alarm_date, alarm_time, alarm_day, dday_alarmyn, dday_alarmday, dday_displayyn, anniversary) values ('1900-01-01', '6.25전쟁기념일', 9, 0, '06-25', '00:00', 1, 0, 0, 0, 'Y')"]]></item>
+		<item><![CDATA["insert into schedule (schedule_date, schedule_title, schedule_repeat, alarm_lunasolar, alarm_date, alarm_time, alarm_day, dday_alarmyn, dday_alarmday, dday_displayyn, anniversary) values ('1900-01-01', '현충일', 9, 0, '06-06', '00:00', 0, 0, 0, 0, 'Y')"]]></item>
+		<item><![CDATA["insert into schedule (schedule_date, schedule_title, schedule_repeat, alarm_lunasolar, alarm_date, alarm_time, alarm_day, dday_alarmyn, dday_alarmday, dday_displayyn, anniversary) values ('1900-01-01', '단오', 9, 1, '05-05', '00:00', 1, 0, 0, 0, 'Y')"]]></item>
+		<item><![CDATA["insert into schedule (schedule_date, schedule_title, schedule_repeat, alarm_lunasolar, alarm_date, alarm_time, alarm_day, dday_alarmyn, dday_alarmday, dday_displayyn, anniversary) values ('1900-01-01', '제헌절', 9, 0, '07-17', '00:00', 1, 0, 0, 0, 'Y')"]]></item>
+		<item><![CDATA["insert into schedule (schedule_date, schedule_title, schedule_repeat, alarm_lunasolar, alarm_date, alarm_time, alarm_day, dday_alarmyn, dday_alarmday, dday_displayyn, anniversary) values ('1900-01-01', '광복절', 9, 0, '08-15', '00:00', 0, 0, 0, 0, 'Y')"]]></item>
+		<item><![CDATA["insert into schedule (schedule_date, schedule_title, schedule_repeat, alarm_lunasolar, alarm_date, alarm_time, alarm_day, dday_alarmyn, dday_alarmday, dday_displayyn, anniversary) values ('1900-01-01', '철도의날', 9, 0, '09-18', '00:00', 1, 0, 0, 0, 'Y')"]]></item>
+		<item><![CDATA["insert into schedule (schedule_date, schedule_title, schedule_repeat, alarm_lunasolar, alarm_date, alarm_time, alarm_day, dday_alarmyn, dday_alarmday, dday_displayyn, anniversary) values ('1900-01-01', '국군의날', 9, 0, '10-01', '00:00', 1, 0, 0, 0, 'Y')"]]></item>
+		<item><![CDATA["insert into schedule (schedule_date, schedule_title, schedule_repeat, alarm_lunasolar, alarm_date, alarm_time, alarm_day, dday_alarmyn, dday_alarmday, dday_displayyn, anniversary) values ('1900-01-01', '추석', 9, 1, '08-14', '00:00', 0, 0, 0, 0, 'Y')"]]></item>
+		<item><![CDATA["insert into schedule (schedule_date, schedule_title, schedule_repeat, alarm_lunasolar, alarm_date, alarm_time, alarm_day, dday_alarmyn, dday_alarmday, dday_displayyn, anniversary) values ('1900-01-01', '추석', 9, 1, '08-15', '00:00', 0, 0, 0, 0, 'Y')"]]></item>
+		<item><![CDATA["insert into schedule (schedule_date, schedule_title, schedule_repeat, alarm_lunasolar, alarm_date, alarm_time, alarm_day, dday_alarmyn, dday_alarmday, dday_displayyn, anniversary) values ('1900-01-01', '추석', 9, 1, '08-16', '00:00', 0, 0, 0, 0, 'Y')"]]></item>
+		<item><![CDATA["insert into schedule (schedule_date, schedule_title, schedule_repeat, alarm_lunasolar, alarm_date, alarm_time, alarm_day, dday_alarmyn, dday_alarmday, dday_displayyn, anniversary) values ('1900-01-01', '개천절', 9, 0, '10-03', '00:00', 0, 0, 0, 0, 'Y')"]]></item>
+		<item><![CDATA["insert into schedule (schedule_date, schedule_title, schedule_repeat, alarm_lunasolar, alarm_date, alarm_time, alarm_day, dday_alarmyn, dday_alarmday, dday_displayyn, anniversary) values ('1900-01-01', '한글날', 9, 0, '10-09', '00:00', 1, 0, 0, 0, 'Y')"]]></item>
+		<item><![CDATA["insert into schedule (schedule_date, schedule_title, schedule_repeat, alarm_lunasolar, alarm_date, alarm_time, alarm_day, dday_alarmyn, dday_alarmday, dday_displayyn, anniversary) values ('1900-01-01', '경찰의날', 9, 0, '10-21', '00:00', 1, 0, 0, 0, 'Y')"]]></item>
+		<item><![CDATA["insert into schedule (schedule_date, schedule_title, schedule_repeat, alarm_lunasolar, alarm_date, alarm_time, alarm_day, dday_alarmyn, dday_alarmday, dday_displayyn, anniversary) values ('1900-01-01', '교정의날', 9, 0, '10-28', '00:00', 1, 0, 0, 0, 'Y')"]]></item>
+		<item><![CDATA["insert into schedule (schedule_date, schedule_title, schedule_repeat, alarm_lunasolar, alarm_date, alarm_time, alarm_day, dday_alarmyn, dday_alarmday, dday_displayyn, anniversary) values ('1900-01-01', '학생독립운동기념일', 9, 0, '11-03', '00:00', 1, 0, 0, 0, 'Y')"]]></item>
+		<item><![CDATA["insert into schedule (schedule_date, schedule_title, schedule_repeat, alarm_lunasolar, alarm_date, alarm_time, alarm_day, dday_alarmyn, dday_alarmday, dday_displayyn, anniversary) values ('1900-01-01', '성탄절',9,0,'12-25','00:00',0,0,0,0,'Y')"]]></item>
+	</string-array>
+
+
+
+	<string-array name="entries_list_preference">
+		<item>Transparent</item>
+		<item>Black</item>
+		<item>Orange</item>
+		<item>Green</item>
+		<item>Blue</item>
+	</string-array>
+
+	<string-array name="widgetcolor_valuelist">
+		<item>0</item>
+		<item>1</item>
+		<item>2</item>
+		<item>3</item>
+		<item>4</item>
+	</string-array>
+
+
+	<string-array name="entries_syncmethod_preference">
+		<item>자동 동기화</item>
+		<item>동기화 중지</item>
+	</string-array>
+
+	<string-array name="entryvalues_syncmethod_preference">
+		<item>auto</item>
+		<item>stop</item>
+	</string-array>
+
+	<string-array name="entries_widgetsize">
+		<item>LunarCalendar(1x1)</item>
+		<item>LunarCalendar(2x2)</item>
+	</string-array>
+
+	<string-array name="entries_widgetkind">
+		<item>D-day</item>
+		<item>기념일</item>
+		<item>일반일정</item>
+		<item>모든일정</item>
+		<item>온라인구독일정</item>
+	</string-array>
+
+	<string-array name="entries_dataworks">
+		<item>일정 백업</item>
+		<item>일정 복원</item>
+		<item>CSV 내보내기</item>
+		<item>CSV 가져오기</item>
+	</string-array>
+
+	<string-array name="entries_batchjobs">
+		<item>음력일정 일괄생성</item>
+		<item>맥체인성경읽기 가정용일정 생성</item>
+		<item>맥체인성경읽기 개인용일정 생성</item>
+		<item>로컬일정 일괄 생성\n(비동기화 일정 일괄생성)</item>
+	</string-array>
+
+	<string-array name="widget_font_colors">
+		<item>밝은회색/LTGRAY</item>
+		<item>진한회색/DKGRAY</item>
+		<item>회색/GRAY</item>
+		<item>흰색/WHITE</item>
+		<item>빨강/RED</item>
+		<item>초록/GREEN</item>
+		<item>파랑/BLUE</item>
+		<item>노랑/YELLOW</item>
+		<item>청록/CYAN</item>
+		<item>분홍/MAGENTA</item>
+		<item>검정/BLACK</item>
+	</string-array>
+</resources>

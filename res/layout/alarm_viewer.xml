@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="fill_parent" android:layout_height="wrap_content"
+	android:scrollbars="vertical">
+
+	<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+		android:id="@+id/schedule_child" android:layout_width="fill_parent"
+		android:layout_height="fill_parent" android:orientation="horizontal">
+
+		<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+			android:orientation="vertical" android:layout_gravity="center_horizontal"
+			android:layout_width="fill_parent" android:layout_height="wrap_content">
+
+			<LinearLayout android:layout_width="fill_parent"
+				android:layout_height="40dip" android:orientation="horizontal"
+				android:layout_marginTop="1dip" android:layout_marginBottom="1dip"
+				android:layout_marginLeft="1dip" android:layout_marginRight="1dip"
+				android:background="#aaeeeeee">
+
+				<ImageView android:layout_height="wrap_content"
+					android:id="@+id/flags" android:src="@drawable/icon"
+					android:adjustViewBounds="true" android:layout_width="wrap_content"
+					android:layout_gravity="center_vertical" android:maxWidth="32dip"
+					android:maxHeight="32dip" android:paddingLeft="5dip"
+					android:paddingRight="5dip" android:scaleType="centerInside" />
+
+				<TextView android:id="@+id/title" android:textSize="16sp"
+					android:textStyle="bold" android:layout_width="fill_parent"
+					android:textColor="#ffffffff" android:layout_height="wrap_content"
+					android:layout_gravity="center" android:gravity="center" />
+
+			</LinearLayout>
+			<LinearLayout android:layout_width="fill_parent"
+				android:layout_height="wrap_content" android:orientation="horizontal"
+				android:layout_marginTop="5dip" android:layout_marginBottom="5dip"
+				android:layout_marginLeft="5dip" android:layout_marginRight="5dip">
+
+				<TextView android:layout_width="wrap_content"
+					android:layout_height="wrap_content" android:text="●"
+					android:paddingRight="1sp" />
+				<TextView android:layout_width="70dp"
+					android:layout_height="wrap_content" android:text="내용" />
+
+				<TextView android:id="@+id/schedule_contents"
+					android:maxLines="10" android:scrollbars="vertical"
+					android:editable="false" android:layout_width="fill_parent"
+					android:layout_height="wrap_content" />
+
+			</LinearLayout>
+			<LinearLayout android:layout_width="fill_parent"
+				android:layout_height="wrap_content" android:orientation="horizontal"
+				android:layout_marginTop="5dip" android:layout_marginBottom="5dip"
+				android:layout_marginLeft="5dip" android:layout_marginRight="5dip">
+
+				<TextView android:layout_width="wrap_content"
+					android:layout_height="wrap_content" android:text="●"
+					android:paddingRight="1sp" />
+				<TextView android:layout_width="70dp"
+					android:layout_height="wrap_content" android:text="알람"
+					android:textColor="@color/alarm_infocolor" />
+				<TextView android:id="@+id/schedule_repeat"
+					android:gravity="left" android:layout_width="fill_parent"
+					android:layout_height="wrap_content" />
+
+			</LinearLayout>
+			<LinearLayout android:layout_width="fill_parent"
+				android:layout_height="wrap_content" android:orientation="horizontal"
+				android:layout_marginTop="5dip" android:layout_marginBottom="5dip"
+				android:layout_marginLeft="5dip" android:layout_marginRight="5dip">
+
+				<TextView android:layout_width="wrap_content"
+					android:layout_height="wrap_content" android:text="●"
+					android:paddingRight="1sp" android:textColor="@color/dday_infocolor" />
+				<TextView android:layout_width="70dp"
+					android:layout_height="wrap_content" android:text="D-day"
+					android:textColor="@color/dday_infocolor" />
+				<TextView android:id="@+id/specialday_displayyn"
+					android:gravity="left" android:layout_width="fill_parent"
+					android:layout_height="wrap_content" />
+			</LinearLayout>
+
+			<LinearLayout android:layout_width="fill_parent"
+				android:layout_height="wrap_content" android:orientation="horizontal"
+				android:layout_marginTop="5dip" android:layout_marginBottom="5dip"
+				android:layout_marginLeft="5dip" android:layout_marginRight="5dip"
+				android:gravity="center">
+
+				<Button android:text="@string/btn_repeatalarm" android:id="@+id/btn_repeatalarm"
+					android:layout_width="100dip" android:layout_height="wrap_content" />
+				<Button android:text="@string/btn_stopalarm"
+					android:layout_width="100dip" android:layout_height="wrap_content"
+					android:id="@+id/btn_stopalarm"></Button>
+
+			
+
+</LinearLayout>
+			</LinearLayout>
+	</RelativeLayout>
+
+</ScrollView>
+
+

@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:id="@+id/schedule_child" android:layout_width="fill_parent"
+	android:layout_height="fill_parent" android:orientation="horizontal">
+
+	<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+		android:orientation="vertical" android:layout_gravity="center_horizontal"
+
+		android:layout_width="fill_parent" android:layout_height="wrap_content">
+
+		<LinearLayout android:layout_width="fill_parent"
+			android:layout_height="wrap_content" android:orientation="horizontal">
+			<ImageView android:layout_height="wrap_content" android:id="@+id/flags"
+				android:src="@drawable/pen" android:adjustViewBounds="true"
+				android:layout_width="wrap_content" android:layout_gravity="top"
+				android:maxWidth="20dip" android:maxHeight="20dip"
+				android:layout_marginTop="7dip" android:scaleType="centerInside"
+				android:paddingLeft="3dip" android:visibility="invisible" />
+			<LinearLayout android:layout_width="fill_parent"
+				android:layout_height="wrap_content" android:orientation="vertical">
+				<LinearLayout android:id="@+id/contents_line"
+					android:layout_width="wrap_content" android:paddingLeft="3dip"
+					android:layout_height="wrap_content" android:orientation="horizontal"
+					android:layout_marginTop="5dip" android:layout_marginBottom="5dip"
+					android:layout_marginLeft="5dip" android:layout_marginRight="5dip">
+					<TextView android:layout_width="wrap_content"
+						android:layout_height="wrap_content" android:text="●"
+						android:paddingRight="1sp" />
+					<TextView android:layout_width="70dp"
+						android:layout_height="wrap_content" android:text="내용" />
+					<TextView android:id="@+id/schedule_contents"
+						android:layout_width="wrap_content" android:textSize="16sp"
+						android:layout_height="wrap_content" />
+				</LinearLayout>
+				<LinearLayout android:id="@+id/alarm_line"
+					android:layout_width="wrap_content" android:paddingLeft="3dip"
+					android:layout_height="wrap_content" android:orientation="horizontal"
+					android:layout_marginTop="5dip" android:layout_marginBottom="5dip"
+					android:layout_marginLeft="5dip" android:layout_marginRight="5dip"
+					android:visibility="invisible">
+
+					<TextView android:layout_width="wrap_content"
+						android:layout_height="wrap_content" android:text="●"
+						android:paddingRight="1sp" />
+					<TextView android:layout_width="70dp"
+						android:layout_height="wrap_content" android:text="알람"
+						android:textColor="@color/alarm_infocolor" />
+					<TextView android:id="@+id/alarm_detailinfo"
+						android:layout_width="wrap_content" android:textSize="16sp"
+						android:textColor="@color/alarm_infocolor" android:layout_height="wrap_content" />
+
+				</LinearLayout>
+				<LinearLayout android:id="@+id/dday_line"
+					android:layout_width="wrap_content" android:paddingLeft="3dip"
+					android:layout_height="wrap_content" android:orientation="horizontal"
+					android:layout_marginTop="5dip" android:layout_marginBottom="5dip"
+					android:layout_marginLeft="5dip" android:layout_marginRight="5dip"
+					android:visibility="invisible">
+
+					<TextView android:layout_width="wrap_content"
+						android:layout_height="wrap_content" android:text="●"
+						android:paddingRight="1sp" android:textColor="@color/dday_infocolor" />
+					<TextView android:layout_width="70dp"
+						android:layout_height="wrap_content" android:text="D-day"
+						android:textColor="@color/dday_infocolor" />
+					<TextView android:id="@+id/dday_detailinfo"
+						android:layout_width="wrap_content" android:textSize="16sp"
+						android:layout_height="wrap_content" />
+				</LinearLayout>
+			</LinearLayout>
+		</LinearLayout>
+	</LinearLayout>
+
+</RelativeLayout>

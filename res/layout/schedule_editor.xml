@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="fill_parent" android:layout_height="wrap_content"
+	android:scrollbars="vertical">
+
+	<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+		android:id="@+id/schedule_child" android:layout_width="fill_parent"
+		android:layout_height="fill_parent" android:orientation="horizontal">
+
+		<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+			android:id="@+id/schedule_editor" android:orientation="vertical"
+			android:layout_gravity="center_horizontal" android:layout_width="fill_parent"
+			android:layout_height="wrap_content" android:layout_marginTop="10dip"
+			android:layout_marginBottom="10dip" android:layout_marginLeft="10dip"
+			android:layout_marginRight="10dip">
+
+			<!-- 기본정보 -->
+			<LinearLayout android:layout_width="fill_parent"
+				android:layout_height="wrap_content" android:orientation="horizontal">
+				<ImageView android:layout_height="wrap_content"
+					android:id="@+id/flags" android:src="@drawable/pen"
+					android:maxWidth="36dip" android:maxHeight="36dip"
+					android:adjustViewBounds="true" android:layout_width="wrap_content"
+					android:paddingRight="5dip" android:scaleType="centerInside" />
+				<TextView android:id="@+id/schedule_repeat_label"
+					android:paddingLeft="10dp" android:layout_width="wrap_content"
+					android:layout_height="wrap_content" android:text="일정 기본 정보"
+					android:textSize="16sp" android:gravity="center" android:textColor="@color/orange" />
+			</LinearLayout>
+
+			<!-- 시작일 -->
+			<LinearLayout android:layout_width="fill_parent"
+				android:layout_height="wrap_content" android:orientation="horizontal">
+				<TextView android:layout_width="wrap_content"
+					android:layout_height="wrap_content" android:text="시작"
+					android:paddingLeft="10dp" />
+				<EditText android:id="@+id/schedule_date" android:editable="false"
+					android:layout_width="110dp" android:layout_height="wrap_content"
+					android:textSize="16sp" android:paddingLeft="10dp" />
+				<TextView android:layout_width="wrap_content"
+					android:layout_height="wrap_content" android:text="음력"
+					android:paddingLeft="10dp" />
+				<!-- 선택된 날짜에 해당하는 음력날짜를 자동으로 계산해서 display한다. -->
+				<EditText android:id="@+id/schedule_ldate"
+					android:editable="false" android:layout_width="110dp"
+					android:layout_height="wrap_content" android:textSize="16sp" />
+			</LinearLayout>
+
+			<!-- 종료일 -->
+			<LinearLayout android:layout_width="fill_parent"
+				android:layout_height="wrap_content" android:orientation="horizontal"
+				android:visibility="gone">
+				<TextView android:layout_width="wrap_content"
+					android:layout_height="wrap_content" android:text="종료"
+					android:paddingLeft="10dp" />
+				<EditText android:id="@+id/schedule_date2"
+					android:editable="false" android:layout_width="110dp"
+					android:layout_height="wrap_content" android:textSize="16sp"
+					android:paddingLeft="10dp" />
+				<TextView android:layout_width="wrap_content"
+					android:layout_height="wrap_content" android:text="음력"
+					android:paddingLeft="10dp" />
+				<!-- 선택된 날짜에 해당하는 음력날짜를 자동으로 계산해서 display한다. -->
+				<EditText android:id="@+id/schedule_ldate2"
+					android:editable="false" android:layout_width="110dp"
+					android:layout_height="wrap_content" android:textSize="16sp" />
+			</LinearLayout>
+
+			<!-- 기념일 종류 선택 -->
+			<LinearLayout android:layout_width="fill_parent"
+				android:layout_height="wrap_content" android:layout_gravity="right"
+				android:orientation="horizontal" android:gravity="right">
+				<CheckBox android:id="@+id/check_lunar"
+					android:layout_height="wrap_content" android:layout_width="wrap_content" />
+				<TextView android:gravity="center" android:paddingLeft="10dp"
+					android:layout_width="wrap_content" android:layout_height="wrap_content"
+					android:text="@string/check_lunar_label" />
+				<CheckBox android:layout_height="wrap_content"
+					android:paddingLeft="10dp" android:layout_width="wrap_content"
+					android:id="@+id/check_anniversary" />
+				<TextView android:gravity="center" android:paddingLeft="10dp"
+					android:paddingRight="10dp" android:layout_width="wrap_content"
+					android:layout_height="wrap_content" android:text="@string/check_anniversary_label" />
+			</LinearLayout>
+			<!-- 일정제목 -->
+			<TextView android:layout_width="wrap_content"
+				android:selectAllOnFocus="true" android:layout_height="wrap_content"
+				android:text="@string/schedule_title" />
+			<EditText android:id="@+id/schedule_title"
+				android:layout_width="fill_parent" android:layout_height="wrap_content"
+				android:singleLine="true" android:inputType="text" />
+			<!-- 일정내용 -->
+			<TextView android:layout_width="wrap_content"
+				android:layout_height="wrap_content" android:text="@string/schedule_contents" />
+			<EditText android:id="@+id/schedule_contents"
+				android:layout_width="fill_parent" android:layout_height="wrap_content"
+				android:inputType="textMultiLine" />
+
+			<!-- 반복알람설정 -->
+			<LinearLayout android:layout_width="fill_parent"
+				android:layout_height="wrap_content" android:orientation="horizontal">
+				<ImageView android:layout_height="wrap_content"
+					android:id="@+id/flags" android:src="@drawable/clock"
+					android:adjustViewBounds="true" android:layout_width="wrap_content"
+					android:maxWidth="36dip" android:maxHeight="36dip"
+					android:paddingRight="5dip" android:scaleType="centerInside" />
+				<TextView android:id="@+id/schedule_repeat_label"
+					android:layout_width="wrap_content" android:layout_height="wrap_content"
+					android:text="@string/schedule_repeat" android:textSize="16sp"
+					android:textColor="@color/orange" />
+			</LinearLayout>
+			<Spinner android:id="@+id/schedule_repeat"
+				android:layout_width="fill_parent" android:layout_height="wrap_content" />
+			<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+				android:id="@+id/alarm_settings" android:layout_width="fill_parent"
+				android:layout_height="wrap_content">
+				<TextView android:id="@+id/schedule_repeatvalue"
+					android:layout_width="wrap_content" android:layout_height="wrap_content"
+					android:text="@string/schedule_repeatvalue" android:gravity="center_vertical" />
+				<!-- 음력/양력선택 -->
+				<Spinner android:id="@+id/alarm_lunasolar"
+					android:layout_width="wrap_content" android:layout_height="wrap_content"
+					android:gravity="center" android:visibility="gone"
+					android:layout_toRightOf="@id/schedule_repeatvalue" />
+				<EditText android:id="@+id/alarm_date"
+					android:layout_width="wrap_content" android:layout_height="wrap_content"
+					android:singleLine="true" android:gravity="center"
+					android:editable="false" android:visibility="gone"
+					android:layout_toRightOf="@id/alarm_lunasolar" />
+				<!-- 요일선택 -->
+				<Spinner android:id="@+id/alarm_days" android:layout_width="wrap_content"
+					android:gravity="center" android:layout_height="wrap_content"
+					android:visibility="gone" android:layout_toRightOf="@id/alarm_date" />
+				<!-- 음력인 경우 음력 날짜 선택 -->
+				<Spinner android:id="@+id/luna_alarm_day"
+					android:layout_width="wrap_content" android:gravity="center"
+					android:layout_height="wrap_content" android:visibility="gone"
+					android:layout_toRightOf="@id/alarm_days" />
+				<!--  알람을 실행할 날짜. -->
+				<EditText android:id="@+id/alarm_day" android:layout_width="60dip"
+					android:gravity="center" android:layout_height="wrap_content"
+					android:singleLine="true" android:editable="false"
+					android:focusableInTouchMode="true" android:visibility="gone"
+					android:layout_toRightOf="@id/luna_alarm_day" />
+				<!-- 지정일수마다 반복일경우 반복일수 -->
+				<EditText android:id="@+id/alarm_repeatday"
+					android:layout_width="100dip" android:gravity="right"
+					android:layout_height="wrap_content" android:singleLine="true"
+					android:editable="true" android:visibility="gone"
+					android:selectAllOnFocus="true" android:layout_toRightOf="@id/alarm_day"
+					android:inputType="number" />
+				<!--  지정시간 알람인경우 알람시간... -->
+				<EditText android:id="@+id/alarm_time"
+					android:layout_width="100dip" android:gravity="center"
+					android:layout_height="wrap_content" android:lines="1"
+					android:editable="false" android:visibility="gone"
+					android:focusableInTouchMode="true" android:layout_toRightOf="@id/alarm_repeatday" />
+			</RelativeLayout>
+
+			<!-- D-day 설정 -->
+			<LinearLayout android:layout_width="fill_parent"
+				android:layout_height="wrap_content" android:orientation="horizontal">
+				<ImageView android:layout_height="wrap_content"
+					android:id="@+id/flags" android:src="@drawable/dday"
+					android:adjustViewBounds="true" android:layout_width="wrap_content"
+					android:maxWidth="36dip" android:maxHeight="36dip"
+					android:paddingRight="5dip" android:scaleType="centerInside" />
+				<TextView android:id="@+id/schedule_repeat_label"
+					android:layout_width="wrap_content" android:layout_height="wrap_content"
+					android:text="@string/specialday_alarmyn" android:textSize="16sp"
+					android:textColor="@color/orange" />
+			</LinearLayout>
+			<Spinner android:id="@+id/specialday_alarmyn"
+				android:layout_width="fill_parent" android:layout_height="wrap_content" />
+			<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+				android:id="@+id/dday_settings" android:layout_width="fill_parent"
+				android:visibility="gone" android:layout_height="wrap_content">
+				<TextView android:id="@+id/specialday_ddayvalue"
+					android:paddingRight="4dip" android:layout_width="wrap_content"
+					android:layout_height="fill_parent" android:text="@string/specialday_ddayvalue"
+					android:gravity="center_vertical" />
+				<EditText android:id="@+id/specialday_alarmday"
+					android:layout_width="90dip" android:layout_height="wrap_content"
+					android:selectAllOnFocus="true" android:singleLine="true"
+					android:maxLength="3" android:gravity="right" android:text="0"
+					android:editable="true" android:layout_toRightOf="@id/specialday_ddayvalue"
+					android:inputType="number" />
+				<Spinner android:id="@+id/specialday_sign"
+					android:layout_width="wrap_content" android:gravity="center"
+					android:layout_height="wrap_content" android:layout_toRightOf="@id/specialday_alarmday" />
+				<TextView android:id="@+id/specialday_displayposition"
+					android:paddingRight="4dip" android:layout_width="wrap_content"
+					android:layout_height="wrap_content" android:text="@string/specialday_displayposigion"
+					android:layout_below="@id/specialday_alarmday" />
+				<Spinner android:id="@+id/specialday_displayyn"
+					android:layout_width="fill_parent" android:layout_height="wrap_content"
+					android:layout_toRightOf="@id/specialday_displayposition"
+					android:layout_below="@id/specialday_alarmday" />
+			</RelativeLayout>
+		</LinearLayout>
+	</RelativeLayout>
+</ScrollView>				

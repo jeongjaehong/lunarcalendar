@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="fill_parent" android:layout_height="wrap_content"
+	android:orientation="vertical" android:layout_gravity="center_horizontal"
+	android:padding="5dip">
+
+	<LinearLayout android:id="@+id/topPanel"
+		android:layout_width="fill_parent" android:layout_height="wrap_content"
+		android:minHeight="54dip" android:orientation="vertical">
+		<LinearLayout android:id="@+id/title_template"
+			android:layout_width="fill_parent" android:layout_height="wrap_content"
+			android:orientation="horizontal" android:layout_marginLeft="5dip"
+			android:layout_marginRight="5dip">
+
+			<TextView android:id="@+id/schedule_date_label"
+				android:textSize="16sp" android:layout_width="100dip"
+				android:paddingRight="5dip" android:layout_height="wrap_content"
+				android:text="■ 색상/종류" />
+
+			<Spinner android:id="@+id/widgetcolor" android:layout_height="wrap_content"
+				android:layout_width="100dip" />
+
+			<Spinner android:id="@+id/widgetkind" android:layout_height="wrap_content"
+				android:layout_width="wrap_content" />
+		</LinearLayout>
+		<LinearLayout android:id="@+id/font_colors"
+			android:layout_width="fill_parent" android:layout_height="wrap_content"
+			android:orientation="horizontal" android:layout_marginLeft="5dip"
+			android:layout_marginRight="5dip">
+
+			<TextView android:id="@+id/schedule_date_label"
+				android:textSize="16sp" android:layout_width="100dip"
+				android:paddingRight="5dip" android:layout_height="wrap_content"
+				android:text="■ 글자 색상" />
+
+			<Spinner android:id="@+id/fontcolor" android:layout_height="wrap_content"
+				android:layout_width="fill_parent" />
+		</LinearLayout>
+		<LinearLayout android:id="@+id/title_template"
+			android:layout_width="fill_parent" android:layout_height="wrap_content"
+			android:orientation="horizontal" android:layout_marginLeft="20dip"
+			android:layout_marginRight="10dip" android:visibility="gone">
+
+
+			<TextView android:id="@+id/online_widget"
+				android:gravity="center" android:padding="5sp" android:layout_width="wrap_content"
+				android:layout_height="45dip" android:text="" />
+
+
+		</LinearLayout>
+		<!--
+			</LinearLayout> <LinearLayout android:id="@+id/topPanel"
+			android:layout_width="fill_parent"
+			android:layout_height="wrap_content" android:minHeight="54dip"
+			android:orientation="vertical"> <LinearLayout
+			android:id="@+id/title_template" android:layout_width="fill_parent"
+			android:layout_height="wrap_content" android:orientation="horizontal"
+			android:layout_marginLeft="10dip" android:layout_marginRight="10dip">
+
+			<TextView android:id="@+id/schedule_date_label"
+			android:textSize="16sp" android:layout_width="100dip"
+			android:layout_height="wrap_content" android:text="■ 일정 종류" />
+
+			<Spinner android:id="@+id/widgetkind"
+			android:layout_height="wrap_content"
+			android:layout_marginLeft="10dip" android:layout_width="fill_parent"
+			/> </LinearLayout>
+		-->
+		<LinearLayout android:id="@+id/title_template"
+			android:layout_width="fill_parent" android:layout_height="wrap_content"
+			android:orientation="horizontal" android:layout_marginLeft="20dip"
+			android:layout_marginRight="10dip" android:visibility="gone">
+
+			<CheckBox android:id="@+id/check_receiver"
+				android:layout_height="wrap_content" android:layout_width="wrap_content" />
+
+			<TextView android:id="@+id/check_lunar_label"
+				android:gravity="center" android:padding="5sp" android:layout_width="wrap_content"
+				android:layout_height="45dip" android:text="자동 새로고침 (5분 간격)" />
+
+
+		</LinearLayout>
+		<LinearLayout android:id="@+id/title_template"
+			android:layout_width="fill_parent" android:layout_height="wrap_content"
+			android:orientation="horizontal" android:layout_marginLeft="20dip"
+			android:layout_marginRight="10dip" android:visibility="gone">
+
+
+			<TextView android:id="@+id/check_lunar_label"
+				android:gravity="center" android:padding="5sp" android:layout_width="wrap_content"
+				android:layout_height="45dip" android:text="모든 D-day위젯에 적용됩니다." />
+
+
+		</LinearLayout>
+
+	</LinearLayout>
+	<LinearLayout android:id="@+id/buttonPanel"
+		android:layout_width="fill_parent" android:layout_height="wrap_content"
+		android:minHeight="54dip" android:orientation="horizontal"
+		android:layout_gravity="center_vertical"
+		android:layout_alignParentBottom="true">
+		<LinearLayout android:layout_width="fill_parent"
+			android:layout_height="wrap_content" android:paddingTop="4dip"
+			android:paddingLeft="2dip" android:paddingRight="2dip"
+			android:orientation="horizontal" android:gravity="center">
+
+			<Button android:id="@+id/save_button" android:layout_width="100dip"
+				android:layout_height="wrap_content" android:text="@android:string/ok" />
+
+			<Button android:id="@+id/cancel_button" android:layout_width="100dip"
+				android:layout_height="wrap_content" android:text="@android:string/cancel" />
+
+		</LinearLayout>
+	</LinearLayout>
+
+	<ListView android:id="@+id/ContentsListView"
+		android:focusable="true" android:focusableInTouchMode="true"
+		android:choiceMode="singleChoice" android:background="@color/background"
+		android:fastScrollEnabled="true" android:layout_width="fill_parent"
+		android:layout_height="wrap_content" />
+
+</LinearLayout>

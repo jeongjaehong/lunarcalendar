@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:id="@+id/widget" android:background="@drawable/widget_background_orange"
+	android:clickable="true" android:layout_width="fill_parent"
+	android:layout_height="wrap_content" android:layout_gravity="center">
+
+	<LinearLayout android:id="@+id/content"
+		android:layout_marginLeft="10dip" android:layout_marginTop="7dip"
+		android:layout_marginRight="5dip" android:layout_marginBottom="5dip"
+		android:orientation="horizontal" android:gravity="top"
+		android:layout_width="fill_parent" android:layout_height="wrap_content">
+
+		<LinearLayout android:id="@+id/layout_phone"
+			android:orientation="horizontal" android:layout_width="wrap_content"
+			android:layout_height="fill_parent" android:paddingLeft="5dip"
+			android:paddingRight="5dip" android:layout_gravity="center_vertical">
+			<ImageView android:id="@+id/widget_icon" android:scaleType="fitXY"
+				android:src="@android:drawable/stat_notify_sync"
+				android:layout_width="50dp" android:layout_height="50dp" />
+		</LinearLayout>
+
+		<LinearLayout android:orientation="vertical"
+			android:layout_width="fill_parent" android:layout_height="wrap_content">
+
+			<LinearLayout android:id="@+id/layout_phone"
+				android:orientation="horizontal" android:layout_width="fill_parent"
+				android:layout_height="wrap_content">
+				<TextView android:id="@+id/text_dday" android:text="@string/empty_str"
+					android:textSize="14sp" android:textStyle="bold" android:gravity="center"
+					android:layout_width="fill_parent" android:layout_height="wrap_content" />
+			</LinearLayout>
+
+			<LinearLayout android:id="@+id/layout_message"
+				android:orientation="horizontal" android:layout_width="fill_parent"
+				android:layout_height="wrap_content">
+
+				<TextView android:id="@+id/text_title" android:text="@string/empty_str"
+					android:textSize="14sp" android:gravity="center" android:maxLines="2"
+					android:layout_width="fill_parent"
+					android:layout_height="wrap_content" />
+				<TextView android:id="@+id/text_title2" android:text="@string/empty_str"
+					android:textSize="12sp" android:gravity="left" android:maxLines="3"
+					android:layout_width="fill_parent"
+					android:layout_height="wrap_content" android:visibility="gone"/>
+			</LinearLayout>
+			<LinearLayout android:id="@+id/layout_data"
+				android:orientation="horizontal" android:layout_width="fill_parent"
+				android:layout_height="wrap_content">
+
+				<TextView android:id="@+id/text_contents" android:text="@string/empty_str"
+					android:textSize="14sp" android:gravity="center"
+					android:layout_width="fill_parent" android:layout_height="fill_parent" />
+			</LinearLayout>
+		</LinearLayout>
+	</LinearLayout>
+</RelativeLayout>

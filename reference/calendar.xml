@@ -1,0 +1,37 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<feed xmlns='http://www.w3.org/2005/Atom'>
+	<link rel='alternate' href='https://www.google.com/calendar/render' />
+	<link rel='http://schemas.google.com/g/2005#feed'
+		href='https://www.google.com/calendar/feeds/default/owncalendars/full' />
+	<link rel='http://schemas.google.com/g/2005#post'
+		href='https://www.google.com/calendar/feeds/default/owncalendars/full' />
+	<link rel='self'
+		href='https://www.google.com/calendar/feeds/default/owncalendars/full' />
+	<entry>
+		<id>http://www.google.com/calendar/feeds/default/owncalendars/full/zin.jeong%40gmail.com</id>
+		<updated>2011-05-04T23:05:13.000Z</updated>
+		<title type='text'>My Schedule...</title>
+		<link rel='alternate'
+			href='https://www.google.com/calendar/feeds/zin.jeong%40gmail.com/private/full' />
+		<link rel='http://schemas.google.com/gCal/2005#eventFeed'
+			href='https://www.google.com/calendar/feeds/zin.jeong%40gmail.com/private/full' />
+		<link rel='http://schemas.google.com/acl/2007#accessControlList'
+			href='https://www.google.com/calendar/feeds/zin.jeong%40gmail.com/acl/full' />
+		<link rel='self'
+			href='https://www.google.com/calendar/feeds/default/owncalendars/full/zin.jeong%40gmail.com' />
+	</entry>
+	<entry>
+		<id>http://www.google.com/calendar/feeds/default/owncalendars/full/m7jum9esgmgh015b8v2e8ae7sk%40group.calendar.google.com</id>
+		<updated>2011-04-27T05:34:03.000Z</updated>
+		<title type='text'>프로젝트일정</title>
+		<summary type='text'>대한적십자사 프로젝트 일정</summary>
+		<link rel='alternate'
+			href='https://www.google.com/calendar/feeds/m7jum9esgmgh015b8v2e8ae7sk%40group.calendar.google.com/private/full' />
+		<link rel='http://schemas.google.com/gCal/2005#eventFeed'
+			href='https://www.google.com/calendar/feeds/m7jum9esgmgh015b8v2e8ae7sk%40group.calendar.google.com/private/full' />
+		<link rel='http://schemas.google.com/acl/2007#accessControlList'
+			href='https://www.google.com/calendar/feeds/m7jum9esgmgh015b8v2e8ae7sk%40group.calendar.google.com/acl/full' />
+		<link rel='self'
+			href='https://www.google.com/calendar/feeds/default/owncalendars/full/m7jum9esgmgh015b8v2e8ae7sk%40group.calendar.google.com' />
+	</entry>
+</feed>

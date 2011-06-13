@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<appwidget-provider xmlns:android="http://schemas.android.com/apk/res/android"
+	android:updatePeriodMillis="21600000" 
+	android:configure="org.nilriri.LunaCalendar.widget.WidgetConfigure"
+	android:minWidth="195dip" 
+	android:minHeight="65dip"
+	android:initialLayout="@layout/widget3x1_transparent">
+</appwidget-provider>

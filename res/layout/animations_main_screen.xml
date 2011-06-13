@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:id="@+id/container" android:layout_width="fill_parent"
+	android:layout_height="fill_parent">
+
+	<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+		android:layout_width="fill_parent" android:layout_height="fill_parent">
+
+
+		<org.nilriri.LunaCalendar.LunarCalendarView
+			android:id="@+id/lunaCalendarView" android:layout_marginBottom="150dip"
+			android:layout_width="fill_parent" android:layout_height="fill_parent" />
+
+		<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+			android:orientation="horizontal" android:layout_gravity="center_horizontal"
+			android:layout_width="fill_parent" android:layout_height="150dip"
+			android:layout_alignParentBottom="true">
+
+
+			<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+				android:orientation="vertical" android:layout_gravity="top"
+				android:layout_width="45dip" android:layout_height="fill_parent"
+				android:visibility="gone">
+
+				<Button android:text="Event" android:layout_width="45dip"
+					android:layout_height="45dip">
+				</Button>
+				<Button android:text="Call" android:layout_width="45dip"
+					android:layout_height="45dip">
+				</Button>
+				<Button android:text="SMS" android:layout_width="45dip"
+					android:layout_height="45dip">
+				</Button>
+
+			</LinearLayout>
+
+			<ListView android:id="@+id/ContentsListView"
+				android:layout_width="fill_parent" android:focusable="false"
+				android:background="@color/cal_background" android:layout_height="fill_parent" />
+
+		</LinearLayout>
+
+	</RelativeLayout>
+
+</FrameLayout>
+

@@ -1,0 +1,64 @@
+
+<?xml version='1.0' encoding='UTF-8'?>
+<entry 
+	xmlns='http://www.w3.org/2005/Atom' 
+	xmlns:app='http://www.w3.org/2007/app'
+	xmlns:gCal='http://schemas.google.com/gCal/2005' 
+	xmlns:gd='http://schemas.google.com/g/2005'
+	gd:etag='&quot;GUsPRwRDeSp7JGA6WhJQ&quot;' 
+	gd:kind='calendar#event'>
+	<id>http://www.google.com/calendar/feeds/zin.jeong%40gmail.com/events/5kb67mvqv152ismgh0qesl478s
+	</id>
+
+	<published>2011-04-28T05:00:27.000Z</published>
+	<updated>2011-04-28T05:00:27.000Z</updated>
+	<app:edited>2011-04-28T05:00:27.000Z</app:edited>
+
+	<category 
+	scheme='http://schemas.google.com/g/2005#kind' 
+	term='http://schemas.google.com/g/2005#event' />
+	<title>eee</title>
+	<content>fff</content>
+
+	<link rel='alternate' type='text/html'
+		href='https://www.google.com/calendar/event?eid=NWtiNjdtdnF2MTUyaXNtZ2gwcWVzbDQ3OHMgemluLmplb25nQG0'
+		title='alternate' />
+	<link rel='self' type='application/atom+xml'
+		href='https://www.google.com/calendar/feeds/zin.jeong%40gmail.com/private/full/5kb67mvqv152ismgh0qesl478s' />
+	<link rel='edit' type='application/atom+xml'
+		href='https://www.google.com/calendar/feeds/zin.jeong%40gmail.com/private/full/5kb67mvqv152ismgh0qesl478s' />
+
+	<author>
+		<name>Á¤ÀçÈ«</name>
+		<email>zin.jeong@gmail.com</email>
+	</author>
+
+	<gd:comments>
+		<gd:feedLink
+			href='https://www.google.com/calendar/feeds/zin.jeong%40gmail.com/private/full/5kb67mvqv152ismgh0qesl478s/comments' />
+	</gd:comments>
+
+	<gd:eventStatus value='http://schemas.google.com/g/2005#event.confirmed' />
+
+	<gd:where />
+
+	<gd:who 
+		email='zin.jeong@gmail.com' 
+		rel='http://schemas.google.com/g/2005#event.organizer'
+		valueString='zin.jeong@gmail.com' />
+
+	<gd:when 
+		endTime='2011-04-20T05:00:13.000+09:00' 
+		startTime='2011-04-20T05:00:13.000+09:00' />
+
+	<gd:transparency value='http://schemas.google.com/g/2005#event.opaque' />
+	<gd:visibility value='http://schemas.google.com/g/2005#event.default' />
+
+	<gCal:anyoneCanAddSelf value='false' />
+	<gCal:guestsCanInviteOthers value='true' />
+	<gCal:guestsCanModify value='false' />
+	<gCal:guestsCanSeeGuests value='true' />
+	<gCal:sequence value='0' />
+
+	<gCal:uid value='5kb67mvqv152ismgh0qesl478s@google.com' />
+</entry>

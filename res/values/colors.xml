@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+	
+<resources>
+	<color name="background">#3500ffff</color>
+
+	<color name="cal_hilite">#ffffffff</color>
+	<color name="cal_light">#64c6d4ef</color>
+	<color name="cal_dark">#6456648f</color>
+	<color name="cal_foreground">#f0000000</color>
+	<color name="cal_hint_0">#64ff0000</color>
+	<color name="cal_hint_1">#6400ff80</color>
+	<color name="cal_hint_2">#2000ff80</color>
+
+	<color name="cal_background">#ffeff9ff</color>
+
+	<color name="cal_sunday">#abff0000</color>
+	<color name="cal_normalday">#ab000000</color>
+	<color name="cal_satday">#ab0000ff</color>
+	<color name="cal_todaybox">#ab94BA21</color>
+	
+	<color name="orange">#abff7921</color>
+	<color name="sun_background">#ffffeeee</color>
+	<color name="widget_dday">#abff7921</color>
+	<color name="cal_groupdate">#ab44D944</color>
+	<color name="disable_text">#66cccccc</color>
+	
+	
+	
+	
+	<color name="today_schedule_list">#ff000000</color>
+	
+		
+	<color name="alarm_infocolor">#ffEF9221</color>
+	<color name="dday_infocolor">#ff528EFF</color>
+	
+
+	<color name="cal_selected">#64ff8000</color>
+
+</resources>

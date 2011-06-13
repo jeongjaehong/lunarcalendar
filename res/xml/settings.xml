@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+	<PreferenceCategory android:title="일반설정"
+		android:key="GeneralInfo">
+
+		<CheckBoxPreference android:key="lunaicon"
+			android:title="@string/lunaicon_title" android:summary="@string/lunaicon_summary"
+			android:defaultValue="true" />
+		<CheckBoxPreference android:key="lunadays"
+			android:title="@string/lunadays_title" android:summary="@string/lunadays_summary"
+			android:defaultValue="true" />
+
+		<CheckBoxPreference android:key="anniversary"
+			android:title="@string/anniversary_title" android:summary="@string/anniversary_summary"
+			android:defaultValue="false" />
+
+		<CheckBoxPreference android:key="sdcarduse"
+			android:title="@string/sdcarduse" android:summary="@string/sdcarduse_summary"
+			android:defaultValue="false" />
+
+		<ListPreference android:key="widgetcolor"
+			android:title="@string/title_list_preference" 
+			android:summary="@string/summary_list_preference"
+			android:entries="@array/entries_list_preference" 
+			android:entryValues="@array/widgetcolor_valuelist"
+			android:dialogTitle="@string/dialog_title_list_preference" />
+
+	</PreferenceCategory>
+
+	<PreferenceCategory android:title="알람및 통지방법 설정"
+		android:key="AlarmInfo">
+
+		<CheckBoxPreference android:key="alarmcheck"
+			android:title="@string/alarm_title" android:summary="@string/alarm_summary"
+			android:defaultValue="true" />
+
+		<CheckBoxPreference android:key="sound"
+			android:title="알림음 사용" android:summary="알림음을  변경하려면 선택해제 후 다시 선택하십시오."
+			android:dependency="alarmcheck" android:defaultValue="true" />
+
+		<CheckBoxPreference android:key="vibrate"
+			android:title="진동 사용" android:summary="진동을 사용하려면 선택하십시오."
+			android:dependency="alarmcheck" android:defaultValue="false" />
+
+		<CheckBoxPreference android:key="ledlight"
+			android:title="LED 사용" android:summary="LED램프 깜박임을 사용하려면 선택하십시오."
+			android:dependency="alarmcheck" android:defaultValue="false" />
+
+	</PreferenceCategory>
+
+	<PreferenceCategory android:title="구글 동기화 설정"
+		android:key="GoogleAccountInfo">
+
+		<ListPreference android:key="accounts" android:title="Google 계정"
+			android:summary="Sync할 계정을 선택하십시오." android:dialogTitle="Google 계정선택" />
+
+		<ListPreference android:key="calendars" android:title="Calendar 선택"
+			android:summary="동기화할 달력을 선택하십시오." android:dialogTitle="달력 선택" />
+
+		<ListPreference android:key="onlinecalendars"
+			android:title="달력 구독하기" android:summary="온라인으로 구독할 달력을 선택하십시오."
+			android:dialogTitle="달력 선택" />
+
+		<ListPreference android:key="syncmethod" android:title="Sync 방법"
+			android:summary="Sync 방법을 선택하십시오." android:dialogTitle="Sync 방법"
+			android:entries="@array/entries_syncmethod_preference"
+			android:entryValues="@array/entryvalues_syncmethod_preference"
+			android:defaultValue="stop" />
+
+
+	</PreferenceCategory>
+
+</PreferenceScreen>
