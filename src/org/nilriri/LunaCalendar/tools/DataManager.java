@@ -7,7 +7,6 @@ import android.content.Context;
 import android.database.Cursor;
 import android.os.Handler;
 import android.os.Message;
-import android.util.Log;
 import android.widget.Toast;
 
 public class DataManager {
@@ -23,7 +22,7 @@ public class DataManager {
 
         // work = true  : 내부메모리 => 외부메모리
         //        false : 외부메모리 => 내부메모리  
-        Log.d(Common.TAG, "==========StartCopy=========" + work);
+        //Log.d(Common.TAG, "==========StartCopy=========" + work);
         daoSource = new ScheduleDaoImpl(mContext, null, !work);
         daoTarget = new ScheduleDaoImpl(mContext, null, work);
 

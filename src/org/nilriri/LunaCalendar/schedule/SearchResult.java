@@ -18,7 +18,6 @@ import android.database.Cursor;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.ContextMenu;
 import android.view.LayoutInflater;
 import android.view.Menu;
@@ -317,15 +316,15 @@ public class SearchResult extends ExpandableListActivity implements OnTouchListe
             }
 
             String lunaryn = c.getString(c.getColumnIndexOrThrow(Schedule.LUNARYN));
-            Log.d(Common.TAG, "lunaryn=" + lunaryn);
+            //Log.d(Common.TAG, "lunaryn=" + lunaryn);
             String sdate = "";
             String ldate = "";
             if ("Y".equals(lunaryn)) {
-                Log.d(Common.TAG, "lunaryn=" + lunaryn);
+                //Log.d(Common.TAG, "lunaryn=" + lunaryn);
                 ldate = c.getString(c.getColumnIndexOrThrow(Schedule.SCHEDULE_LDATE));
                 sdate = Common.fmtDate(Lunar2Solar.l2s(ldate));
-                Log.d(Common.TAG, "sdate=" + sdate);
-                Log.d(Common.TAG, "ldate=" + ldate);
+                //Log.d(Common.TAG, "sdate=" + sdate);
+                //Log.d(Common.TAG, "ldate=" + ldate);
             } else {
                 sdate = c.getString(c.getColumnIndexOrThrow(Schedule.SCHEDULE_DATE));
                 ldate = Lunar2Solar.s2l(sdate);

@@ -21,8 +21,8 @@ import org.nilriri.LunaCalendar.tools.DataManager;
 import org.nilriri.LunaCalendar.tools.Lunar2Solar;
 import org.nilriri.LunaCalendar.tools.OldEvent;
 import org.nilriri.LunaCalendar.tools.Prefs;
-import org.nilriri.LunaCalendar.tools.SearchData;
 import org.nilriri.LunaCalendar.tools.QuickContactViewer;
+import org.nilriri.LunaCalendar.tools.SearchData;
 
 import android.app.Activity;
 import android.app.AlertDialog;
@@ -104,14 +104,14 @@ public class LunarCalendar extends Activity implements RefreshManager {
         if (intent.hasExtra("DataPk")) {
 
             Long dataPK = intent.getLongExtra("DataPk", new Long(0));
-            Log.d(Common.TAG, "dataPK=" + dataPK);
+            //Log.d(Common.TAG, "dataPK=" + dataPK);
             ScheduleBean s = new ScheduleBean(dao.query(dataPK));
 
             if (dataPK > 0) {
                 if (s.getLunaryn()) {
                     String sdate = Lunar2Solar.l2s(s.getYear() + "", s.getLMonth() + "", s.getLDay() + "");
 
-                    Log.d(Common.TAG, "sdate=" + sdate);
+                    //Log.d(Common.TAG, "sdate=" + sdate);
 
                     mYear = Integer.parseInt(sdate.substring(0, 4));
                     mMonth = Integer.parseInt(sdate.substring(4, 6)) - 1;
@@ -260,7 +260,7 @@ public class LunarCalendar extends Activity implements RefreshManager {
             // 날짜가 바뀌면 다시 조회하기 위해서 초기화한다.
             todayEvents.clear();
         } catch (Exception e) {
-            Log.e(Common.TAG, e.getMessage(), e);
+            //Log.e(Common.TAG, e.getMessage(), e);
         }
     }
 
@@ -755,7 +755,7 @@ public class LunarCalendar extends Activity implements RefreshManager {
             try {
                 info = (AdapterView.AdapterContextMenuInfo) menuInfo;
             } catch (ClassCastException e) {
-                Log.e("LunarCalendar", "bad menuInfo", e);
+                //Log.e("LunarCalendar", "bad menuInfo", e);
                 return;
             }
 
@@ -833,7 +833,7 @@ public class LunarCalendar extends Activity implements RefreshManager {
                     info = (AdapterView.AdapterContextMenuInfo) item.getMenuInfo();
                     dao.syncDelete(info.id, this);
                 } catch (ClassCastException e) {
-                    Log.e("LunarCalendar", "bad menuInfo", e);
+                    //Log.e("LunarCalendar", "bad menuInfo", e);
                     return false;
                 }
                 return true;

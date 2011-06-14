@@ -26,7 +26,6 @@ import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.os.Parcelable;
 import android.util.AttributeSet;
-import android.util.Log;
 import android.view.KeyEvent;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -146,7 +145,7 @@ public class LunarCalendarView extends View {
         while (cursor2.moveToNext()) {
             String date[] = Common.tokenFn(cursor2.getString(0), "-");
 
-            Log.d(Common.TAG, "Lunar===>" + cursor2.getString(0));
+            //Log.d(Common.TAG, "Lunar===>" + cursor2.getString(0));
 
             boolean isChange = (queryMonth.substring(0, 7).compareTo(cursor2.getString(0).substring(0, 7)) >= 0);
             String sDay = "";
@@ -156,12 +155,12 @@ public class LunarCalendarView extends View {
             } else {
                 sDay = Lunar2Solar.l2s(date[0], date[1], date[2]);
             }
-            Log.d(Common.TAG, "Solar===>" + sDay);
+            //Log.d(Common.TAG, "Solar===>" + sDay);
 
             int day = Integer.parseInt(sDay.substring(6));
             mScheduleMap.put(day, 1);
 
-            Log.d(Common.TAG, "Map===>" + mScheduleMap.toString());
+            //Log.d(Common.TAG, "Map===>" + mScheduleMap.toString());
 
         }
         cursor2.close();
@@ -218,7 +217,7 @@ public class LunarCalendarView extends View {
 
         }
 
-        Log.d(Common.TAG, "ldaysource=" + ldaysource);
+        //Log.d(Common.TAG, "ldaysource=" + ldaysource);
         mLunadays = Common.tokenFn(ldaysource.toString(), ",");
 
         // 음력기념일 정보를 보관한다.

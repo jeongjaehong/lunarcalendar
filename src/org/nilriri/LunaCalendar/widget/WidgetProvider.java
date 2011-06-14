@@ -28,7 +28,6 @@ import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.os.AsyncTask;
 import android.text.format.Time;
-import android.util.Log;
 import android.view.View;
 import android.widget.RemoteViews;
 
@@ -39,7 +38,7 @@ public class WidgetProvider extends AppWidgetProvider {
 
     @Override
     public void onUpdate(Context context, AppWidgetManager appWidgetManager, int[] appWidgetIds) {
-        Log.d(Common.TAG, "onUpdate");
+        //Log.d(Common.TAG, "onUpdate");
         final int N = appWidgetIds.length;
         for (int i = 0; i < N; i++) {
             int appWidgetId = appWidgetIds[i];
@@ -51,13 +50,13 @@ public class WidgetProvider extends AppWidgetProvider {
     @Override
     public void onReceive(Context context, Intent intent) {
         super.onReceive(context, intent);
-        Log.d(Common.TAG, "onReceive=" + intent);
+        //Log.d(Common.TAG, "onReceive=" + intent);
 
     }
 
     @Override
     public void onDeleted(Context context, int[] appWidgetIds) {
-        Log.d(Common.TAG, "onDeleted");
+        //Log.d(Common.TAG, "onDeleted");
         final int N = appWidgetIds.length;
         for (int i = 0; i < N; i++) {
             WidgetConfigure.removePrefData(context, appWidgetIds[i]);
@@ -81,7 +80,7 @@ public class WidgetProvider extends AppWidgetProvider {
 
     @Override
     public void onDisabled(Context context) {
-        Log.d(Common.TAG, "onDisabled");
+        //Log.d(Common.TAG, "onDisabled");
         PackageManager pm = context.getPackageManager();
         pm.setComponentEnabledSetting(//
                 new ComponentName("org.nilriri.LunaCalendar",//
@@ -104,7 +103,7 @@ public class WidgetProvider extends AppWidgetProvider {
 
                 AppWidgetProviderInfo wf = appWidgetManager.getAppWidgetInfo(appWidgetId);
 
-                Log.d(Common.TAG, "widget provider=" + wf.provider);
+                //Log.d(Common.TAG, "widget provider=" + wf.provider);
 
                 if (wf.provider.toString().indexOf("org.nilriri.LunaCalendar.widget") > 0) {
                     new ShowOnlineCalendar().execute(appWidgetId);
@@ -306,15 +305,15 @@ public class WidgetProvider extends AppWidgetProvider {
 
                                 AppWidgetProviderInfo wf = mAppWidgetManager.getAppWidgetInfo(mAppWidgetId);
 
-                                Log.d(Common.TAG, "wf.initialLayout=" + wf.initialLayout);
-                                Log.d(Common.TAG, "dataPK=" + wf);
+                                //Log.d(Common.TAG, "wf.initialLayout=" + wf.initialLayout);
+                                //Log.d(Common.TAG, "dataPK=" + wf);
 
                                 if (wf.initialLayout == R.layout.widget2x2_transparent) {
                                     views.setViewVisibility(R.id.text_title, View.GONE);
                                     views.setViewVisibility(R.id.text_title2, View.VISIBLE);
                                     mDday_content = mDday_msg + "\n";
                                     mDday_content += cursor.getString(cursor.getColumnIndexOrThrow(Schedule.SCHEDULE_CONTENTS));
-                                    Log.d(Common.TAG, "mDday_content=" + mDday_content);
+                                    //Log.d(Common.TAG, "mDday_content=" + mDday_content);
                                 }
 
                                 mDday_date = D_dayDate;
@@ -402,16 +401,8 @@ public class WidgetProvider extends AppWidgetProvider {
     }
 
     public static int getWidgetLayout(Context context, AppWidgetManager appWidgetManager, int appWidgetId) {
-        System.out.println("---------------------------------------------");
-        System.out.println("appWidgetId=" + appWidgetId);
-        System.out.println("getWidgetColor(context, appWidgetId)=" + getWidgetColor(context, appWidgetId));
 
         AppWidgetProviderInfo wf = appWidgetManager.getAppWidgetInfo(appWidgetId);
-
-        System.out.println("wf.minWidth=" + wf.minWidth);
-        System.out.println("wf.minHeight=" + wf.minHeight);
-        System.out.println("wf.label=" + wf.label);
-        System.out.println("---------------------------------------------");
 
         switch (wf.initialLayout) {
 

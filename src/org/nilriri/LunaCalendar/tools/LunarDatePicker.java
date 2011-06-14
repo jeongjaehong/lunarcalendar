@@ -8,7 +8,6 @@ import org.nilriri.LunaCalendar.tools.NumberPicker.OnChangedListener;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.view.Window;
 import android.view.View.OnClickListener;
@@ -68,8 +67,8 @@ public class LunarDatePicker extends Activity implements OnClickListener {
 
         Calendar c = Calendar.getInstance();
 
-        Log.e(Common.TAG, "month=" + mIntent.getIntExtra("month", -99));
-        Log.e(Common.TAG, "day=" + mIntent.getIntExtra("day", -88));
+        //Log.e(Common.TAG, "month=" + mIntent.getIntExtra("month", -99));
+        //Log.e(Common.TAG, "day=" + mIntent.getIntExtra("day", -88));
 
         int year = mIntent.getIntExtra("year", 1900);
         if (1900 == year) {
@@ -111,8 +110,8 @@ public class LunarDatePicker extends Activity implements OnClickListener {
                 intent.putExtra("month", mMonth.getCurrent());
                 intent.putExtra("day", mDay.getCurrent());
 
-                Log.e(Common.TAG, "month=" + mMonth.getCurrent());
-                Log.e(Common.TAG, "day=" + mDay.getCurrent());
+                //Log.e(Common.TAG, "month=" + mMonth.getCurrent());
+                //Log.e(Common.TAG, "day=" + mDay.getCurrent());
 
                 setResult(RESULT_OK, intent);
                 finish();

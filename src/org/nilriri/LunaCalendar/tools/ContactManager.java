@@ -3,9 +3,7 @@ package org.nilriri.LunaCalendar.tools;
 import android.content.Context;
 import android.database.Cursor;
 import android.net.Uri;
-import android.provider.CallLog;
 import android.provider.ContactsContract;
-import android.util.Log;
 
 public class ContactManager {
 

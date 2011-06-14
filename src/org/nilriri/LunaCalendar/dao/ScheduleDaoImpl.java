@@ -198,7 +198,7 @@ public class ScheduleDaoImpl extends AbstractDao {
 
                 scheduleBean.setId(c2.getLong(Schedule.COL_ID));
                 c2.close();
-                Log.d(Common.TAG, "GUID동일건 UPDATE..");
+                //Log.d(Common.TAG, "GUID동일건 UPDATE..");
 
                 // 로컬에 없는 정보를 동기화 요청 결과로 변경하여 로컬에 저장한다.
                 localBean.setTitle(scheduleBean.getSchedule_title());
@@ -559,7 +559,7 @@ public class ScheduleDaoImpl extends AbstractDao {
 
                     if ("".equals(url)) {
                         cancel(true);
-                        Log.e(Common.TAG, "===== 신규 달력생성 실패!!! =====");
+                        //Log.e(Common.TAG, "===== 신규 달력생성 실패!!! =====");
                     }
                 } else {
                     url = params[0];
@@ -608,7 +608,7 @@ public class ScheduleDaoImpl extends AbstractDao {
 
                     if ("".equals(url)) {
                         cancel(true);
-                        Log.e(Common.TAG, "===== 신규 달력생성 실패!!! =====");
+                        //Log.e(Common.TAG, "===== 신규 달력생성 실패!!! =====");
                     }
                 } else {
                     url = params[0];
@@ -659,7 +659,7 @@ public class ScheduleDaoImpl extends AbstractDao {
 
                     if ("".equals(url)) {
                         cancel(true);
-                        Log.e(Common.TAG, "===== 신규 달력생성 실패!!! =====");
+                        //Log.e(Common.TAG, "===== 신규 달력생성 실패!!! =====");
                     }
                 } else {
                     url = params[0];
@@ -888,7 +888,7 @@ public class ScheduleDaoImpl extends AbstractDao {
 
         String selectionArgs[] = new String[] { date, date, date, date, date, date, };
 
-        Log.d(Common.TAG, "query=" + query.toString());
+        //Log.d(Common.TAG, "query=" + query.toString());
 
         return getReadableDatabase().rawQuery(query.toString(), selectionArgs);
 
@@ -1194,10 +1194,10 @@ public class ScheduleDaoImpl extends AbstractDao {
         db.beginTransaction();
         boolean isFirst = true;
 
-        Log.d(Common.TAG, "cursor=" + cursor.getCount());
+        //Log.d(Common.TAG, "cursor=" + cursor.getCount());
 
-        Log.d(Common.TAG, " cursor.moveToFirst()=" + cursor.moveToFirst());
-        Log.d(Common.TAG, " moveToNext()=" + cursor.moveToNext());
+        //Log.d(Common.TAG, " cursor.moveToFirst()=" + cursor.moveToFirst());
+        //Log.d(Common.TAG, " moveToNext()=" + cursor.moveToNext());
 
         cursor.moveToFirst();
         while (cursor.getCount() > 0) {
@@ -1219,7 +1219,7 @@ public class ScheduleDaoImpl extends AbstractDao {
 
             val.remove(Schedule._ID);
 
-            Log.d(Common.TAG, "Contents=" + val);
+            //Log.d(Common.TAG, "Contents=" + val);
 
             db.insert("schedule", null, val);
 
@@ -1238,7 +1238,7 @@ public class ScheduleDaoImpl extends AbstractDao {
 
         StringBuilder query = new StringBuilder();
 
-        Log.d(Common.TAG, "month=" + month + ", lfromday=" + lfromday + ", ltoday=" + ltoday);
+        //Log.d(Common.TAG, "month=" + month + ", lfromday=" + lfromday + ", ltoday=" + ltoday);
 
         lfromday = lfromday.substring(4, 8);
         ltoday = ltoday.substring(4, 8);
@@ -1263,7 +1263,7 @@ public class ScheduleDaoImpl extends AbstractDao {
         }
         query.append("and " + Schedule.ALARM_TIME + " = '00:00' ");
 
-        Log.d(Common.TAG, "query=" + query.toString());
+        //Log.d(Common.TAG, "query=" + query.toString());
         return getReadableDatabase().rawQuery(query.toString(), null);
 
     }
@@ -1467,7 +1467,7 @@ public class ScheduleDaoImpl extends AbstractDao {
 
         String selectionArgs[] = null;
 
-        Log.d(Common.TAG, query.toString());
+        //Log.d(Common.TAG, query.toString());
 
         return getReadableDatabase().rawQuery(query.toString(), selectionArgs);
 
@@ -1497,7 +1497,7 @@ public class ScheduleDaoImpl extends AbstractDao {
 
         String selectionArgs[] = null;
 
-        Log.d(Common.TAG, query.toString());
+        //Log.d(Common.TAG, query.toString());
 
         return getReadableDatabase().rawQuery(query.toString(), selectionArgs);
 
@@ -1591,7 +1591,7 @@ public class ScheduleDaoImpl extends AbstractDao {
 
         String selectionArgs[] = null;
 
-        Log.d(Common.TAG, "qroup query=" + query.toString());
+        //Log.d(Common.TAG, "qroup query=" + query.toString());
 
         return getReadableDatabase().rawQuery(query.toString(), selectionArgs);
 
@@ -1883,7 +1883,7 @@ public class ScheduleDaoImpl extends AbstractDao {
 
         query.append(" ORDER BY 2 ASC ");
 
-        Log.d(Common.TAG, query.toString());
+        //Log.d(Common.TAG, query.toString());
 
         return getReadableDatabase().rawQuery(query.toString(), null);
 
@@ -1921,7 +1921,7 @@ public class ScheduleDaoImpl extends AbstractDao {
         query.append(" FROM " + Schedule.SCHEDULE_DAYS_JOIN_TABLE);
         query.append(" WHERE _id = ? ");
 
-        Log.d(Common.TAG, "query=" + query.toString());
+        //Log.d(Common.TAG, "query=" + query.toString());
 
         return getReadableDatabase().rawQuery(query.toString(), selectionArgs);
 

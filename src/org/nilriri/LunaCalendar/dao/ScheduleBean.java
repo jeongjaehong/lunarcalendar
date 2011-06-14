@@ -318,7 +318,7 @@ public class ScheduleBean {
             }
         } catch (Exception e) {
             e.printStackTrace();
-            Log.d(Common.TAG, "event is " + event.toString());
+            Log.e(Common.TAG, "event is " + event.toString());
         }
     }
 
@@ -491,7 +491,7 @@ public class ScheduleBean {
         } else {
             //TODO: 반복일정일 경우 반복일정 정보를 갱신한다.
             // 미구현...
-            Log.d(Common.TAG, "OLD Recurrence=" + this.getRecurrence());
+            //Log.d(Common.TAG, "OLD Recurrence=" + this.getRecurrence());
 
             this.setWhen(null);
 

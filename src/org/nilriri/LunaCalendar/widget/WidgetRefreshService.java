@@ -11,7 +11,6 @@ import android.os.Binder;
 import android.os.IBinder;
 import android.os.Parcel;
 import android.os.RemoteException;
-import android.util.Log;
 
 public class WidgetRefreshService extends Service {
 
@@ -21,7 +20,7 @@ public class WidgetRefreshService extends Service {
     public void onCreate() {
         mNM = (NotificationManager) getSystemService(NOTIFICATION_SERVICE);
 
-        Log.d(Common.TAG, "WidgetRefreshService Create...");
+        //Log.d(Common.TAG, "WidgetRefreshService Create...");
 
         // 3초후 서비스 자동 종료.
         Thread thr = new Thread(null, mTask, "WidgetAlarmService");
@@ -33,7 +32,7 @@ public class WidgetRefreshService extends Service {
         try {
             if (Common.isConnectNetwork(WidgetRefreshService.this)) {
 
-                Log.d(Common.TAG, "onStart=" + intent);
+                //Log.d(Common.TAG, "onStart=" + intent);
                 if (AppWidgetManager.ACTION_APPWIDGET_UPDATE.equals(intent.getAction())) {
                     //WidgetUtil.refreshWidgets(context);
                     AppWidgetManager awm = AppWidgetManager.getInstance(getBaseContext());
@@ -42,7 +41,7 @@ public class WidgetRefreshService extends Service {
 
                     WidgetProvider.updateAppWidget(getBaseContext(), awm, appWidgetId);
 
-                    Log.d(Common.TAG, "Refresh Call=" + appWidgetId);
+                    //Log.d(Common.TAG, "Refresh Call=" + appWidgetId);
                 } else {
                     WidgetUtil.refreshWidgets(getBaseContext());
                 }

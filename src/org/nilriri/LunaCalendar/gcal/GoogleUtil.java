@@ -221,7 +221,7 @@ public class GoogleUtil {
                 for (EventEntry newEvent : batchResult.events) {
                     BatchStatus batchStatus = newEvent.batchStatus;
                     if (batchStatus != null && !HttpResponse.isSuccessStatusCode(batchStatus.code)) {
-                        Log.d(Common.TAG, "Error posting event: " + batchStatus.reason);
+                        //Log.d(Common.TAG, "Error posting event: " + batchStatus.reason);
                     }
                 }
                 feed.events.clear();
@@ -344,7 +344,7 @@ public class GoogleUtil {
                         pd.setSecondaryProgress(s++);
 
                         if (batchStatus != null && !HttpResponse.isSuccessStatusCode(batchStatus.code)) {
-                            Log.d(Common.TAG, "Error posting event: " + batchStatus.reason);
+                            //Log.d(Common.TAG, "Error posting event: " + batchStatus.reason);
                         }
                     }
                 } catch (Exception e) {
@@ -363,7 +363,7 @@ public class GoogleUtil {
 
             CalendarUrl url = new CalendarUrl(feedUrl);
             while (true) {
-                Log.d(Common.TAG, "Delete url: " + url.toString());
+                //Log.d(Common.TAG, "Delete url: " + url.toString());
                 feed = EventFeed.executeGet(transport, url);
                 if (feed.events != null) {
 
@@ -378,14 +378,14 @@ public class GoogleUtil {
                         BatchStatus batchStatus = newEvent.batchStatus;
 
                         if (batchStatus != null && !HttpResponse.isSuccessStatusCode(batchStatus.code)) {
-                            Log.d(Common.TAG, "Error posting event: " + batchStatus.reason);
+                            //Log.d(Common.TAG, "Error posting event: " + batchStatus.reason);
                         } else {
-                            Log.d(Common.TAG, "Delete Result: " + batchStatus.reason);
+                            //Log.d(Common.TAG, "Delete Result: " + batchStatus.reason);
                         }
                     }
                 }
                 String nexturl = feed.getNextLink();
-                Log.d(Common.TAG, "Delete getNextLink: " + nexturl);
+                //Log.d(Common.TAG, "Delete getNextLink: " + nexturl);
                 if (nexturl == null) {
                     break;
                 } else {

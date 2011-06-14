@@ -19,7 +19,6 @@ package org.nilriri.LunaCalendar.widget;
 import org.nilriri.LunaCalendar.R;
 import org.nilriri.LunaCalendar.dao.ScheduleDaoImpl;
 import org.nilriri.LunaCalendar.dao.Constants.Schedule;
-import org.nilriri.LunaCalendar.tools.Common;
 import org.nilriri.LunaCalendar.tools.Prefs;
 
 import android.app.Activity;
@@ -31,7 +30,6 @@ import android.database.Cursor;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -286,7 +284,7 @@ public class WidgetConfigure extends Activity {
                             }
                         } catch (Exception e) {
 
-                            Log.d(Common.TAG, "error=" + e.getMessage());
+                            //Log.d(Common.TAG, "error=" + e.getMessage());
 
                         }
 

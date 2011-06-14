@@ -216,10 +216,10 @@ public class Common extends Activity {
             if (process.importance == RunningAppProcessInfo.IMPORTANCE_FOREGROUND) {
                 if (process.processName.indexOf("WidgetRefreshService") >= 0) {
                     isRun = true;
-                    Log.d(Common.TAG, "isRun=" + process.processName);
+                    //Log.d(Common.TAG, "isRun=" + process.processName);
                     break;
                 } else {
-                    Log.d(Common.TAG, "process=" + process.processName);
+                    //Log.d(Common.TAG, "process=" + process.processName);
                 }
 
             }
@@ -245,10 +245,10 @@ public class Common extends Activity {
             if (process.importance == RunningAppProcessInfo.IMPORTANCE_FOREGROUND) {
                 if (process.processName.indexOf("WidgetRefreshService") >= 0) {
                     isRun = true;
-                    Log.d(Common.TAG, "isRun=" + process.processName);
+                    //Log.d(Common.TAG, "isRun=" + process.processName);
                     break;
                 } else {
-                    Log.d(Common.TAG, "process=" + process.processName);
+                    //Log.d(Common.TAG, "process=" + process.processName);
                 }
 
             }
@@ -273,10 +273,10 @@ public class Common extends Activity {
             if (process.importance == RunningAppProcessInfo.IMPORTANCE_FOREGROUND) {
                 if (process.processName.indexOf("org.nilriri.LunaCalendar:remote") >= 0) {
                     isRun = true;
-                    Log.d(Common.TAG, "isRun=" + process.processName);
+                    //Log.d(Common.TAG, "isRun=" + process.processName);
                     break;
                 } else {
-                    Log.d(Common.TAG, "processName=" + process.processName);
+                    //Log.d(Common.TAG, "processName=" + process.processName);
                 }
             }
         }
