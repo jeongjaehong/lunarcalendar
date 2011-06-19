@@ -1,28 +1,32 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!--
- ! Excerpted from "Hello, Android!",
- ! published by The Pragmatic Bookshelf.
- ! Copyrights apply to this code. It may not be used to create training material, 
- ! courses, books, articles, and the like. Contact us if you are in doubt.
- ! We make no guarantees that this code is fit for any purpose. 
- ! Visit http://www.pragmaticprogrammer.com/titles/eband for more book information.
--->
+	<!--
+		! Excerpted from "Hello, Android!", ! published by The Pragmatic
+		Bookshelf. ! Copyrights apply to this code. It may not be used to
+		create training material, ! courses, books, articles, and the like.
+		Contact us if you are in doubt. ! We make no guarantees that this code
+		is fit for any purpose. ! Visit
+		http://www.pragmaticprogrammer.com/titles/eband for more book
+		information.
+	-->
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
-   <item android:id="@+id/datawork"
-      android:title="자료관리"
-      android:icon="@android:drawable/ic_menu_save"/>
+	<item android:id="@+id/datawork" android:title="자료관리"
+		android:icon="@android:drawable/ic_menu_save" />
 
-   <item android:id="@+id/batchjob"
-      android:title="배치작업"
-      android:icon="@android:drawable/ic_menu_upload"/>
+	<item android:id="@+id/batchjob" android:title="배치작업"
+		android:icon="@android:drawable/ic_menu_upload" />
 
-   <item android:id="@+id/settings"
-      android:title="@string/settings_label"
-      android:icon="@android:drawable/ic_menu_preferences"
-      android:alphabeticShortcut="@string/settings_shortcut" />
+	<item android:id="@+id/settings" android:title="@string/settings_label"
+		android:icon="@android:drawable/ic_menu_preferences"
+		android:alphabeticShortcut="@string/settings_shortcut" />
 
-   <item android:id="@+id/about"
-      android:title="@string/about_label"
-      android:icon="@android:drawable/ic_menu_help"
-      android:alphabeticShortcut="C" />
+	<item android:id="@+id/email" android:title="피드백 및 오류전송(이메일)"
+		android:icon="@android:drawable/sym_action_email" />
+
+	<item android:id="@+id/blog" android:title="홈페이지 방문"
+		android:icon="@android:drawable/sym_action_chat" />
+
+	<item android:id="@+id/about" android:title="@string/about_label"
+		android:icon="@android:drawable/ic_menu_help"
+		android:alphabeticShortcut="C" />
+
 </menu>

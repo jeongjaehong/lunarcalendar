@@ -8,13 +8,14 @@ import android.database.sqlite.SQLiteDatabase.CursorFactory;
 public class InternalStorage extends SQLiteOpenHelper implements StorageSelector {
 
     private Context mContext;
-    private SQLiteDatabase db;
+
+    //private SQLiteDatabase db;
 
     public InternalStorage(Context context, String name, CursorFactory factory, int version) {
         super(context, name, factory, version);
         mContext = context;
 
-        db = getWritableDatabase();
+        //db = getWritableDatabase();
     }
 
     public Context getContext() {
@@ -32,6 +33,7 @@ public class InternalStorage extends SQLiteOpenHelper implements StorageSelector
     }
 
     public SQLiteDatabase getReadableDatabase() {
+        SQLiteDatabase db = null;
         if (db == null) {
             db = super.getReadableDatabase();
         } else if (!db.isOpen()) {
@@ -41,6 +43,7 @@ public class InternalStorage extends SQLiteOpenHelper implements StorageSelector
     }
 
     public SQLiteDatabase getWritableDatabase() {
+        SQLiteDatabase db = null;
         if (db == null) {
             db = super.getWritableDatabase();
         } else if (db.isReadOnly()) {
@@ -54,17 +57,11 @@ public class InternalStorage extends SQLiteOpenHelper implements StorageSelector
 
     @Override
     public void close() {
-        if (db != null) {
-            db.close();
-        }
         super.close();
     }
 
     public void onDestroy() {
-        if (db != null) {
-            db.close();
-        }
-        super.close();
+        close();
     }
 
 }

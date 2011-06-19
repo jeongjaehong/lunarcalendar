@@ -668,6 +668,32 @@ public class LunarCalendar extends Activity implements RefreshManager {
                 startActivity(new Intent(this, About.class));
                 return true;
             }
+
+            case R.id.blog: {
+                Intent browserIntent = new Intent(android.content.Intent.ACTION_VIEW);
+
+                browserIntent.setAction(Intent.ACTION_VIEW);
+                browserIntent.setData(Uri.parse("http://nilriri.blogspot.com/search/label/LunarCalendar"));
+
+                startActivity(browserIntent);
+
+                return true;
+            }
+            case R.id.email: {
+                final Intent emailIntent = new Intent(android.content.Intent.ACTION_SEND_MULTIPLE);
+
+                /* Fill it with Data */
+                emailIntent.setType("plain/text");
+                emailIntent.putExtra(android.content.Intent.EXTRA_EMAIL, new String[] { "jeongjaehong@gmail.com" });
+                emailIntent.putExtra(android.content.Intent.EXTRA_SUBJECT, "[LunarCalendar]Feedback...");
+                emailIntent.putExtra(android.content.Intent.EXTRA_TEXT, "* 폰 모델:\n* 버젼:\n* 증상:\n* 상황설명:\n\n[LunarCalendar]");
+
+                /* Send it off to the Activity-Chooser */
+                startActivity(Intent.createChooser(emailIntent, "Send mail..."));
+
+                return true;
+            }
+
         }
         return super.onOptionsItemSelected(item);
     }
@@ -849,6 +875,7 @@ public class LunarCalendar extends Activity implements RefreshManager {
                 }
                 return true;
             }
+
         }
         return false;
     }
