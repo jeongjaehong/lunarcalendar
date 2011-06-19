@@ -26,6 +26,7 @@ import android.content.pm.PackageManager;
 import android.database.Cursor;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
+import android.net.Uri;
 import android.os.AsyncTask;
 import android.text.format.Time;
 import android.view.View;
@@ -149,18 +150,26 @@ public class WidgetProvider extends AppWidgetProvider {
 
                 //dataPK 가 0보다 작업경우...  
                 // 온라인 일정을 조회한다.
-                if (0 > dataPK) {
+                if (0 > dataPK && !"".equals(Prefs.getOnlineCalendar(mContext))) {
 
+                    // 위젯을 새로고침하기 위한 서비스를 호출하기위한 인텐트.
                     Intent serviceIntent = new Intent(mContext, WidgetRefreshService.class);
                     serviceIntent.setAction(AppWidgetManager.ACTION_APPWIDGET_UPDATE);
                     serviceIntent.putExtra("WidgetId", mAppWidgetId);
+
+                    // 브라우져를 오픈해서 구글 캘린더 사이트로 이동하기 위한 인텐트
+                    Intent browserIntent = new Intent();
+                    browserIntent.setAction(Intent.ACTION_VIEW);
+                    browserIntent.setData(Uri.parse("http://www.google.com/calendar/gp"));
 
                     StringBuilder eventdata = new StringBuilder();
                     String url = WidgetConfigure.getWidgetUrl(mContext, mAppWidgetId);
 
                     if ("".equals(url)) {
                         url = Prefs.getOnlineCalendar(mContext);
+
                     } else if (url.indexOf("&start-max=") >= 0) {
+
                         int pos = url.indexOf("&start-max=");
                         url = url.substring(0, pos - 1);
 
@@ -188,15 +197,17 @@ public class WidgetProvider extends AppWidgetProvider {
                         views.setTextViewText(R.id.text_contents, "");
                         views.setImageViewResource(R.id.widget_icon, R.drawable.flag4);
 
-                        views.setOnClickPendingIntent(R.id.widget, //
-                                PendingIntent.getService(mContext, mAppWidgetId, serviceIntent, 0));
+                        // 구글캘린더를 브라우져로 오픈한다.
+                        views.setOnClickPendingIntent(R.id.widget, PendingIntent.getActivity(mContext, mAppWidgetId, browserIntent, 0));
+
+                        // 위젯을 지정한 날짜에 일정이 없는경우 위젯클릭시 현재 날짜기준으로 새로고침 할경우 사용.
+                        //views.setOnClickPendingIntent(R.id.widget, PendingIntent.getService(mContext, mAppWidgetId, serviceIntent, 0));
 
                     } else {
                         if ("0".equals(todayEvents.get(0).id)) {
                             // 일정조회중 네트워크 오류나 기타 타임아웃같은 오류가 발생했을경우..
                             // 터치 했을때 리프레쉬 가능하도록 설정만 해준다.
-                            views.setOnClickPendingIntent(R.id.widget, //
-                                    PendingIntent.getService(mContext, mAppWidgetId, serviceIntent, 0));
+                            views.setOnClickPendingIntent(R.id.widget, PendingIntent.getService(mContext, mAppWidgetId, serviceIntent, 0));
                         } else {
                             String names[] = new String[todayEvents.size()];
                             String contents[] = new String[todayEvents.size()];
@@ -226,9 +237,11 @@ public class WidgetProvider extends AppWidgetProvider {
 
                             // 일정의 상세내용이 없는경우...
                             if (contents.length == 0 || contents == null) {
+                                // 구글캘린더 오픈.
+                                views.setOnClickPendingIntent(R.id.widget, PendingIntent.getActivity(mContext, mAppWidgetId, browserIntent, 0));
 
-                                views.setOnClickPendingIntent(R.id.widget,//
-                                        PendingIntent.getService(mContext, mAppWidgetId, serviceIntent, 0));
+                                // 새로고침
+                                //views.setOnClickPendingIntent(R.id.widget, PendingIntent.getService(mContext, mAppWidgetId, serviceIntent, 0));
                             } else { // 일정의 상세내용이 있는경우 내용에 따라서 작업한다.
                                 String eventContent = contents[0] == null ? "" : contents[0];
 
@@ -249,17 +262,21 @@ public class WidgetProvider extends AppWidgetProvider {
 
                                     views.setImageViewResource(R.id.widget_icon, R.drawable.ic_bible);
 
-                                    views.setOnClickPendingIntent(R.id.widget, //
-                                            PendingIntent.getActivity(mContext, mAppWidgetId, bibleIntent, 0));
+                                    // 온라인 성경 앱 오픈.
+                                    views.setOnClickPendingIntent(R.id.widget, PendingIntent.getActivity(mContext, mAppWidgetId, bibleIntent, 0));
                                 } else {
 
-                                    views.setOnClickPendingIntent(R.id.widget, //
-                                            PendingIntent.getService(mContext, mAppWidgetId, serviceIntent, 0));
+                                    // 구글 캘린더 오픈.
+                                    views.setOnClickPendingIntent(R.id.widget, PendingIntent.getActivity(mContext, mAppWidgetId, browserIntent, 0));
+
+                                    // 새로고침.
+                                    //views.setOnClickPendingIntent(R.id.widget, PendingIntent.getService(mContext, mAppWidgetId, serviceIntent, 0));
 
                                 }
                             }
 
                         }
+
                     }
                 } else { // db에서 일정을 조회한다.
 

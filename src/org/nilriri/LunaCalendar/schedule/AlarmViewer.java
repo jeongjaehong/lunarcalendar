@@ -97,6 +97,10 @@ public class AlarmViewer extends Activity implements OnClickListener {
         String days[] = getResources().getStringArray(R.array.repeat_days);
         String lunarsolar[] = getResources().getStringArray(R.array.repeat_lunasolar);
 
+        if (!(scheduleBean.getSchedule_repeat() >= 0 && scheduleBean.getSchedule_repeat() < repeat.length)) {
+            this.finish();
+            return;
+        }
         String repeatnm = repeat[scheduleBean.getSchedule_repeat()] + " \n";
 
         switch (scheduleBean.getSchedule_repeat()) {

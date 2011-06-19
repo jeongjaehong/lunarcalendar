@@ -32,7 +32,7 @@ import android.widget.Toast;
 
 public class ScheduleDaoImpl extends AbstractDao {
 
-    private SQLiteDatabase db;
+    //private SQLiteDatabase db;
     private Context mContext;
     private ScheduleBean oldBean;
     public final boolean mSdcarduse;
@@ -46,7 +46,7 @@ public class ScheduleDaoImpl extends AbstractDao {
 
         mContext = context;
 
-        db = getWritableDatabase();
+        //db = getWritableDatabase();
     }
 
     private void CallerRefresh() {
@@ -287,6 +287,7 @@ public class ScheduleDaoImpl extends AbstractDao {
         @Override
         protected void onPreExecute() {
 
+
             if ("".equals(oldBean.getSchedule_title())) {
                 dialog = ProgressDialog.show(mContext, "", "일정을 복사 후 추가하고 있습니다...", true);
             } else {
@@ -362,6 +363,7 @@ public class ScheduleDaoImpl extends AbstractDao {
 
         @Override
         protected void onPreExecute() {
+
             // 변경사항을 먼저 저장한다.
             localUpdate(oldBean);
 
@@ -431,6 +433,7 @@ public class ScheduleDaoImpl extends AbstractDao {
 
         @Override
         protected void onPreExecute() {
+
             //dialog = ProgressDialog.show(mContext, "", "Delete event from google...", true);
             localDelete(oldBean.getId());
         }
@@ -467,6 +470,7 @@ public class ScheduleDaoImpl extends AbstractDao {
 
         @Override
         protected void onPreExecute() {
+ 
             //dialog = ProgressDialog.show(mContext, "", "구글캘린더에서 일정을 가져오고 있습니다...", true);
             dialog = new ProgressDialog(mContext);
             dialog.setTitle("일정 가져오기");
@@ -506,6 +510,7 @@ public class ScheduleDaoImpl extends AbstractDao {
 
         @Override
         protected void onPreExecute() {
+ 
             dialog = ProgressDialog.show(mContext, "", "구글캘린더의 모든 일정을 삭제하고 있습니다...", true);
         }
 
@@ -536,6 +541,7 @@ public class ScheduleDaoImpl extends AbstractDao {
 
         @Override
         protected void onPreExecute() {
+ 
             dialog = new ProgressDialog(mContext);
             dialog.setTitle("일정생성!");
             dialog.setMessage("구글캘린더에 음력일정을 생성하고 있습니다...");
@@ -585,6 +591,7 @@ public class ScheduleDaoImpl extends AbstractDao {
 
         @Override
         protected void onPreExecute() {
+
             dialog = new ProgressDialog(mContext);
             dialog.setTitle("일정생성!");
             dialog.setMessage("구글캘린더에 일정을 생성하고 있습니다...");
@@ -635,6 +642,7 @@ public class ScheduleDaoImpl extends AbstractDao {
 
         @Override
         protected void onPreExecute() {
+ 
             dialog = new ProgressDialog(mContext);
             dialog.setTitle("일정생성!");
             dialog.setMessage("구글캘린더에 맥체인성경읽기 일정을 생성하고 있습니다...");
@@ -688,6 +696,8 @@ public class ScheduleDaoImpl extends AbstractDao {
      */
     public Long localInsert(ScheduleBean scheduleBean) {
         Long newId;
+        SQLiteDatabase db = this.getWritableDatabase();
+        
         db.beginTransaction();
         if (1 == scheduleBean.getDday_displayyn()) {
             // 기존에 상단에 표시하도록 되어있던 D-day정보는 목록표시로 변경한다.
@@ -705,6 +715,7 @@ public class ScheduleDaoImpl extends AbstractDao {
         whereClause.put(Schedule._ID, scheduleBean.getId());
         whereClause.put(Schedule.UPDATED, scheduleBean.getUpdated(), "<=");
 
+        SQLiteDatabase db = this.getWritableDatabase();
         db.beginTransaction();
         if (1 == scheduleBean.getDday_displayyn()) {
             // 기존에 상단에 표시하도록 되어있던 D-day정보는 목록표시로 변경한다.
@@ -1143,6 +1154,7 @@ public class ScheduleDaoImpl extends AbstractDao {
             return true;
         }
 
+        SQLiteDatabase db = this.getWritableDatabase();
         try {
             String[] CheckData = null;
             FileInputStream fis = new FileInputStream(file);
@@ -1191,6 +1203,7 @@ public class ScheduleDaoImpl extends AbstractDao {
             return false;
         }
 
+        SQLiteDatabase db = this.getWritableDatabase();
         db.beginTransaction();
         boolean isFirst = true;
 
@@ -1927,18 +1940,8 @@ public class ScheduleDaoImpl extends AbstractDao {
 
     }
 
-    public boolean isClose() {
-        if (db != null) {
-            return !db.isOpen();
-        }
-        return false;
-    }
-
     @Override
     public void close() {
-        if (db != null) {
-            db.close();
-        }
         super.close();
     }
 

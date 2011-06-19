@@ -1,69 +1,905 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <feed xmlns='http://www.w3.org/2005/Atom' xmlns:openSearch='http://a9.com/-/spec/opensearchrss/1.0/'
-	xmlns:gCal='http://schemas.google.com/gCal/2005' xmlns:gd='http://schemas.google.com/g/2005'>
-	<id>http://www.google.com/calendar/feeds/p%23weather%40group.v.calendar.google.com/private/full
+	xmlns:gCal='http://schemas.google.com/gCal/2005'>
+	<id>http://www.google.com/calendar/feeds/i_211.57.231.130%23sunrise%40group.v.calendar.google.com/public/basic
 	</id>
-	<updated>2011-05-30T07:35:01.000Z</updated>
+	<updated>2011-06-17T08:24:25.000Z</updated>
 	<category scheme='http://schemas.google.com/g/2005#kind' term='http://schemas.google.com/g/2005#event' />
-	<title type='text'>날씨</title>
-	<subtitle type='text'>관심지역의 일일 일기예보</subtitle>
+	<title type='text'>Sunrise and sunset for 서울특별시</title>
+	<subtitle type='text'>Daily sunrise, sunset, and twilight times for
+		서울특별시</subtitle>
 	<link rel='alternate' type='text/html'
-		href='https://www.google.com/calendar/embed?src=p#weather@group.v.calendar.google.com' />
+		href='https://www.google.com/calendar/embed?src=i_211.57.231.130#sunrise@group.v.calendar.google.com' />
 	<link rel='http://schemas.google.com/g/2005#feed' type='application/atom+xml'
-		href='https://www.google.com/calendar/feeds/p%23weather%40group.v.calendar.google.com/private/full' />
+		href='https://www.google.com/calendar/feeds/i_211.57.231.130%23sunrise%40group.v.calendar.google.com/public/basic' />
 	<link rel='http://schemas.google.com/g/2005#batch' type='application/atom+xml'
-		href='https://www.google.com/calendar/feeds/p%23weather%40group.v.calendar.google.com/private/full/batch' />
+		href='https://www.google.com/calendar/feeds/i_211.57.231.130%23sunrise%40group.v.calendar.google.com/public/basic/batch' />
 	<link rel='self' type='application/atom+xml'
-		href='https://www.google.com/calendar/feeds/p%23weather%40group.v.calendar.google.com/private/full?max-results=25&amp;start-min=2011-05-30&amp;start-max=2011-05-31' />
+		href='https://www.google.com/calendar/feeds/i_211.57.231.130%23sunrise%40group.v.calendar.google.com/public/basic?max-results=25' />
+	<link rel='next' type='application/atom+xml'
+		href='https://www.google.com/calendar/feeds/i_211.57.231.130%23sunrise%40group.v.calendar.google.com/public/basic?start-index=26&amp;max-results=25' />
 	<author>
-		<name>Weather</name>
+		<name>Sunrise/Sunset: 서울특별시</name>
 	</author>
 	<generator version='1.0' uri='http://www.google.com/calendar'>Google Calendar</generator>
-	<openSearch:totalResults>1</openSearch:totalResults>
+	<openSearch:totalResults>1095</openSearch:totalResults>
 	<openSearch:startIndex>1</openSearch:startIndex>
 	<openSearch:itemsPerPage>25</openSearch:itemsPerPage>
-	<gCal:timezone value='Asia/Seoul' />
+	<gCal:timezone value='UTC' />
 	<gCal:timesCleaned value='0' />
 	<entry>
-		<id>http://www.google.com/calendar/feeds/p%23weather%40group.v.calendar.google.com/private/full/20110530_weatherP
+		<id>http://www.google.com/calendar/feeds/i_211.57.231.130%23sunrise%40group.v.calendar.google.com/public/basic/Sunrise%2B734567-a3i4n3f331htrdj4rb9bhn8mpp44dt67
 		</id>
-		<published>2011-05-30T07:35:01.000Z</published>
-		<updated>2011-05-30T07:35:01.000Z</updated>
+		<published>2007-05-17T00:00:00.000Z</published>
+		<updated>2007-05-17T00:00:00.000Z</updated>
 		<category scheme='http://schemas.google.com/g/2005#kind'
 			term='http://schemas.google.com/g/2005#event' />
-		<title type='text'>Seoul, Korea. (26° | 16°) 일기예보</title>
-		<content type='text' />
+		<title type='html'>Sunrise: 9:59pm (previous day), Sunset: 9:30am
+		</title>
+		<summary type='html'>일시: 2012. 3. 5. (&amp;#50900;)&lt;br&gt;
+			&lt;br&gt;참석자: Sunrise/Sunset:
+			&amp;#49436;&amp;#50872;&amp;#53945;&amp;#48324;&amp;#49884;
+
+			&lt;br&gt;일정 상태: 확인됨</summary>
+		<content type='html'>일시: 2012. 3. 5. (월)&lt;br /&gt;
+			&lt;br /&gt;참석자: Sunrise/Sunset: 서울특별시
+
+			&lt;br /&gt;일정 상태: 확인됨
+			&lt;br /&gt;일정 설명: 8:32pm (previous day) Start of astronomical twilight
+			9:03pm (previous day) Start of nautical twilight
+			9:33pm (previous day) Start of civil twilight
+			9:59pm (previous day) Sunrise
+			9:30am Sunset
+			9:56am End of civil twilight
+			10:26am End of nautical twilight
+			10:57am End of astronomical twilight</content>
 		<link rel='alternate' type='text/html'
-			href='https://www.google.com/calendar/event?eid=MjAxMTA1MzBfd2VhdGhlclAgcCN3ZWF0aGVyQHY'
+			href='https://www.google.com/calendar/event?eid=U3VucmlzZSs3MzQ1NjctYTNpNG4zZjMzMWh0cmRqNHJiOWJobjhtcHA0NGR0NjcgaV8yMTEuNTcuMjMxLjEzMCNzdW5yaXNlQHY'
 			title='alternate' />
-		<link rel='http://schemas.google.com/gCal/2005/webContent' type='text/html'
-			href='http://www.google.com/calendar/images/weather/cloudy.gif'
-			title='Seoul, Korea. (26° | 16°) 일기예보'>
-			<gCal:webContent height='140'
-				url='http://www.google.com/calendar/weather?w_location=Seoul,+Korea.&amp;w_date=20110530&amp;w_units=C&amp;hl=ko'
-				width='425' />
-		</link>
 		<link rel='self' type='application/atom+xml'
-			href='https://www.google.com/calendar/feeds/p%23weather%40group.v.calendar.google.com/private/full/20110530_weatherP' />
+			href='https://www.google.com/calendar/feeds/i_211.57.231.130%23sunrise%40group.v.calendar.google.com/public/basic/Sunrise%2B734567-a3i4n3f331htrdj4rb9bhn8mpp44dt67' />
 		<author>
-			<name>Weather: Seoul, Korea.</name>
+			<name>Sunrise/Sunset: 서울특별시</name>
 		</author>
-		<gd:comments>
-			<gd:feedLink
-				href='https://www.google.com/calendar/feeds/p%23weather%40group.v.calendar.google.com/private/full/20110530_weatherP/comments' />
-		</gd:comments>
-		<gd:eventStatus value='http://schemas.google.com/g/2005#event.confirmed' />
-		<gd:where />
-		<gd:who email='p#weather@group.v.calendar.google.com'
-			rel='http://schemas.google.com/g/2005#event.organizer' valueString='Weather: Seoul, Korea.' />
-		<gd:when endTime='2011-05-31' startTime='2011-05-30' />
-		<gd:transparency value='http://schemas.google.com/g/2005#event.opaque' />
-		<gd:visibility value='http://schemas.google.com/g/2005#event.public' />
-		<gCal:anyoneCanAddSelf value='false' />
-		<gCal:guestsCanInviteOthers value='true' />
-		<gCal:guestsCanModify value='false' />
-		<gCal:guestsCanSeeGuests value='true' />
-		<gCal:sequence value='1' />
-		<gCal:uid value='20110530_weatherP@google.com' />
+	</entry>
+	<entry>
+		<id>http://www.google.com/calendar/feeds/i_211.57.231.130%23sunrise%40group.v.calendar.google.com/public/basic/Sunrise%2B734202-a3i4n3f331htrdj4rb9bhn8mpp44dt67
+		</id>
+		<published>2007-05-17T00:00:00.000Z</published>
+		<updated>2007-05-17T00:00:00.000Z</updated>
+		<category scheme='http://schemas.google.com/g/2005#kind'
+			term='http://schemas.google.com/g/2005#event' />
+		<title type='html'>Sunrise: 9:59pm (previous day), Sunset: 9:30am
+		</title>
+		<summary type='html'>일시: 2011. 3. 6. (&amp;#51068;)&lt;br&gt;
+			&lt;br&gt;참석자: Sunrise/Sunset:
+			&amp;#49436;&amp;#50872;&amp;#53945;&amp;#48324;&amp;#49884;
+
+			&lt;br&gt;일정 상태: 확인됨</summary>
+		<content type='html'>일시: 2011. 3. 6. (일)&lt;br /&gt;
+			&lt;br /&gt;참석자: Sunrise/Sunset: 서울특별시
+
+			&lt;br /&gt;일정 상태: 확인됨
+			&lt;br /&gt;일정 설명: 8:32pm (previous day) Start of astronomical twilight
+			9:02pm (previous day) Start of nautical twilight
+			9:32pm (previous day) Start of civil twilight
+			9:59pm (previous day) Sunrise
+			9:30am Sunset
+			9:56am End of civil twilight
+			10:26am End of nautical twilight
+			10:57am End of astronomical twilight</content>
+		<link rel='alternate' type='text/html'
+			href='https://www.google.com/calendar/event?eid=U3VucmlzZSs3MzQyMDItYTNpNG4zZjMzMWh0cmRqNHJiOWJobjhtcHA0NGR0NjcgaV8yMTEuNTcuMjMxLjEzMCNzdW5yaXNlQHY'
+			title='alternate' />
+		<link rel='self' type='application/atom+xml'
+			href='https://www.google.com/calendar/feeds/i_211.57.231.130%23sunrise%40group.v.calendar.google.com/public/basic/Sunrise%2B734202-a3i4n3f331htrdj4rb9bhn8mpp44dt67' />
+		<author>
+			<name>Sunrise/Sunset: 서울특별시</name>
+		</author>
+	</entry>
+	<entry>
+		<id>http://www.google.com/calendar/feeds/i_211.57.231.130%23sunrise%40group.v.calendar.google.com/public/basic/Sunrise%2B734809-rt3cesthboj03eslop9h3pig259fk1cp
+		</id>
+		<published>2007-05-17T00:00:00.000Z</published>
+		<updated>2007-05-17T00:00:00.000Z</updated>
+		<category scheme='http://schemas.google.com/g/2005#kind'
+			term='http://schemas.google.com/g/2005#event' />
+		<title type='html'>Sunrise: 9:59pm (previous day), Sunset: 8:33am
+		</title>
+		<summary type='html'>일시: 2012. 11. 2. (&amp;#44552;)&lt;br&gt;
+			&lt;br&gt;참석자: Sunrise/Sunset:
+			&amp;#49436;&amp;#50872;&amp;#53945;&amp;#48324;&amp;#49884;
+
+			&lt;br&gt;일정 상태: 확인됨</summary>
+		<content type='html'>일시: 2012. 11. 2. (금)&lt;br /&gt;
+			&lt;br /&gt;참석자: Sunrise/Sunset: 서울특별시
+
+			&lt;br /&gt;일정 상태: 확인됨
+			&lt;br /&gt;일정 설명: 8:30pm (previous day) Start of astronomical twilight
+			9:01pm (previous day) Start of nautical twilight
+			9:32pm (previous day) Start of civil twilight
+			9:59pm (previous day) Sunrise
+			8:33am Sunset
+			9:00am End of civil twilight
+			9:31am End of nautical twilight
+			10:01am End of astronomical twilight</content>
+		<link rel='alternate' type='text/html'
+			href='https://www.google.com/calendar/event?eid=U3VucmlzZSs3MzQ4MDktcnQzY2VzdGhib2owM2VzbG9wOWgzcGlnMjU5ZmsxY3AgaV8yMTEuNTcuMjMxLjEzMCNzdW5yaXNlQHY'
+			title='alternate' />
+		<link rel='self' type='application/atom+xml'
+			href='https://www.google.com/calendar/feeds/i_211.57.231.130%23sunrise%40group.v.calendar.google.com/public/basic/Sunrise%2B734809-rt3cesthboj03eslop9h3pig259fk1cp' />
+		<author>
+			<name>Sunrise/Sunset: 서울특별시</name>
+		</author>
+	</entry>
+	<entry>
+		<id>http://www.google.com/calendar/feeds/i_211.57.231.130%23sunrise%40group.v.calendar.google.com/public/basic/Sunrise%2B734444-79phmpbbmr7g6rktvp16is7en6asdf51
+		</id>
+		<published>2007-05-17T00:00:00.000Z</published>
+		<updated>2007-05-17T00:00:00.000Z</updated>
+		<category scheme='http://schemas.google.com/g/2005#kind'
+			term='http://schemas.google.com/g/2005#event' />
+		<title type='html'>Sunrise: 9:59pm (previous day), Sunset: 8:32am
+		</title>
+		<summary type='html'>일시: 2011. 11. 3. (&amp;#47785;)&lt;br&gt;
+			&lt;br&gt;참석자: Sunrise/Sunset:
+			&amp;#49436;&amp;#50872;&amp;#53945;&amp;#48324;&amp;#49884;
+
+			&lt;br&gt;일정 상태: 확인됨</summary>
+		<content type='html'>일시: 2011. 11. 3. (목)&lt;br /&gt;
+			&lt;br /&gt;참석자: Sunrise/Sunset: 서울특별시
+
+			&lt;br /&gt;일정 상태: 확인됨
+			&lt;br /&gt;일정 설명: 8:31pm (previous day) Start of astronomical twilight
+			9:01pm (previous day) Start of nautical twilight
+			9:32pm (previous day) Start of civil twilight
+			9:59pm (previous day) Sunrise
+			8:32am Sunset
+			9:00am End of civil twilight
+			9:31am End of nautical twilight
+			10:01am End of astronomical twilight</content>
+		<link rel='alternate' type='text/html'
+			href='https://www.google.com/calendar/event?eid=U3VucmlzZSs3MzQ0NDQtNzlwaG1wYmJtcjdnNnJrdHZwMTZpczdlbjZhc2RmNTEgaV8yMTEuNTcuMjMxLjEzMCNzdW5yaXNlQHY'
+			title='alternate' />
+		<link rel='self' type='application/atom+xml'
+			href='https://www.google.com/calendar/feeds/i_211.57.231.130%23sunrise%40group.v.calendar.google.com/public/basic/Sunrise%2B734444-79phmpbbmr7g6rktvp16is7en6asdf51' />
+		<author>
+			<name>Sunrise/Sunset: 서울특별시</name>
+		</author>
+	</entry>
+	<entry>
+		<id>http://www.google.com/calendar/feeds/i_211.57.231.130%23sunrise%40group.v.calendar.google.com/public/basic/Sunrise%2B734568-qqd9hvs5d240gkofa6lve853mp70pi1f
+		</id>
+		<published>2007-05-17T00:00:00.000Z</published>
+		<updated>2007-05-17T00:00:00.000Z</updated>
+		<category scheme='http://schemas.google.com/g/2005#kind'
+			term='http://schemas.google.com/g/2005#event' />
+		<title type='html'>Sunrise: 9:58pm (previous day), Sunset: 9:31am
+		</title>
+		<summary type='html'>일시: 2012. 3. 6. (&amp;#54868;)&lt;br&gt;
+			&lt;br&gt;참석자: Sunrise/Sunset:
+			&amp;#49436;&amp;#50872;&amp;#53945;&amp;#48324;&amp;#49884;
+
+			&lt;br&gt;일정 상태: 확인됨</summary>
+		<content type='html'>일시: 2012. 3. 6. (화)&lt;br /&gt;
+			&lt;br /&gt;참석자: Sunrise/Sunset: 서울특별시
+
+			&lt;br /&gt;일정 상태: 확인됨
+			&lt;br /&gt;일정 설명: 8:31pm (previous day) Start of astronomical twilight
+			9:01pm (previous day) Start of nautical twilight
+			9:31pm (previous day) Start of civil twilight
+			9:58pm (previous day) Sunrise
+			9:31am Sunset
+			9:57am End of civil twilight
+			10:27am End of nautical twilight
+			10:58am End of astronomical twilight</content>
+		<link rel='alternate' type='text/html'
+			href='https://www.google.com/calendar/event?eid=U3VucmlzZSs3MzQ1NjgtcXFkOWh2czVkMjQwZ2tvZmE2bHZlODUzbXA3MHBpMWYgaV8yMTEuNTcuMjMxLjEzMCNzdW5yaXNlQHY'
+			title='alternate' />
+		<link rel='self' type='application/atom+xml'
+			href='https://www.google.com/calendar/feeds/i_211.57.231.130%23sunrise%40group.v.calendar.google.com/public/basic/Sunrise%2B734568-qqd9hvs5d240gkofa6lve853mp70pi1f' />
+		<author>
+			<name>Sunrise/Sunset: 서울특별시</name>
+		</author>
+	</entry>
+	<entry>
+		<id>http://www.google.com/calendar/feeds/i_211.57.231.130%23sunrise%40group.v.calendar.google.com/public/basic/Sunrise%2B733837-d8iq1cn9vtm7rfivm89f912tku0vshk9
+		</id>
+		<published>2007-05-17T00:00:00.000Z</published>
+		<updated>2007-05-17T00:00:00.000Z</updated>
+		<category scheme='http://schemas.google.com/g/2005#kind'
+			term='http://schemas.google.com/g/2005#event' />
+		<title type='html'>Sunrise: 9:58pm (previous day), Sunset: 9:30am
+		</title>
+		<summary type='html'>일시: 2010. 3. 6. (&amp;#53664;)&lt;br&gt;
+			&lt;br&gt;참석자: Sunrise/Sunset:
+			&amp;#49436;&amp;#50872;&amp;#53945;&amp;#48324;&amp;#49884;
+
+			&lt;br&gt;일정 상태: 확인됨</summary>
+		<content type='html'>일시: 2010. 3. 6. (토)&lt;br /&gt;
+			&lt;br /&gt;참석자: Sunrise/Sunset: 서울특별시
+
+			&lt;br /&gt;일정 상태: 확인됨
+			&lt;br /&gt;일정 설명: 8:32pm (previous day) Start of astronomical twilight
+			9:02pm (previous day) Start of nautical twilight
+			9:32pm (previous day) Start of civil twilight
+			9:58pm (previous day) Sunrise
+			9:30am Sunset
+			9:56am End of civil twilight
+			10:27am End of nautical twilight
+			10:57am End of astronomical twilight</content>
+		<link rel='alternate' type='text/html'
+			href='https://www.google.com/calendar/event?eid=U3VucmlzZSs3MzM4MzctZDhpcTFjbjl2dG03cmZpdm04OWY5MTJ0a3UwdnNoazkgaV8yMTEuNTcuMjMxLjEzMCNzdW5yaXNlQHY'
+			title='alternate' />
+		<link rel='self' type='application/atom+xml'
+			href='https://www.google.com/calendar/feeds/i_211.57.231.130%23sunrise%40group.v.calendar.google.com/public/basic/Sunrise%2B733837-d8iq1cn9vtm7rfivm89f912tku0vshk9' />
+		<author>
+			<name>Sunrise/Sunset: 서울특별시</name>
+		</author>
+	</entry>
+	<entry>
+		<id>http://www.google.com/calendar/feeds/i_211.57.231.130%23sunrise%40group.v.calendar.google.com/public/basic/Sunrise%2B734808-q0u3r6r2kc9vfe9kjck4ode52grqh5d9
+		</id>
+		<published>2007-05-17T00:00:00.000Z</published>
+		<updated>2007-05-17T00:00:00.000Z</updated>
+		<category scheme='http://schemas.google.com/g/2005#kind'
+			term='http://schemas.google.com/g/2005#event' />
+		<title type='html'>Sunrise: 9:58pm (previous day), Sunset: 8:34am
+		</title>
+		<summary type='html'>일시: 2012. 11. 1. (&amp;#47785;)&lt;br&gt;
+			&lt;br&gt;참석자: Sunrise/Sunset:
+			&amp;#49436;&amp;#50872;&amp;#53945;&amp;#48324;&amp;#49884;
+
+			&lt;br&gt;일정 상태: 확인됨</summary>
+		<content type='html'>일시: 2012. 11. 1. (목)&lt;br /&gt;
+			&lt;br /&gt;참석자: Sunrise/Sunset: 서울특별시
+
+			&lt;br /&gt;일정 상태: 확인됨
+			&lt;br /&gt;일정 설명: 8:29pm (previous day) Start of astronomical twilight
+			9:00pm (previous day) Start of nautical twilight
+			9:31pm (previous day) Start of civil twilight
+			9:58pm (previous day) Sunrise
+			8:34am Sunset
+			9:01am End of civil twilight
+			9:32am End of nautical twilight
+			10:02am End of astronomical twilight</content>
+		<link rel='alternate' type='text/html'
+			href='https://www.google.com/calendar/event?eid=U3VucmlzZSs3MzQ4MDgtcTB1M3I2cjJrYzl2ZmU5a2pjazRvZGU1MmdycWg1ZDkgaV8yMTEuNTcuMjMxLjEzMCNzdW5yaXNlQHY'
+			title='alternate' />
+		<link rel='self' type='application/atom+xml'
+			href='https://www.google.com/calendar/feeds/i_211.57.231.130%23sunrise%40group.v.calendar.google.com/public/basic/Sunrise%2B734808-q0u3r6r2kc9vfe9kjck4ode52grqh5d9' />
+		<author>
+			<name>Sunrise/Sunset: 서울특별시</name>
+		</author>
+	</entry>
+	<entry>
+		<id>http://www.google.com/calendar/feeds/i_211.57.231.130%23sunrise%40group.v.calendar.google.com/public/basic/Sunrise%2B734443-q0u3r6r2kc9vfe9kjck4ode52grqh5d9
+		</id>
+		<published>2007-05-17T00:00:00.000Z</published>
+		<updated>2007-05-17T00:00:00.000Z</updated>
+		<category scheme='http://schemas.google.com/g/2005#kind'
+			term='http://schemas.google.com/g/2005#event' />
+		<title type='html'>Sunrise: 9:58pm (previous day), Sunset: 8:34am
+		</title>
+		<summary type='html'>일시: 2011. 11. 2. (&amp;#49688;)&lt;br&gt;
+			&lt;br&gt;참석자: Sunrise/Sunset:
+			&amp;#49436;&amp;#50872;&amp;#53945;&amp;#48324;&amp;#49884;
+
+			&lt;br&gt;일정 상태: 확인됨</summary>
+		<content type='html'>일시: 2011. 11. 2. (수)&lt;br /&gt;
+			&lt;br /&gt;참석자: Sunrise/Sunset: 서울특별시
+
+			&lt;br /&gt;일정 상태: 확인됨
+			&lt;br /&gt;일정 설명: 8:30pm (previous day) Start of astronomical twilight
+			9:00pm (previous day) Start of nautical twilight
+			9:31pm (previous day) Start of civil twilight
+			9:58pm (previous day) Sunrise
+			8:34am Sunset
+			9:01am End of civil twilight
+			9:32am End of nautical twilight
+			10:02am End of astronomical twilight</content>
+		<link rel='alternate' type='text/html'
+			href='https://www.google.com/calendar/event?eid=U3VucmlzZSs3MzQ0NDMtcTB1M3I2cjJrYzl2ZmU5a2pjazRvZGU1MmdycWg1ZDkgaV8yMTEuNTcuMjMxLjEzMCNzdW5yaXNlQHY'
+			title='alternate' />
+		<link rel='self' type='application/atom+xml'
+			href='https://www.google.com/calendar/feeds/i_211.57.231.130%23sunrise%40group.v.calendar.google.com/public/basic/Sunrise%2B734443-q0u3r6r2kc9vfe9kjck4ode52grqh5d9' />
+		<author>
+			<name>Sunrise/Sunset: 서울특별시</name>
+		</author>
+	</entry>
+	<entry>
+		<id>http://www.google.com/calendar/feeds/i_211.57.231.130%23sunrise%40group.v.calendar.google.com/public/basic/Sunrise%2B734078-jr4ppob15m986qstjp3ji3sj8js5paim
+		</id>
+		<published>2007-05-17T00:00:00.000Z</published>
+		<updated>2007-05-17T00:00:00.000Z</updated>
+		<category scheme='http://schemas.google.com/g/2005#kind'
+			term='http://schemas.google.com/g/2005#event' />
+		<title type='html'>Sunrise: 9:58pm (previous day), Sunset: 8:33am
+		</title>
+		<summary type='html'>일시: 2010. 11. 2. (&amp;#54868;)&lt;br&gt;
+			&lt;br&gt;참석자: Sunrise/Sunset:
+			&amp;#49436;&amp;#50872;&amp;#53945;&amp;#48324;&amp;#49884;
+
+			&lt;br&gt;일정 상태: 확인됨</summary>
+		<content type='html'>일시: 2010. 11. 2. (화)&lt;br /&gt;
+			&lt;br /&gt;참석자: Sunrise/Sunset: 서울특별시
+
+			&lt;br /&gt;일정 상태: 확인됨
+			&lt;br /&gt;일정 설명: 8:30pm (previous day) Start of astronomical twilight
+			9:00pm (previous day) Start of nautical twilight
+			9:31pm (previous day) Start of civil twilight
+			9:58pm (previous day) Sunrise
+			8:33am Sunset
+			9:00am End of civil twilight
+			9:31am End of nautical twilight
+			10:02am End of astronomical twilight</content>
+		<link rel='alternate' type='text/html'
+			href='https://www.google.com/calendar/event?eid=U3VucmlzZSs3MzQwNzgtanI0cHBvYjE1bTk4NnFzdGpwM2ppM3NqOGpzNXBhaW0gaV8yMTEuNTcuMjMxLjEzMCNzdW5yaXNlQHY'
+			title='alternate' />
+		<link rel='self' type='application/atom+xml'
+			href='https://www.google.com/calendar/feeds/i_211.57.231.130%23sunrise%40group.v.calendar.google.com/public/basic/Sunrise%2B734078-jr4ppob15m986qstjp3ji3sj8js5paim' />
+		<author>
+			<name>Sunrise/Sunset: 서울특별시</name>
+		</author>
+	</entry>
+	<entry>
+		<id>http://www.google.com/calendar/feeds/i_211.57.231.130%23sunrise%40group.v.calendar.google.com/public/basic/Sunrise%2B734203-2lbd778q7fl5am33evhnn1mr8cqoeisv
+		</id>
+		<published>2007-05-17T00:00:00.000Z</published>
+		<updated>2007-05-17T00:00:00.000Z</updated>
+		<category scheme='http://schemas.google.com/g/2005#kind'
+			term='http://schemas.google.com/g/2005#event' />
+		<title type='html'>Sunrise: 9:57pm (previous day), Sunset: 9:31am
+		</title>
+		<summary type='html'>일시: 2011. 3. 7. (&amp;#50900;)&lt;br&gt;
+			&lt;br&gt;참석자: Sunrise/Sunset:
+			&amp;#49436;&amp;#50872;&amp;#53945;&amp;#48324;&amp;#49884;
+
+			&lt;br&gt;일정 상태: 확인됨</summary>
+		<content type='html'>일시: 2011. 3. 7. (월)&lt;br /&gt;
+			&lt;br /&gt;참석자: Sunrise/Sunset: 서울특별시
+
+			&lt;br /&gt;일정 상태: 확인됨
+			&lt;br /&gt;일정 설명: 8:30pm (previous day) Start of astronomical twilight
+			9:01pm (previous day) Start of nautical twilight
+			9:31pm (previous day) Start of civil twilight
+			9:57pm (previous day) Sunrise
+			9:31am Sunset
+			9:57am End of civil twilight
+			10:27am End of nautical twilight
+			10:58am End of astronomical twilight</content>
+		<link rel='alternate' type='text/html'
+			href='https://www.google.com/calendar/event?eid=U3VucmlzZSs3MzQyMDMtMmxiZDc3OHE3Zmw1YW0zM2V2aG5uMW1yOGNxb2Vpc3YgaV8yMTEuNTcuMjMxLjEzMCNzdW5yaXNlQHY'
+			title='alternate' />
+		<link rel='self' type='application/atom+xml'
+			href='https://www.google.com/calendar/feeds/i_211.57.231.130%23sunrise%40group.v.calendar.google.com/public/basic/Sunrise%2B734203-2lbd778q7fl5am33evhnn1mr8cqoeisv' />
+		<author>
+			<name>Sunrise/Sunset: 서울특별시</name>
+		</author>
+	</entry>
+	<entry>
+		<id>http://www.google.com/calendar/feeds/i_211.57.231.130%23sunrise%40group.v.calendar.google.com/public/basic/Sunrise%2B733838-2lbd778q7fl5am33evhnn1mr8cqoeisv
+		</id>
+		<published>2007-05-17T00:00:00.000Z</published>
+		<updated>2007-05-17T00:00:00.000Z</updated>
+		<category scheme='http://schemas.google.com/g/2005#kind'
+			term='http://schemas.google.com/g/2005#event' />
+		<title type='html'>Sunrise: 9:57pm (previous day), Sunset: 9:31am
+		</title>
+		<summary type='html'>일시: 2010. 3. 7. (&amp;#51068;)&lt;br&gt;
+			&lt;br&gt;참석자: Sunrise/Sunset:
+			&amp;#49436;&amp;#50872;&amp;#53945;&amp;#48324;&amp;#49884;
+
+			&lt;br&gt;일정 상태: 확인됨</summary>
+		<content type='html'>일시: 2010. 3. 7. (일)&lt;br /&gt;
+			&lt;br /&gt;참석자: Sunrise/Sunset: 서울특별시
+
+			&lt;br /&gt;일정 상태: 확인됨
+			&lt;br /&gt;일정 설명: 8:30pm (previous day) Start of astronomical twilight
+			9:00pm (previous day) Start of nautical twilight
+			9:31pm (previous day) Start of civil twilight
+			9:57pm (previous day) Sunrise
+			9:31am Sunset
+			9:57am End of civil twilight
+			10:28am End of nautical twilight
+			10:58am End of astronomical twilight</content>
+		<link rel='alternate' type='text/html'
+			href='https://www.google.com/calendar/event?eid=U3VucmlzZSs3MzM4MzgtMmxiZDc3OHE3Zmw1YW0zM2V2aG5uMW1yOGNxb2Vpc3YgaV8yMTEuNTcuMjMxLjEzMCNzdW5yaXNlQHY'
+			title='alternate' />
+		<link rel='self' type='application/atom+xml'
+			href='https://www.google.com/calendar/feeds/i_211.57.231.130%23sunrise%40group.v.calendar.google.com/public/basic/Sunrise%2B733838-2lbd778q7fl5am33evhnn1mr8cqoeisv' />
+		<author>
+			<name>Sunrise/Sunset: 서울특별시</name>
+		</author>
+	</entry>
+	<entry>
+		<id>http://www.google.com/calendar/feeds/i_211.57.231.130%23sunrise%40group.v.calendar.google.com/public/basic/Sunrise%2B734807-i9iohfq87ek5kr7qblhhkhge0abl155m
+		</id>
+		<published>2007-05-17T00:00:00.000Z</published>
+		<updated>2007-05-17T00:00:00.000Z</updated>
+		<category scheme='http://schemas.google.com/g/2005#kind'
+			term='http://schemas.google.com/g/2005#event' />
+		<title type='html'>Sunrise: 9:57pm (previous day), Sunset: 8:35am
+		</title>
+		<summary type='html'>일시: 2012. 10. 31. (&amp;#49688;)&lt;br&gt;
+			&lt;br&gt;참석자: Sunrise/Sunset:
+			&amp;#49436;&amp;#50872;&amp;#53945;&amp;#48324;&amp;#49884;
+
+			&lt;br&gt;일정 상태: 확인됨</summary>
+		<content type='html'>일시: 2012. 10. 31. (수)&lt;br /&gt;
+			&lt;br /&gt;참석자: Sunrise/Sunset: 서울특별시
+
+			&lt;br /&gt;일정 상태: 확인됨
+			&lt;br /&gt;일정 설명: 8:29pm (previous day) Start of astronomical twilight
+			8:59pm (previous day) Start of nautical twilight
+			9:30pm (previous day) Start of civil twilight
+			9:57pm (previous day) Sunrise
+			8:35am Sunset
+			9:02am End of civil twilight
+			9:33am End of nautical twilight
+			10:03am End of astronomical twilight</content>
+		<link rel='alternate' type='text/html'
+			href='https://www.google.com/calendar/event?eid=U3VucmlzZSs3MzQ4MDctaTlpb2hmcTg3ZWs1a3I3cWJsaGhraGdlMGFibDE1NW0gaV8yMTEuNTcuMjMxLjEzMCNzdW5yaXNlQHY'
+			title='alternate' />
+		<link rel='self' type='application/atom+xml'
+			href='https://www.google.com/calendar/feeds/i_211.57.231.130%23sunrise%40group.v.calendar.google.com/public/basic/Sunrise%2B734807-i9iohfq87ek5kr7qblhhkhge0abl155m' />
+		<author>
+			<name>Sunrise/Sunset: 서울특별시</name>
+		</author>
+	</entry>
+	<entry>
+		<id>http://www.google.com/calendar/feeds/i_211.57.231.130%23sunrise%40group.v.calendar.google.com/public/basic/Sunrise%2B734442-i9iohfq87ek5kr7qblhhkhge0abl155m
+		</id>
+		<published>2007-05-17T00:00:00.000Z</published>
+		<updated>2007-05-17T00:00:00.000Z</updated>
+		<category scheme='http://schemas.google.com/g/2005#kind'
+			term='http://schemas.google.com/g/2005#event' />
+		<title type='html'>Sunrise: 9:57pm (previous day), Sunset: 8:35am
+		</title>
+		<summary type='html'>일시: 2011. 11. 1. (&amp;#54868;)&lt;br&gt;
+			&lt;br&gt;참석자: Sunrise/Sunset:
+			&amp;#49436;&amp;#50872;&amp;#53945;&amp;#48324;&amp;#49884;
+
+			&lt;br&gt;일정 상태: 확인됨</summary>
+		<content type='html'>일시: 2011. 11. 1. (화)&lt;br /&gt;
+			&lt;br /&gt;참석자: Sunrise/Sunset: 서울특별시
+
+			&lt;br /&gt;일정 상태: 확인됨
+			&lt;br /&gt;일정 설명: 8:29pm (previous day) Start of astronomical twilight
+			8:59pm (previous day) Start of nautical twilight
+			9:30pm (previous day) Start of civil twilight
+			9:57pm (previous day) Sunrise
+			8:35am Sunset
+			9:02am End of civil twilight
+			9:33am End of nautical twilight
+			10:03am End of astronomical twilight</content>
+		<link rel='alternate' type='text/html'
+			href='https://www.google.com/calendar/event?eid=U3VucmlzZSs3MzQ0NDItaTlpb2hmcTg3ZWs1a3I3cWJsaGhraGdlMGFibDE1NW0gaV8yMTEuNTcuMjMxLjEzMCNzdW5yaXNlQHY'
+			title='alternate' />
+		<link rel='self' type='application/atom+xml'
+			href='https://www.google.com/calendar/feeds/i_211.57.231.130%23sunrise%40group.v.calendar.google.com/public/basic/Sunrise%2B734442-i9iohfq87ek5kr7qblhhkhge0abl155m' />
+		<author>
+			<name>Sunrise/Sunset: 서울특별시</name>
+		</author>
+	</entry>
+	<entry>
+		<id>http://www.google.com/calendar/feeds/i_211.57.231.130%23sunrise%40group.v.calendar.google.com/public/basic/Sunrise%2B734077-ltdpk73kj9un4u9pd4nkco3j39va2ps6
+		</id>
+		<published>2007-05-17T00:00:00.000Z</published>
+		<updated>2007-05-17T00:00:00.000Z</updated>
+		<category scheme='http://schemas.google.com/g/2005#kind'
+			term='http://schemas.google.com/g/2005#event' />
+		<title type='html'>Sunrise: 9:57pm (previous day), Sunset: 8:34am
+		</title>
+		<summary type='html'>일시: 2010. 11. 1. (&amp;#50900;)&lt;br&gt;
+			&lt;br&gt;참석자: Sunrise/Sunset:
+			&amp;#49436;&amp;#50872;&amp;#53945;&amp;#48324;&amp;#49884;
+
+			&lt;br&gt;일정 상태: 확인됨</summary>
+		<content type='html'>일시: 2010. 11. 1. (월)&lt;br /&gt;
+			&lt;br /&gt;참석자: Sunrise/Sunset: 서울특별시
+
+			&lt;br /&gt;일정 상태: 확인됨
+			&lt;br /&gt;일정 설명: 8:29pm (previous day) Start of astronomical twilight
+			8:59pm (previous day) Start of nautical twilight
+			9:30pm (previous day) Start of civil twilight
+			9:57pm (previous day) Sunrise
+			8:34am Sunset
+			9:01am End of civil twilight
+			9:32am End of nautical twilight
+			10:03am End of astronomical twilight</content>
+		<link rel='alternate' type='text/html'
+			href='https://www.google.com/calendar/event?eid=U3VucmlzZSs3MzQwNzctbHRkcGs3M2tqOXVuNHU5cGQ0bmtjbzNqMzl2YTJwczYgaV8yMTEuNTcuMjMxLjEzMCNzdW5yaXNlQHY'
+			title='alternate' />
+		<link rel='self' type='application/atom+xml'
+			href='https://www.google.com/calendar/feeds/i_211.57.231.130%23sunrise%40group.v.calendar.google.com/public/basic/Sunrise%2B734077-ltdpk73kj9un4u9pd4nkco3j39va2ps6' />
+		<author>
+			<name>Sunrise/Sunset: 서울특별시</name>
+		</author>
+	</entry>
+	<entry>
+		<id>http://www.google.com/calendar/feeds/i_211.57.231.130%23sunrise%40group.v.calendar.google.com/public/basic/Sunrise%2B734569-ll1vqk8cl400pm1ielpm45b4ebu3a8qd
+		</id>
+		<published>2007-05-17T00:00:00.000Z</published>
+		<updated>2007-05-17T00:00:00.000Z</updated>
+		<category scheme='http://schemas.google.com/g/2005#kind'
+			term='http://schemas.google.com/g/2005#event' />
+		<title type='html'>Sunrise: 9:56pm (previous day), Sunset: 9:32am
+		</title>
+		<summary type='html'>일시: 2012. 3. 7. (&amp;#49688;)&lt;br&gt;
+			&lt;br&gt;참석자: Sunrise/Sunset:
+			&amp;#49436;&amp;#50872;&amp;#53945;&amp;#48324;&amp;#49884;
+
+			&lt;br&gt;일정 상태: 확인됨</summary>
+		<content type='html'>일시: 2012. 3. 7. (수)&lt;br /&gt;
+			&lt;br /&gt;참석자: Sunrise/Sunset: 서울특별시
+
+			&lt;br /&gt;일정 상태: 확인됨
+			&lt;br /&gt;일정 설명: 8:29pm (previous day) Start of astronomical twilight
+			9:00pm (previous day) Start of nautical twilight
+			9:30pm (previous day) Start of civil twilight
+			9:56pm (previous day) Sunrise
+			9:32am Sunset
+			9:58am End of civil twilight
+			10:28am End of nautical twilight
+			10:59am End of astronomical twilight</content>
+		<link rel='alternate' type='text/html'
+			href='https://www.google.com/calendar/event?eid=U3VucmlzZSs3MzQ1NjktbGwxdnFrOGNsNDAwcG0xaWVscG00NWI0ZWJ1M2E4cWQgaV8yMTEuNTcuMjMxLjEzMCNzdW5yaXNlQHY'
+			title='alternate' />
+		<link rel='self' type='application/atom+xml'
+			href='https://www.google.com/calendar/feeds/i_211.57.231.130%23sunrise%40group.v.calendar.google.com/public/basic/Sunrise%2B734569-ll1vqk8cl400pm1ielpm45b4ebu3a8qd' />
+		<author>
+			<name>Sunrise/Sunset: 서울특별시</name>
+		</author>
+	</entry>
+	<entry>
+		<id>http://www.google.com/calendar/feeds/i_211.57.231.130%23sunrise%40group.v.calendar.google.com/public/basic/Sunrise%2B734204-ll1vqk8cl400pm1ielpm45b4ebu3a8qd
+		</id>
+		<published>2007-05-17T00:00:00.000Z</published>
+		<updated>2007-05-17T00:00:00.000Z</updated>
+		<category scheme='http://schemas.google.com/g/2005#kind'
+			term='http://schemas.google.com/g/2005#event' />
+		<title type='html'>Sunrise: 9:56pm (previous day), Sunset: 9:32am
+		</title>
+		<summary type='html'>일시: 2011. 3. 8. (&amp;#54868;)&lt;br&gt;
+			&lt;br&gt;참석자: Sunrise/Sunset:
+			&amp;#49436;&amp;#50872;&amp;#53945;&amp;#48324;&amp;#49884;
+
+			&lt;br&gt;일정 상태: 확인됨</summary>
+		<content type='html'>일시: 2011. 3. 8. (화)&lt;br /&gt;
+			&lt;br /&gt;참석자: Sunrise/Sunset: 서울특별시
+
+			&lt;br /&gt;일정 상태: 확인됨
+			&lt;br /&gt;일정 설명: 8:29pm (previous day) Start of astronomical twilight
+			8:59pm (previous day) Start of nautical twilight
+			9:30pm (previous day) Start of civil twilight
+			9:56pm (previous day) Sunrise
+			9:32am Sunset
+			9:58am End of civil twilight
+			10:28am End of nautical twilight
+			10:59am End of astronomical twilight</content>
+		<link rel='alternate' type='text/html'
+			href='https://www.google.com/calendar/event?eid=U3VucmlzZSs3MzQyMDQtbGwxdnFrOGNsNDAwcG0xaWVscG00NWI0ZWJ1M2E4cWQgaV8yMTEuNTcuMjMxLjEzMCNzdW5yaXNlQHY'
+			title='alternate' />
+		<link rel='self' type='application/atom+xml'
+			href='https://www.google.com/calendar/feeds/i_211.57.231.130%23sunrise%40group.v.calendar.google.com/public/basic/Sunrise%2B734204-ll1vqk8cl400pm1ielpm45b4ebu3a8qd' />
+		<author>
+			<name>Sunrise/Sunset: 서울특별시</name>
+		</author>
+	</entry>
+	<entry>
+		<id>http://www.google.com/calendar/feeds/i_211.57.231.130%23sunrise%40group.v.calendar.google.com/public/basic/Sunrise%2B734806-v7bc4e1u6274hkkdnlrngmfe309j6o68
+		</id>
+		<published>2007-05-17T00:00:00.000Z</published>
+		<updated>2007-05-17T00:00:00.000Z</updated>
+		<category scheme='http://schemas.google.com/g/2005#kind'
+			term='http://schemas.google.com/g/2005#event' />
+		<title type='html'>Sunrise: 9:56pm (previous day), Sunset: 8:36am
+		</title>
+		<summary type='html'>일시: 2012. 10. 30. (&amp;#54868;)&lt;br&gt;
+			&lt;br&gt;참석자: Sunrise/Sunset:
+			&amp;#49436;&amp;#50872;&amp;#53945;&amp;#48324;&amp;#49884;
+
+			&lt;br&gt;일정 상태: 확인됨</summary>
+		<content type='html'>일시: 2012. 10. 30. (화)&lt;br /&gt;
+			&lt;br /&gt;참석자: Sunrise/Sunset: 서울특별시
+
+			&lt;br /&gt;일정 상태: 확인됨
+			&lt;br /&gt;일정 설명: 8:28pm (previous day) Start of astronomical twilight
+			8:58pm (previous day) Start of nautical twilight
+			9:29pm (previous day) Start of civil twilight
+			9:56pm (previous day) Sunrise
+			8:36am Sunset
+			9:03am End of civil twilight
+			9:34am End of nautical twilight
+			10:04am End of astronomical twilight</content>
+		<link rel='alternate' type='text/html'
+			href='https://www.google.com/calendar/event?eid=U3VucmlzZSs3MzQ4MDYtdjdiYzRlMXU2Mjc0aGtrZG5scm5nbWZlMzA5ajZvNjggaV8yMTEuNTcuMjMxLjEzMCNzdW5yaXNlQHY'
+			title='alternate' />
+		<link rel='self' type='application/atom+xml'
+			href='https://www.google.com/calendar/feeds/i_211.57.231.130%23sunrise%40group.v.calendar.google.com/public/basic/Sunrise%2B734806-v7bc4e1u6274hkkdnlrngmfe309j6o68' />
+		<author>
+			<name>Sunrise/Sunset: 서울특별시</name>
+		</author>
+	</entry>
+	<entry>
+		<id>http://www.google.com/calendar/feeds/i_211.57.231.130%23sunrise%40group.v.calendar.google.com/public/basic/Sunrise%2B734441-v7bc4e1u6274hkkdnlrngmfe309j6o68
+		</id>
+		<published>2007-05-17T00:00:00.000Z</published>
+		<updated>2007-05-17T00:00:00.000Z</updated>
+		<category scheme='http://schemas.google.com/g/2005#kind'
+			term='http://schemas.google.com/g/2005#event' />
+		<title type='html'>Sunrise: 9:56pm (previous day), Sunset: 8:36am
+		</title>
+		<summary type='html'>일시: 2011. 10. 31. (&amp;#50900;)&lt;br&gt;
+			&lt;br&gt;참석자: Sunrise/Sunset:
+			&amp;#49436;&amp;#50872;&amp;#53945;&amp;#48324;&amp;#49884;
+
+			&lt;br&gt;일정 상태: 확인됨</summary>
+		<content type='html'>일시: 2011. 10. 31. (월)&lt;br /&gt;
+			&lt;br /&gt;참석자: Sunrise/Sunset: 서울특별시
+
+			&lt;br /&gt;일정 상태: 확인됨
+			&lt;br /&gt;일정 설명: 8:28pm (previous day) Start of astronomical twilight
+			8:58pm (previous day) Start of nautical twilight
+			9:29pm (previous day) Start of civil twilight
+			9:56pm (previous day) Sunrise
+			8:36am Sunset
+			9:03am End of civil twilight
+			9:34am End of nautical twilight
+			10:04am End of astronomical twilight</content>
+		<link rel='alternate' type='text/html'
+			href='https://www.google.com/calendar/event?eid=U3VucmlzZSs3MzQ0NDEtdjdiYzRlMXU2Mjc0aGtrZG5scm5nbWZlMzA5ajZvNjggaV8yMTEuNTcuMjMxLjEzMCNzdW5yaXNlQHY'
+			title='alternate' />
+		<link rel='self' type='application/atom+xml'
+			href='https://www.google.com/calendar/feeds/i_211.57.231.130%23sunrise%40group.v.calendar.google.com/public/basic/Sunrise%2B734441-v7bc4e1u6274hkkdnlrngmfe309j6o68' />
+		<author>
+			<name>Sunrise/Sunset: 서울특별시</name>
+		</author>
+	</entry>
+	<entry>
+		<id>http://www.google.com/calendar/feeds/i_211.57.231.130%23sunrise%40group.v.calendar.google.com/public/basic/Sunrise%2B734076-sjbu2hd0k5g5etr5kssacc55v9s5rb65
+		</id>
+		<published>2007-05-17T00:00:00.000Z</published>
+		<updated>2007-05-17T00:00:00.000Z</updated>
+		<category scheme='http://schemas.google.com/g/2005#kind'
+			term='http://schemas.google.com/g/2005#event' />
+		<title type='html'>Sunrise: 9:56pm (previous day), Sunset: 8:35am
+		</title>
+		<summary type='html'>일시: 2010. 10. 31. (&amp;#51068;)&lt;br&gt;
+			&lt;br&gt;참석자: Sunrise/Sunset:
+			&amp;#49436;&amp;#50872;&amp;#53945;&amp;#48324;&amp;#49884;
+
+			&lt;br&gt;일정 상태: 확인됨</summary>
+		<content type='html'>일시: 2010. 10. 31. (일)&lt;br /&gt;
+			&lt;br /&gt;참석자: Sunrise/Sunset: 서울특별시
+
+			&lt;br /&gt;일정 상태: 확인됨
+			&lt;br /&gt;일정 설명: 8:28pm (previous day) Start of astronomical twilight
+			8:59pm (previous day) Start of nautical twilight
+			9:29pm (previous day) Start of civil twilight
+			9:56pm (previous day) Sunrise
+			8:35am Sunset
+			9:02am End of civil twilight
+			9:33am End of nautical twilight
+			10:04am End of astronomical twilight</content>
+		<link rel='alternate' type='text/html'
+			href='https://www.google.com/calendar/event?eid=U3VucmlzZSs3MzQwNzYtc2pidTJoZDBrNWc1ZXRyNWtzc2FjYzU1djlzNXJiNjUgaV8yMTEuNTcuMjMxLjEzMCNzdW5yaXNlQHY'
+			title='alternate' />
+		<link rel='self' type='application/atom+xml'
+			href='https://www.google.com/calendar/feeds/i_211.57.231.130%23sunrise%40group.v.calendar.google.com/public/basic/Sunrise%2B734076-sjbu2hd0k5g5etr5kssacc55v9s5rb65' />
+		<author>
+			<name>Sunrise/Sunset: 서울특별시</name>
+		</author>
+	</entry>
+	<entry>
+		<id>http://www.google.com/calendar/feeds/i_211.57.231.130%23sunrise%40group.v.calendar.google.com/public/basic/Sunrise%2B734570-sif5s7tf8vopurjppi76rn2d3sjlas05
+		</id>
+		<published>2007-05-17T00:00:00.000Z</published>
+		<updated>2007-05-17T00:00:00.000Z</updated>
+		<category scheme='http://schemas.google.com/g/2005#kind'
+			term='http://schemas.google.com/g/2005#event' />
+		<title type='html'>Sunrise: 9:55pm (previous day), Sunset: 9:33am
+		</title>
+		<summary type='html'>일시: 2012. 3. 8. (&amp;#47785;)&lt;br&gt;
+			&lt;br&gt;참석자: Sunrise/Sunset:
+			&amp;#49436;&amp;#50872;&amp;#53945;&amp;#48324;&amp;#49884;
+
+			&lt;br&gt;일정 상태: 확인됨</summary>
+		<content type='html'>일시: 2012. 3. 8. (목)&lt;br /&gt;
+			&lt;br /&gt;참석자: Sunrise/Sunset: 서울특별시
+
+			&lt;br /&gt;일정 상태: 확인됨
+			&lt;br /&gt;일정 설명: 8:28pm (previous day) Start of astronomical twilight
+			8:58pm (previous day) Start of nautical twilight
+			9:29pm (previous day) Start of civil twilight
+			9:55pm (previous day) Sunrise
+			9:33am Sunset
+			9:59am End of civil twilight
+			10:29am End of nautical twilight
+			11:00am End of astronomical twilight</content>
+		<link rel='alternate' type='text/html'
+			href='https://www.google.com/calendar/event?eid=U3VucmlzZSs3MzQ1NzAtc2lmNXM3dGY4dm9wdXJqcHBpNzZybjJkM3NqbGFzMDUgaV8yMTEuNTcuMjMxLjEzMCNzdW5yaXNlQHY'
+			title='alternate' />
+		<link rel='self' type='application/atom+xml'
+			href='https://www.google.com/calendar/feeds/i_211.57.231.130%23sunrise%40group.v.calendar.google.com/public/basic/Sunrise%2B734570-sif5s7tf8vopurjppi76rn2d3sjlas05' />
+		<author>
+			<name>Sunrise/Sunset: 서울특별시</name>
+		</author>
+	</entry>
+	<entry>
+		<id>http://www.google.com/calendar/feeds/i_211.57.231.130%23sunrise%40group.v.calendar.google.com/public/basic/Sunrise%2B733839-v5kbgkv3gqrnqcf4kvsm3agi3pvmsr5m
+		</id>
+		<published>2007-05-17T00:00:00.000Z</published>
+		<updated>2007-05-17T00:00:00.000Z</updated>
+		<category scheme='http://schemas.google.com/g/2005#kind'
+			term='http://schemas.google.com/g/2005#event' />
+		<title type='html'>Sunrise: 9:55pm (previous day), Sunset: 9:32am
+		</title>
+		<summary type='html'>일시: 2010. 3. 8. (&amp;#50900;)&lt;br&gt;
+			&lt;br&gt;참석자: Sunrise/Sunset:
+			&amp;#49436;&amp;#50872;&amp;#53945;&amp;#48324;&amp;#49884;
+
+			&lt;br&gt;일정 상태: 확인됨</summary>
+		<content type='html'>일시: 2010. 3. 8. (월)&lt;br /&gt;
+			&lt;br /&gt;참석자: Sunrise/Sunset: 서울특별시
+
+			&lt;br /&gt;일정 상태: 확인됨
+			&lt;br /&gt;일정 설명: 8:29pm (previous day) Start of astronomical twilight
+			8:59pm (previous day) Start of nautical twilight
+			9:29pm (previous day) Start of civil twilight
+			9:55pm (previous day) Sunrise
+			9:32am Sunset
+			9:58am End of civil twilight
+			10:29am End of nautical twilight
+			10:59am End of astronomical twilight</content>
+		<link rel='alternate' type='text/html'
+			href='https://www.google.com/calendar/event?eid=U3VucmlzZSs3MzM4MzktdjVrYmdrdjNncXJucWNmNGt2c20zYWdpM3B2bXNyNW0gaV8yMTEuNTcuMjMxLjEzMCNzdW5yaXNlQHY'
+			title='alternate' />
+		<link rel='self' type='application/atom+xml'
+			href='https://www.google.com/calendar/feeds/i_211.57.231.130%23sunrise%40group.v.calendar.google.com/public/basic/Sunrise%2B733839-v5kbgkv3gqrnqcf4kvsm3agi3pvmsr5m' />
+		<author>
+			<name>Sunrise/Sunset: 서울특별시</name>
+		</author>
+	</entry>
+	<entry>
+		<id>http://www.google.com/calendar/feeds/i_211.57.231.130%23sunrise%40group.v.calendar.google.com/public/basic/Sunrise%2B734805-vco90g20opp61pputgarvanhdvdgrhmv
+		</id>
+		<published>2007-05-17T00:00:00.000Z</published>
+		<updated>2007-05-17T00:00:00.000Z</updated>
+		<category scheme='http://schemas.google.com/g/2005#kind'
+			term='http://schemas.google.com/g/2005#event' />
+		<title type='html'>Sunrise: 9:55pm (previous day), Sunset: 8:37am
+		</title>
+		<summary type='html'>일시: 2012. 10. 29. (&amp;#50900;)&lt;br&gt;
+			&lt;br&gt;참석자: Sunrise/Sunset:
+			&amp;#49436;&amp;#50872;&amp;#53945;&amp;#48324;&amp;#49884;
+
+			&lt;br&gt;일정 상태: 확인됨</summary>
+		<content type='html'>일시: 2012. 10. 29. (월)&lt;br /&gt;
+			&lt;br /&gt;참석자: Sunrise/Sunset: 서울특별시
+
+			&lt;br /&gt;일정 상태: 확인됨
+			&lt;br /&gt;일정 설명: 8:27pm (previous day) Start of astronomical twilight
+			8:57pm (previous day) Start of nautical twilight
+			9:28pm (previous day) Start of civil twilight
+			9:55pm (previous day) Sunrise
+			8:37am Sunset
+			9:04am End of civil twilight
+			9:35am End of nautical twilight
+			10:05am End of astronomical twilight</content>
+		<link rel='alternate' type='text/html'
+			href='https://www.google.com/calendar/event?eid=U3VucmlzZSs3MzQ4MDUtdmNvOTBnMjBvcHA2MXBwdXRnYXJ2YW5oZHZkZ3JobXYgaV8yMTEuNTcuMjMxLjEzMCNzdW5yaXNlQHY'
+			title='alternate' />
+		<link rel='self' type='application/atom+xml'
+			href='https://www.google.com/calendar/feeds/i_211.57.231.130%23sunrise%40group.v.calendar.google.com/public/basic/Sunrise%2B734805-vco90g20opp61pputgarvanhdvdgrhmv' />
+		<author>
+			<name>Sunrise/Sunset: 서울특별시</name>
+		</author>
+	</entry>
+	<entry>
+		<id>http://www.google.com/calendar/feeds/i_211.57.231.130%23sunrise%40group.v.calendar.google.com/public/basic/Sunrise%2B734440-vco90g20opp61pputgarvanhdvdgrhmv
+		</id>
+		<published>2007-05-17T00:00:00.000Z</published>
+		<updated>2007-05-17T00:00:00.000Z</updated>
+		<category scheme='http://schemas.google.com/g/2005#kind'
+			term='http://schemas.google.com/g/2005#event' />
+		<title type='html'>Sunrise: 9:55pm (previous day), Sunset: 8:37am
+		</title>
+		<summary type='html'>일시: 2011. 10. 30. (&amp;#51068;)&lt;br&gt;
+			&lt;br&gt;참석자: Sunrise/Sunset:
+			&amp;#49436;&amp;#50872;&amp;#53945;&amp;#48324;&amp;#49884;
+
+			&lt;br&gt;일정 상태: 확인됨</summary>
+		<content type='html'>일시: 2011. 10. 30. (일)&lt;br /&gt;
+			&lt;br /&gt;참석자: Sunrise/Sunset: 서울특별시
+
+			&lt;br /&gt;일정 상태: 확인됨
+			&lt;br /&gt;일정 설명: 8:27pm (previous day) Start of astronomical twilight
+			8:57pm (previous day) Start of nautical twilight
+			9:28pm (previous day) Start of civil twilight
+			9:55pm (previous day) Sunrise
+			8:37am Sunset
+			9:04am End of civil twilight
+			9:35am End of nautical twilight
+			10:05am End of astronomical twilight</content>
+		<link rel='alternate' type='text/html'
+			href='https://www.google.com/calendar/event?eid=U3VucmlzZSs3MzQ0NDAtdmNvOTBnMjBvcHA2MXBwdXRnYXJ2YW5oZHZkZ3JobXYgaV8yMTEuNTcuMjMxLjEzMCNzdW5yaXNlQHY'
+			title='alternate' />
+		<link rel='self' type='application/atom+xml'
+			href='https://www.google.com/calendar/feeds/i_211.57.231.130%23sunrise%40group.v.calendar.google.com/public/basic/Sunrise%2B734440-vco90g20opp61pputgarvanhdvdgrhmv' />
+		<author>
+			<name>Sunrise/Sunset: 서울특별시</name>
+		</author>
+	</entry>
+	<entry>
+		<id>http://www.google.com/calendar/feeds/i_211.57.231.130%23sunrise%40group.v.calendar.google.com/public/basic/Sunrise%2B734075-vco90g20opp61pputgarvanhdvdgrhmv
+		</id>
+		<published>2007-05-17T00:00:00.000Z</published>
+		<updated>2007-05-17T00:00:00.000Z</updated>
+		<category scheme='http://schemas.google.com/g/2005#kind'
+			term='http://schemas.google.com/g/2005#event' />
+		<title type='html'>Sunrise: 9:55pm (previous day), Sunset: 8:37am
+		</title>
+		<summary type='html'>일시: 2010. 10. 30. (&amp;#53664;)&lt;br&gt;
+			&lt;br&gt;참석자: Sunrise/Sunset:
+			&amp;#49436;&amp;#50872;&amp;#53945;&amp;#48324;&amp;#49884;
+
+			&lt;br&gt;일정 상태: 확인됨</summary>
+		<content type='html'>일시: 2010. 10. 30. (토)&lt;br /&gt;
+			&lt;br /&gt;참석자: Sunrise/Sunset: 서울특별시
+
+			&lt;br /&gt;일정 상태: 확인됨
+			&lt;br /&gt;일정 설명: 8:27pm (previous day) Start of astronomical twilight
+			8:58pm (previous day) Start of nautical twilight
+			9:28pm (previous day) Start of civil twilight
+			9:55pm (previous day) Sunrise
+			8:37am Sunset
+			9:04am End of civil twilight
+			9:34am End of nautical twilight
+			10:05am End of astronomical twilight</content>
+		<link rel='alternate' type='text/html'
+			href='https://www.google.com/calendar/event?eid=U3VucmlzZSs3MzQwNzUtdmNvOTBnMjBvcHA2MXBwdXRnYXJ2YW5oZHZkZ3JobXYgaV8yMTEuNTcuMjMxLjEzMCNzdW5yaXNlQHY'
+			title='alternate' />
+		<link rel='self' type='application/atom+xml'
+			href='https://www.google.com/calendar/feeds/i_211.57.231.130%23sunrise%40group.v.calendar.google.com/public/basic/Sunrise%2B734075-vco90g20opp61pputgarvanhdvdgrhmv' />
+		<author>
+			<name>Sunrise/Sunset: 서울특별시</name>
+		</author>
+	</entry>
+	<entry>
+		<id>http://www.google.com/calendar/feeds/i_211.57.231.130%23sunrise%40group.v.calendar.google.com/public/basic/Sunrise%2B734205-l337qd23eais0tjpl7nqo5cbodd1rnbn
+		</id>
+		<published>2007-05-17T00:00:00.000Z</published>
+		<updated>2007-05-17T00:00:00.000Z</updated>
+		<category scheme='http://schemas.google.com/g/2005#kind'
+			term='http://schemas.google.com/g/2005#event' />
+		<title type='html'>Sunrise: 9:54pm (previous day), Sunset: 9:33am
+		</title>
+		<summary type='html'>일시: 2011. 3. 9. (&amp;#49688;)&lt;br&gt;
+			&lt;br&gt;참석자: Sunrise/Sunset:
+			&amp;#49436;&amp;#50872;&amp;#53945;&amp;#48324;&amp;#49884;
+
+			&lt;br&gt;일정 상태: 확인됨</summary>
+		<content type='html'>일시: 2011. 3. 9. (수)&lt;br /&gt;
+			&lt;br /&gt;참석자: Sunrise/Sunset: 서울특별시
+
+			&lt;br /&gt;일정 상태: 확인됨
+			&lt;br /&gt;일정 설명: 8:28pm (previous day) Start of astronomical twilight
+			8:58pm (previous day) Start of nautical twilight
+			9:28pm (previous day) Start of civil twilight
+			9:54pm (previous day) Sunrise
+			9:33am Sunset
+			9:59am End of civil twilight
+			10:29am End of nautical twilight
+			11:00am End of astronomical twilight</content>
+		<link rel='alternate' type='text/html'
+			href='https://www.google.com/calendar/event?eid=U3VucmlzZSs3MzQyMDUtbDMzN3FkMjNlYWlzMHRqcGw3bnFvNWNib2RkMXJuYm4gaV8yMTEuNTcuMjMxLjEzMCNzdW5yaXNlQHY'
+			title='alternate' />
+		<link rel='self' type='application/atom+xml'
+			href='https://www.google.com/calendar/feeds/i_211.57.231.130%23sunrise%40group.v.calendar.google.com/public/basic/Sunrise%2B734205-l337qd23eais0tjpl7nqo5cbodd1rnbn' />
+		<author>
+			<name>Sunrise/Sunset: 서울특별시</name>
+		</author>
 	</entry>
 </feed>

@@ -34,6 +34,7 @@ import android.app.Dialog;
 import android.app.TimePickerDialog;
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
@@ -96,7 +97,7 @@ public class ScheduleEditor extends Activity implements OnClickListener, Refresh
         setContentView(R.layout.schedule_editor);
 
         ArrayAdapter<CharSequence> adapter;
-        
+
         mSchedule_date = (EditText) findViewById(R.id.schedule_date);
         mSchedule_ldate = (EditText) findViewById(R.id.schedule_ldate);
         mLunaryn = (CheckBox) findViewById(R.id.check_lunar);
@@ -314,6 +315,8 @@ public class ScheduleEditor extends Activity implements OnClickListener, Refresh
                     mLunaAlarm_day.setVisibility(View.GONE);
                     mAlarm_DayofMonth.setVisibility(View.GONE);
             }
+
+            Log.d(Common.TAG, "alarm9=" + mAlarm_date.getText().toString());
         }
 
         public void onNothingSelected(AdapterView<?> parent) {
@@ -337,13 +340,14 @@ public class ScheduleEditor extends Activity implements OnClickListener, Refresh
         mLunaAlarm_day.setVisibility(View.GONE);
         mAlarm_repeatday.setVisibility(View.GONE);
 
-
         switch (pos) {
             case 1: // 한번:날짜, 시간   yyyy.mm.dd.hh.mm
                 mAlarm_date.setVisibility(View.VISIBLE);
                 mAlarm_time.setVisibility(View.VISIBLE);
 
-                mAlarm_date.setText(Common.fmtDate());
+                //mAlarm_date.setText(Common.fmtDate());
+                mAlarm_date.setText(scheduleBean.getDisplayAlarmDate());
+                Log.d(Common.TAG, "alarm6=" + this.mAlarm_date.getText().toString());
                 break;
             case 2: // 매일 : 시간        hh.mm
                 mAlarm_time.setVisibility(View.VISIBLE);
@@ -357,22 +361,22 @@ public class ScheduleEditor extends Activity implements OnClickListener, Refresh
                 mAlarm_DayofMonth.setVisibility(scheduleBean.getAlarm_lunasolar() == 0 ? View.VISIBLE : View.GONE);
                 mLunaAlarm_day.setVisibility(scheduleBean.getAlarm_lunasolar() == 1 ? View.VISIBLE : View.GONE);
                 mAlarm_time.setVisibility(View.VISIBLE);
-                
+
                 mAlarm_DayofMonth.setText(Common.fmtDate().substring(8));
                 break;
             case 5: // 매년:음/양, 날짜, 시간  +-.mm.dd.hh.mm
                 mAlarm_lunasolar.setVisibility(View.VISIBLE);
                 mAlarm_date.setVisibility(View.VISIBLE);
                 mAlarm_time.setVisibility(View.VISIBLE);
-                
-                mAlarm_date.setText(Common.fmtDate().substring(5));
+
+                mAlarm_date.setText(scheduleBean.getDisplayAlarmDate());
                 break;
             case 6: // 지정된 일수마다  +-.mm.dd.hh.mm
                 mAlarm_repeatday.setVisibility(View.VISIBLE);
                 mAlarm_time.setVisibility(View.VISIBLE);
                 break;
         }
-
+        Log.d(Common.TAG, "alarm7=" + this.mAlarm_date.getText().toString());
     }
 
     private void updateDisplay() {
@@ -403,6 +407,7 @@ public class ScheduleEditor extends Activity implements OnClickListener, Refresh
         mSpecial_alarmday.setText(scheduleBean.getDisplayDday_alarmday());
         mSpecialday_displayyn.setSelection(scheduleBean.getDday_displayyn());
         mSpecialday_sign.setSelection(scheduleBean.getDisplayDday_alarmsign());
+        Log.d(Common.TAG, "alarm0=" + mAlarm_date.getText().toString());
     }
 
     public void onClick(View v) {
@@ -563,7 +568,7 @@ public class ScheduleEditor extends Activity implements OnClickListener, Refresh
                 case R.id.alarm_date:
                     scheduleBean.setAlarmDate(date);
                     mAlarm_date.setText(scheduleBean.getDisplayAlarmDate());
-
+                    Log.d(Common.TAG, "alarm8=" + mAlarm_date.getText().toString());
                     break;
                 case R.id.alarm_day:
                     scheduleBean.setAlarmDay(dayOfMonth);
@@ -596,7 +601,8 @@ public class ScheduleEditor extends Activity implements OnClickListener, Refresh
     protected void onResume() {
         super.onResume();
 
-        if (dao == null || dao.isClose()) {
+        if (dao == null) {
+            Log.d(Common.TAG, "Database Close or Locked...");
             dao = new ScheduleDaoImpl(this, null, Prefs.getSDCardUse(this));
         }
 
@@ -628,6 +634,7 @@ public class ScheduleEditor extends Activity implements OnClickListener, Refresh
             }
 
         }
+        Log.d(Common.TAG, "alarm5=" + this.mAlarm_date.getText().toString());
     }
 
     /**
@@ -650,7 +657,12 @@ public class ScheduleEditor extends Activity implements OnClickListener, Refresh
         }
 
         ChangeViewOfRepeatMethod(scheduleBean.getSchedule_repeat());
+
+        Log.d(Common.TAG, "alarm1=" + this.mAlarm_date.getText().toString());
+        Log.d(Common.TAG, "alarm2=" + scheduleBean.getAlarm_date());
+        Log.d(Common.TAG, "alarm3=" + this.mAlarm_date.getText().toString());
         updateDisplay();
+        Log.d(Common.TAG, "alarm4=" + this.mAlarm_date.getText().toString());
     }
 
     @Override
@@ -691,6 +703,12 @@ public class ScheduleEditor extends Activity implements OnClickListener, Refresh
                 }
             }
         }
+        
+        
+        if (dao != null) {
+            dao.close();
+        }
+
 
     }
 
@@ -797,8 +815,5 @@ public class ScheduleEditor extends Activity implements OnClickListener, Refresh
     }
 
     public void refresh() {
-        if (dao != null) {
-            dao.close();
-        }
     }
 }

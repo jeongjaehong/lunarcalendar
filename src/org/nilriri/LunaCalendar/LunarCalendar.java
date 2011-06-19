@@ -105,9 +105,12 @@ public class LunarCalendar extends Activity implements RefreshManager {
 
             Long dataPK = intent.getLongExtra("DataPk", new Long(0));
             //Log.d(Common.TAG, "dataPK=" + dataPK);
-            ScheduleBean s = new ScheduleBean(dao.query(dataPK));
+            Cursor cursor = dao.query(dataPK);
 
-            if (dataPK > 0) {
+            if (dataPK > 0 && cursor.getCount() > 0) {
+
+                ScheduleBean s = new ScheduleBean(cursor);
+
                 if (s.getLunaryn()) {
                     String sdate = Lunar2Solar.l2s(s.getYear() + "", s.getLMonth() + "", s.getLDay() + "");
 

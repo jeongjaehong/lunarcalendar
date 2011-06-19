@@ -79,7 +79,6 @@ public class Prefs extends PreferenceActivity {
     private static final String OPT_SYNCMETHOD = "syncmethod";
     private static final String OPT_SYNCMETHOD_DEF = "stop";
 
- 
     private ListPreference accounts;
     private ListPreference calendars;
     private ListPreference onlinecalendars;
@@ -533,7 +532,13 @@ public class Prefs extends PreferenceActivity {
     }
 
     public static String getSyncMethod(Context context) {
-        return PreferenceManager.getDefaultSharedPreferences(context).getString(OPT_SYNCMETHOD, OPT_SYNCMETHOD_DEF);
+        if (Common.isConnectNetwork(context)) {
+            return PreferenceManager.getDefaultSharedPreferences(context).getString(OPT_SYNCMETHOD, OPT_SYNCMETHOD_DEF);
+        } else {
+            // 네트웤 연결상태가 아닌경우는 구글 캘린더 동기화를 하지 않는다.
+            Toast.makeText(context, "인터넷 연결 되지 않아 구글 캘린더에는 저장되지 않았습니다.", Toast.LENGTH_LONG).show();
+            return "stop";
+        }
     }
 
     public static void setCalendars(Context context, CharSequence[] values) {
@@ -577,8 +582,5 @@ public class Prefs extends PreferenceActivity {
     public static String getWidgetColor(Context context) {
         return PreferenceManager.getDefaultSharedPreferences(context).getString(OPT_WIDGETCOLOR, OPT_WIDGETCOLOR_DEF);
     }
-    
-    
-   
-    
+
 }

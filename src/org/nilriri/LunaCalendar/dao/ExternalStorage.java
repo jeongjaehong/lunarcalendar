@@ -8,13 +8,14 @@ import android.database.sqlite.SQLiteDatabase.CursorFactory;
 public class ExternalStorage extends SQLiteOpenHelper implements StorageSelector {
     private Context mContext;
     private CursorFactory mFactory;
-    private SQLiteDatabase db;
+
+    // private SQLiteDatabase db;
 
     public ExternalStorage(Context context, String name, CursorFactory factory, int version) {
         super(context, name, factory, version);
 
         mContext = context;
-        db = SQLiteDatabase.openOrCreateDatabase(Constants.getExternalDatabaseName(), factory);
+        SQLiteDatabase db = SQLiteDatabase.openOrCreateDatabase(Constants.getExternalDatabaseName(), factory);
 
         if (Constants.DATABASE_VERSION != db.getVersion()) {
             switch (db.getVersion()) {
@@ -27,10 +28,11 @@ public class ExternalStorage extends SQLiteOpenHelper implements StorageSelector
             }
             db.setVersion(Constants.DATABASE_VERSION);
         }
-        db = getWritableDatabase();
+        db.close();// = getWritableDatabase();
     }
 
     public SQLiteDatabase getReadableDatabase() {
+        SQLiteDatabase db = null;
         if (db == null) {
             db = SQLiteDatabase.openDatabase(Constants.getExternalDatabaseName(), mFactory, SQLiteDatabase.OPEN_READONLY);
         } else if (!db.isOpen()) {
@@ -40,6 +42,7 @@ public class ExternalStorage extends SQLiteOpenHelper implements StorageSelector
     }
 
     public SQLiteDatabase getWritableDatabase() {
+        SQLiteDatabase db = null;
         if (db == null) {
             db = SQLiteDatabase.openDatabase(Constants.getExternalDatabaseName(), mFactory, SQLiteDatabase.OPEN_READWRITE);
         } else if (db.isReadOnly()) {
@@ -53,9 +56,6 @@ public class ExternalStorage extends SQLiteOpenHelper implements StorageSelector
 
     @Override
     public void close() {
-        if (db != null) {
-            db.close();
-        }
         super.close();
     }
 
@@ -74,10 +74,7 @@ public class ExternalStorage extends SQLiteOpenHelper implements StorageSelector
     }
 
     public void onDestroy() {
-        if (db != null) {
-            db.close();
-        }
-        super.close();
+        close();
     }
 
 }

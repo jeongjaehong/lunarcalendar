@@ -33,29 +33,41 @@ public class Lunar2Solar {
     }
 
     public static String s2l(int Year, int Month, int Day) {
-        int m[] = new int[] { 31, 00, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31 };
-        int dt[] = new int[163];
-        int m1;
-        int m2;
-        int jcount;
+        try {
+            int m[] = new int[] { 31, 00, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31 };
+            int dt[] = new int[163];
+            int m1;
+            int m2;
+            int jcount;
 
-        int td;
-        int td0;
-        int td1;
-        int td2;
-        int k11;
+            int td;
+            int td0;
+            int td1;
+            int td2;
+            int k11;
 
-        boolean leap;
+            boolean leap;
 
-        int LYear = 0;
-        int LMonth = 0;
-        int LDay = 0;
+            int LYear = 0;
+            int LMonth = 0;
+            int LDay = 0;
 
-        int idx = 0;
-        for (int i = 0; i <= 162; i++) {
-            dt[i] = 0;
-            for (int j = 0; j <= 11; j++) {
-                switch (kk[i][j]) {
+            int idx = 0;
+            for (int i = 0; i <= 162; i++) {
+                dt[i] = 0;
+                for (int j = 0; j <= 11; j++) {
+                    switch (kk[i][j]) {
+                        case 1:
+                        case 3:
+                            dt[i] = dt[i] + 29;
+                            break;
+                        case 2:
+                        case 4:
+                            dt[i] = dt[i] + 30;
+                            break;
+                    }
+                }
+                switch (kk[i][12]) {
                     case 1:
                     case 3:
                         dt[i] = dt[i] + 29;
@@ -65,70 +77,62 @@ public class Lunar2Solar {
                         dt[i] = dt[i] + 30;
                         break;
                 }
+
             }
-            switch (kk[i][12]) {
-                case 1:
-                case 3:
-                    dt[i] = dt[i] + 29;
-                    break;
-                case 2:
-                case 4:
-                    dt[i] = dt[i] + 30;
-                    break;
-            }
+            td1 = 1880 * 365 + Math.abs(1880 / 4) - Math.abs(1880 / 100) + Math.abs(1880 / 400) + 30;
 
-        }
-        td1 = 1880 * 365 + Math.abs(1880 / 4) - Math.abs(1880 / 100) + Math.abs(1880 / 400) + 30;
-
-        k11 = (Year - 1);
-        td2 = k11 * 365 + Math.abs(k11 / 4) - Math.abs(k11 / 100) + Math.abs(k11 / 400);
-        leap = ((Year % 400) == 0) || ((Year % 100) != 0) && ((Year % 4) == 0);
-        if (leap)
-            m[1] = 29;
-        else
-            m[1] = 28;
-
-        for (int i1 = 0; i1 <= Month - 2; i1++) {
-            td2 = td2 + m[i1];
-        }
-
-        td2 = td2 + Day;
-
-        td = td2 - td1 + 1;
-
-        td0 = dt[0];
-
-        for (idx = 0; idx <= 162; idx++) {
-            if (td <= td0)
-                break;
-            td0 = td0 + dt[idx + 1];
-
-        }
-
-        LYear = idx + 1881;
-        td0 = td0 - dt[idx];
-        td = td - td0;
-        if (kk[idx][12] != 0)
-            jcount = 13;
-        else
-            jcount = 12;
-        m2 = 0;
-
-        for (int j = 0; j <= jcount - 1; j++) {
-            if (kk[idx][j] <= 2)
-                m2 = m2 + 1;
-            if (kk[idx][j] <= 2)
-                m1 = kk[idx][j] + 28;
+            k11 = (Year - 1);
+            td2 = k11 * 365 + Math.abs(k11 / 4) - Math.abs(k11 / 100) + Math.abs(k11 / 400);
+            leap = ((Year % 400) == 0) || ((Year % 100) != 0) && ((Year % 4) == 0);
+            if (leap)
+                m[1] = 29;
             else
-                m1 = kk[idx][j] + 26;
-            if (td <= m1)
-                break;
-            td = td - m1;
-        }
-        LMonth = m2;
-        LDay = td;
+                m[1] = 28;
 
-        return String.format("%04d%02d%02d", LYear, LMonth, LDay);
+            for (int i1 = 0; i1 <= Month - 2; i1++) {
+                td2 = td2 + m[i1];
+            }
+
+            td2 = td2 + Day;
+
+            td = td2 - td1 + 1;
+
+            td0 = dt[0];
+
+            for (idx = 0; idx <= 162; idx++) {
+                if (td <= td0)
+                    break;
+                td0 = td0 + dt[idx + 1];
+
+            }
+
+            LYear = idx + 1881;
+            td0 = td0 - dt[idx];
+            td = td - td0;
+            if (kk[idx][12] != 0)
+                jcount = 13;
+            else
+                jcount = 12;
+            m2 = 0;
+
+            for (int j = 0; j <= jcount - 1; j++) {
+                if (kk[idx][j] <= 2)
+                    m2 = m2 + 1;
+                if (kk[idx][j] <= 2)
+                    m1 = kk[idx][j] + 28;
+                else
+                    m1 = kk[idx][j] + 26;
+                if (td <= m1)
+                    break;
+                td = td - m1;
+            }
+            LMonth = m2;
+            LDay = td;
+
+            return String.format("%04d%02d%02d", LYear, LMonth, LDay);
+        } catch (Exception e) {
+            return String.format("%04d%02d%02d", 1900, Month, Day);
+        }
 
     }
 

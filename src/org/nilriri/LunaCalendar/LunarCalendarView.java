@@ -386,7 +386,7 @@ public class LunarCalendarView extends View {
         Rect headR = new Rect();
 
         //headR.set(-50, (int) (getTileHeight() * 0.5f), getWidth() + 50, (int) getTileHeight());
-        headR.set(0, 0, getWidth(), (int) (getTileHeight() * 0.5f)+1);
+        headR.set(0, 0, getWidth(), (int) (getTileHeight() * 0.5f) + 1);
         // Drawable drawableTitle = getResources().getDrawable(R.drawable.widget_background_blue);
         Drawable drawableTitle = getResources().getDrawable(R.drawable.background);
         drawableTitle.setBounds(headR);
@@ -409,7 +409,7 @@ public class LunarCalendarView extends View {
         drawableAnimal.draw(canvas);
 
         String lday = this.getLunaday(lunarCalendar.mDay);
-        lday = "(" + mGAPJA + lday.substring(4, 6) + getResources().getString(R.string.month_label) + lday.substring(6) + getResources().getString(R.string.day_label) + ")";
+        lday = "(" + mGAPJA + lday.substring(4, 6) + "." + lday.substring(6) + ")";
 
         // 년월과 함께 음력 날짜를 표시한다.
         foreground.setTextSize(getTileHeight() * 0.380f);

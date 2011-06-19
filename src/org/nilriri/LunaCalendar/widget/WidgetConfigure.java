@@ -289,7 +289,11 @@ public class WidgetConfigure extends Activity {
                         }
 
                     } else {
-                        setDataPk(getBaseContext(), mAppWidgetId, mListView.getItemIdAtPosition(mListView.getCheckedItemPosition()));
+                        if (mListView.getCount() > 0) {
+                            setDataPk(getBaseContext(), mAppWidgetId, mListView.getItemIdAtPosition(mListView.getCheckedItemPosition()));
+                        } else {
+                            setDataPk(getBaseContext(), mAppWidgetId, new Long(0));
+                        }
                     }
 
                     setReceiver(getBaseContext(), chk_reveiver.isChecked());
