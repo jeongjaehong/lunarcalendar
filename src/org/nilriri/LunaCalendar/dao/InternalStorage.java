@@ -2,20 +2,37 @@ package org.nilriri.LunaCalendar.dao;
 
 import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;
+import android.database.sqlite.SQLiteException;
 import android.database.sqlite.SQLiteOpenHelper;
 import android.database.sqlite.SQLiteDatabase.CursorFactory;
+import android.os.SystemClock;
 
 public class InternalStorage extends SQLiteOpenHelper implements StorageSelector {
 
     private Context mContext;
 
-    //private SQLiteDatabase db;
+    private SQLiteDatabase db;
 
     public InternalStorage(Context context, String name, CursorFactory factory, int version) {
         super(context, name, factory, version);
         mContext = context;
+        //SQLiteDatabase db = null;
 
-        //db = getWritableDatabase();
+        boolean isOpen = false;
+        while (!isOpen) {
+            try {
+                db = getWritableDatabase();
+                isOpen = true;
+            } catch (SQLiteException e) {
+
+                e.printStackTrace();
+                SystemClock.sleep(200);
+                isOpen = false;
+            }
+        }
+        //db.close();
+        db = getWritableDatabase();
+
     }
 
     public Context getContext() {
@@ -33,7 +50,7 @@ public class InternalStorage extends SQLiteOpenHelper implements StorageSelector
     }
 
     public SQLiteDatabase getReadableDatabase() {
-        SQLiteDatabase db = null;
+        //SQLiteDatabase db = null;
         if (db == null) {
             db = super.getReadableDatabase();
         } else if (!db.isOpen()) {
@@ -43,7 +60,7 @@ public class InternalStorage extends SQLiteOpenHelper implements StorageSelector
     }
 
     public SQLiteDatabase getWritableDatabase() {
-        SQLiteDatabase db = null;
+        //SQLiteDatabase db = null;
         if (db == null) {
             db = super.getWritableDatabase();
         } else if (db.isReadOnly()) {

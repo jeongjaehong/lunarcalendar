@@ -2,20 +2,35 @@ package org.nilriri.LunaCalendar.dao;
 
 import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;
+import android.database.sqlite.SQLiteException;
 import android.database.sqlite.SQLiteOpenHelper;
 import android.database.sqlite.SQLiteDatabase.CursorFactory;
+import android.os.SystemClock;
 
 public class ExternalStorage extends SQLiteOpenHelper implements StorageSelector {
     private Context mContext;
     private CursorFactory mFactory;
 
-    // private SQLiteDatabase db;
+    private SQLiteDatabase db;
 
     public ExternalStorage(Context context, String name, CursorFactory factory, int version) {
         super(context, name, factory, version);
 
         mContext = context;
-        SQLiteDatabase db = SQLiteDatabase.openOrCreateDatabase(Constants.getExternalDatabaseName(), factory);
+
+        boolean isOpen = false;
+        SQLiteDatabase db = null;
+        while (!isOpen) {
+            try {
+                db = SQLiteDatabase.openOrCreateDatabase(Constants.getExternalDatabaseName(), factory);
+                isOpen = true;
+            } catch (SQLiteException e) {
+
+                e.printStackTrace();
+                SystemClock.sleep(200);
+                isOpen = false;
+            }
+        }
 
         if (Constants.DATABASE_VERSION != db.getVersion()) {
             switch (db.getVersion()) {
@@ -28,11 +43,12 @@ public class ExternalStorage extends SQLiteOpenHelper implements StorageSelector
             }
             db.setVersion(Constants.DATABASE_VERSION);
         }
-        db.close();// = getWritableDatabase();
+        //db.close();
+        db = getWritableDatabase();
     }
 
     public SQLiteDatabase getReadableDatabase() {
-        SQLiteDatabase db = null;
+        //SQLiteDatabase db = null;
         if (db == null) {
             db = SQLiteDatabase.openDatabase(Constants.getExternalDatabaseName(), mFactory, SQLiteDatabase.OPEN_READONLY);
         } else if (!db.isOpen()) {
@@ -42,7 +58,7 @@ public class ExternalStorage extends SQLiteOpenHelper implements StorageSelector
     }
 
     public SQLiteDatabase getWritableDatabase() {
-        SQLiteDatabase db = null;
+        //SQLiteDatabase db = null;
         if (db == null) {
             db = SQLiteDatabase.openDatabase(Constants.getExternalDatabaseName(), mFactory, SQLiteDatabase.OPEN_READWRITE);
         } else if (db.isReadOnly()) {

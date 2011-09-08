@@ -364,10 +364,11 @@ public class ScheduleDaoImpl extends AbstractDao {
         @Override
         protected void onPreExecute() {
 
+            dialog = ProgressDialog.show(mContext, "", "구글캘린더와 동기화 중입니다...", true);
+
             // 변경사항을 먼저 저장한다.
             localUpdate(oldBean);
 
-            //dialog = ProgressDialog.show(this, "", "Add event...", true);
         }
 
         @Override
@@ -422,7 +423,11 @@ public class ScheduleDaoImpl extends AbstractDao {
             CallerRefresh();
 
             if (dialog != null && dialog.isShowing()) {
-                dialog.dismiss();
+                try{
+                    dialog.dismiss();                    
+                }catch(Exception e){
+                    e.printStackTrace();
+                }
             }
         }
 

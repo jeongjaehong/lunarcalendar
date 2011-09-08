@@ -322,7 +322,8 @@ public class SearchResult extends ExpandableListActivity implements OnTouchListe
             if ("Y".equals(lunaryn)) {
                 //Log.d(Common.TAG, "lunaryn=" + lunaryn);
                 ldate = c.getString(c.getColumnIndexOrThrow(Schedule.SCHEDULE_LDATE));
-                sdate = Common.fmtDate(Lunar2Solar.l2s(ldate));
+                sdate = c.getString(c.getColumnIndexOrThrow(Schedule.SCHEDULE_DATE));
+                //sdate = Common.fmtDate(Lunar2Solar.l2s(ldate));
                 //Log.d(Common.TAG, "sdate=" + sdate);
                 //Log.d(Common.TAG, "ldate=" + ldate);
             } else {
@@ -343,29 +344,29 @@ public class SearchResult extends ExpandableListActivity implements OnTouchListe
 
             } else if ("MONTH".equals(mSearchRange)) {
                 schedule_date += sdate.substring(8);
-                if ("Y".equals(lunaryn)) {
+                //if ("Y".equals(lunaryn)) {
 
                     schedule_date += " [" + DAYNAMES[Common.getCalValue(Calendar.DAY_OF_WEEK, sdate)] + "]";
 
-                } else {
+               // } else {
 
-                    int dayindex = c.getInt(c.getColumnIndexOrThrow("dayindex"));
-                    schedule_date += " [" + DAYNAMES[dayindex] + "]";
+                    //int dayindex = c.getInt(c.getColumnIndexOrThrow("dayindex"));
+                    //schedule_date += " [" + DAYNAMES[dayindex] + "]";
 
-                }
-                schedule_date += "\n (" + Common.fmtDate(ldate).substring(5) + ")";
+                //}
+                    schedule_date += "\n (" + Common.fmtDate(ldate).substring(5) + ")";
 
             } else if ("WEEK".equals(mSearchRange)) {
                 schedule_date += sdate.substring(8);
 
-                if ("Y".equals(lunaryn)) {
+                //if ("Y".equals(lunaryn)) {
 
                     schedule_date += " [" + DAYNAMES[Common.getCalValue(Calendar.DAY_OF_WEEK, sdate)] + "]";
 
-                } else {
-                    int dayindex = c.getInt(c.getColumnIndexOrThrow("dayindex"));
-                    schedule_date += " [" + DAYNAMES[dayindex] + "]";
-                }
+               // } else {
+               //     int dayindex = c.getInt(c.getColumnIndexOrThrow("dayindex"));
+               //     schedule_date += " [" + DAYNAMES[dayindex] + "]";
+               // }
 
                 schedule_date += "\n (" + Common.fmtDate(ldate).substring(5) + ")";
 

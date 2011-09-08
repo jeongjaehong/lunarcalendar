@@ -24,7 +24,11 @@ public class Lunar2Solar {
     /*2041*/{ 2, 1, 1, 2, 1, 2, 2, 1, 2, 2, 1, 2, 0 }, { 1, 2, 3, 1, 2, 1, 2, 1, 2, 2, 2, 1, 2 }, { 1, 2, 1, 1, 2, 1, 1, 2, 2, 1, 2, 2, 0 } };
 
     public static String s2l(String date) {
-        return s2l(Integer.parseInt(date.substring(0, 4)), Integer.parseInt(date.substring(5, 7)), Integer.parseInt(date.substring(8, 10)));
+        if (date == null || "".equals(date)) {
+            return "";
+        } else {
+            return s2l(Integer.parseInt(date.substring(0, 4)), Integer.parseInt(date.substring(5, 7)), Integer.parseInt(date.substring(8, 10)));
+        }
     }
 
     public static String s2l(Calendar c) {
@@ -137,7 +141,11 @@ public class Lunar2Solar {
     }
 
     public static String l2s(String date) {
-        return s2l(Integer.parseInt(date.substring(0, 4)), Integer.parseInt(date.substring(5, 7)), Integer.parseInt(date.substring(8, 10)));
+        if (date == null || "".equals(date)) {
+            return "";
+        } else {
+            return s2l(Integer.parseInt(date.substring(0, 4)), Integer.parseInt(date.substring(5, 7)), Integer.parseInt(date.substring(8, 10)));
+        }
     }
 
     public static String l2s(String LunarYear, String LunarMonth, String LunarDay) {

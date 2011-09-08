@@ -106,8 +106,8 @@ public class ScheduleViewer extends Activity implements OnClickListener {
         scheduleBean = new ScheduleBean(dao.query(getIntent().getLongExtra("id", 0)));
 
         if (scheduleBean.getId() <= 0) {
-
             this.finish();
+            return;
         }
 
         String title = scheduleBean.getSchedule_title();

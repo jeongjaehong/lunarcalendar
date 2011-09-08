@@ -114,7 +114,7 @@ public class Common extends Activity {
     public static int getCalValue(int field, String sdate) {
         Calendar cc = Calendar.getInstance();
         cc.set(Calendar.YEAR, Integer.parseInt(sdate.substring(0, 4)));
-        cc.set(Calendar.MONTH, Integer.parseInt(sdate.substring(5, 7)));
+        cc.set(Calendar.MONTH, Integer.parseInt(sdate.substring(5, 7)) - 1);
         cc.set(Calendar.DAY_OF_MONTH, Integer.parseInt(sdate.substring(8)));
 
         return cc.get(field);
@@ -126,6 +126,7 @@ public class Common extends Activity {
     }
 
     public static String fmtDate(String date) {
+        date = date.replace("-", "");
         String returnValue = "";
         returnValue = (new StringBuilder()).append(date.substring(0, 4)).append("-").append(date.substring(4, 6)).append("-").append(date.substring(6, 8)).toString();
         return returnValue;
