@@ -1,170 +1,222 @@
 <?xml version="1.0" encoding="UTF-8"?>
-
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-	package="org.nilriri.LunaCalendar" android:versionCode="137" android:versionName="3.7.14">
+    package="org.nilriri.LunaCalendar"
+    android:versionCode="138"
+    android:versionName="3.7.15" >
 
+    <application
+        android:allowBackup="true"
+        android:allowClearUserData="true"
+        android:debuggable="false"
+        android:enabled="true"
+        android:icon="@drawable/icon"
+        android:killAfterRestore="true"
+        android:label="@string/app_name" >
 
-	<application android:icon="@drawable/icon" android:label="@string/app_name"
-		android:debuggable="false" android:allowClearUserData="true"
-		android:allowBackup="true" android:enabled="true"
-		android:killAfterRestore="true">
+        <!-- Service -->
+        <service
+            android:name=".alarm.CalendarAlarmService"
+            android:process=":remote" />
+        <service
+            android:name=".widget.WidgetRefreshService"
+            android:process=":remote" />
 
-		<!-- Service -->
-		<service android:name=".alarm.CalendarAlarmService"
-			android:process=":remote" />
+        <!-- Receiver -->
+        <receiver
+            android:name=".BootUpReceiver"
+            android:enabled="true"
+            android:permission="android.permission.RECEIVE_BOOT_COMPLETED" >
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
 
-		<service android:name=".widget.WidgetRefreshService"
-			android:process=":remote" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </receiver>
+        <!-- Widget -->
+        <receiver
+            android:name=".widget.WidgetProvider1x1"
+            android:label="@string/widget_label_1x1" >
+            <meta-data
+                android:name="android.appwidget.provider"
+                android:resource="@xml/widget1x1" />
 
-		<!-- Receiver -->
-		<receiver android:enabled="true" android:name=".BootUpReceiver"
-			android:permission="android.permission.RECEIVE_BOOT_COMPLETED">
-			<intent-filter>
-				<action android:name="android.intent.action.BOOT_COMPLETED" />
-				<category android:name="android.intent.category.DEFAULT" />
-			</intent-filter>
-		</receiver>
-		<!-- Widget -->
-		<receiver android:name=".widget.WidgetProvider1x1"
-			android:label="@string/widget_label_1x1">
-			<meta-data android:name="android.appwidget.provider"
-				android:resource="@xml/widget1x1" />
-			<intent-filter>
-				<action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
-			</intent-filter>
-		</receiver>
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+            </intent-filter>
+        </receiver>
+        <receiver
+            android:name=".widget.WidgetProvider1x2"
+            android:label="@string/widget_label_1x2" >
+            <meta-data
+                android:name="android.appwidget.provider"
+                android:resource="@xml/widget1x2" />
 
-		<receiver android:name=".widget.WidgetProvider1x2"
-			android:label="@string/widget_label_1x2">
-			<meta-data android:name="android.appwidget.provider"
-				android:resource="@xml/widget1x2" />
-			<intent-filter>
-				<action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
-			</intent-filter>
-		</receiver>
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+            </intent-filter>
+        </receiver>
+        <receiver
+            android:name=".widget.WidgetProvider3x1"
+            android:label="@string/widget_label_3x1" >
+            <meta-data
+                android:name="android.appwidget.provider"
+                android:resource="@xml/widget3x1" />
 
-		<receiver android:name=".widget.WidgetProvider3x1"
-			android:label="@string/widget_label_3x1">
-			<meta-data android:name="android.appwidget.provider"
-				android:resource="@xml/widget3x1" />
-			<intent-filter>
-				<action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
-			</intent-filter>
-		</receiver>
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+            </intent-filter>
+        </receiver>
+        <receiver
+            android:name=".widget.WidgetProvider2x2"
+            android:label="@string/widget_label_2x2" >
+            <meta-data
+                android:name="android.appwidget.provider"
+                android:resource="@xml/widget2x2" />
 
-		<receiver android:name=".widget.WidgetProvider2x2"
-			android:label="@string/widget_label_2x2">
-			<meta-data android:name="android.appwidget.provider"
-				android:resource="@xml/widget2x2" />
-			<intent-filter>
-				<action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
-			</intent-filter>
-		</receiver>
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+            </intent-filter>
+        </receiver>
 
-		<!-- Activity -->
-		<activity android:name=".widget.WidgetConfigure">
-			<intent-filter>
-				<action android:name="android.appwidget.action.APPWIDGET_CONFIGURE" />
-			</intent-filter>
-		</activity>
+        <!-- Activity -->
+        <activity android:name=".widget.WidgetConfigure" >
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_CONFIGURE" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".tools.QuickContactViewer"
+            android:label="@string/app_name"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" >
+            <intent-filter>
+                <category android:name="android.intent.category.DEFAULT" />
 
-		<activity android:theme="@android:style/Theme.Translucent.NoTitleBar"
-			android:name=".tools.QuickContactViewer" android:label="@string/app_name">
-			<intent-filter>
-				<category android:name="android.intent.category.DEFAULT" />
-				<action android:name="org.nilriri.LunaCalendar.QUICKVIEW1" />
-				<data android:mimeType="*/*" />
-			</intent-filter>
-		</activity>
+                <action android:name="org.nilriri.LunaCalendar.QUICKVIEW1" />
 
-		<activity android:name=".LunarCalendar" android:label="@string/calendar_title"
-			android:theme="@android:style/Theme.Light" android:screenOrientation="user"
-			android:configChanges="keyboardHidden|orientation">
-			<intent-filter>
-				<action android:name="android.intent.action.MAIN" />
-				<category android:name="android.intent.category.LAUNCHER" />
-			</intent-filter>
-			<intent-filter>
-				<action android:name="org.nilriri.lunarcalendar.MAIN" />
-				<category android:name="android.intent.category.DEFAULT" />
-				<data android:mimeType="vnd.org.nilriri/lunarcalendar" />
-			</intent-filter>
-		</activity>
+                <data android:mimeType="*/*" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".LunarCalendar"
+            android:configChanges="keyboardHidden|orientation"
+            android:label="@string/calendar_title"
+            android:screenOrientation="user"
+            android:theme="@android:style/Theme.Light" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
 
-		<activity android:name=".tools.About" android:label="@string/about_title"
-			android:screenOrientation="user" android:configChanges="keyboardHidden|orientation"
-			android:theme="@android:style/Theme.Dialog">
-		</activity>
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="org.nilriri.lunarcalendar.MAIN" />
 
-		<activity android:name=".schedule.SearchResult"
-			android:label="@string/schedule_list_label"
-			android:screenOrientation="user" android:configChanges="keyboardHidden|orientation">
-		</activity>
+                <category android:name="android.intent.category.DEFAULT" />
 
-		<activity android:name=".schedule.ScheduleList"
-			android:label="@string/schedule_list_label"
-			android:screenOrientation="user" android:configChanges="keyboardHidden|orientation">
-		</activity>
+                <data android:mimeType="vnd.org.nilriri/lunarcalendar" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".tools.About"
+            android:configChanges="keyboardHidden|orientation"
+            android:label="@string/about_title"
+            android:screenOrientation="user"
+            android:theme="@android:style/Theme.Dialog" >
+        </activity>
+        <activity
+            android:name=".schedule.SearchResult"
+            android:configChanges="keyboardHidden|orientation"
+            android:label="@string/schedule_list_label"
+            android:screenOrientation="user" >
+        </activity>
+        <activity
+            android:name=".schedule.ScheduleList"
+            android:configChanges="keyboardHidden|orientation"
+            android:label="@string/schedule_list_label"
+            android:screenOrientation="user" >
+        </activity>
+        <activity
+            android:name=".tools.Prefs"
+            android:configChanges="keyboardHidden|orientation"
+            android:label="@string/settings_title"
+            android:screenOrientation="user" >
+        </activity>
+        <activity
+            android:name=".schedule.ScheduleEditor"
+            android:configChanges="keyboardHidden|orientation"
+            android:label="@string/schedule_viewer_label"
+            android:screenOrientation="user" >
+        </activity>
+        <activity
+            android:name=".schedule.AlarmViewer"
+            android:configChanges="keyboardHidden|orientation"
+            android:label="@string/schedule_viewer_label"
+            android:screenOrientation="user"
+            android:theme="@android:style/Theme.Dialog" >
+        </activity>
+        <activity
+            android:name=".schedule.ScheduleViewer"
+            android:configChanges="keyboardHidden|orientation"
+            android:label="@string/schedule_viewer_label"
+            android:screenOrientation="user"
+            android:theme="@android:style/Theme.Dialog" >
+        </activity>
+        <activity
+            android:name=".tools.ContactSelector"
+            android:configChanges="keyboardHidden|orientation"
+            android:label="@string/app_name"
+            android:screenOrientation="user" >
+        </activity>
+        <activity
+            android:name=".tools.SearchData"
+            android:configChanges="keyboardHidden|orientation"
+            android:label="일정검색"
+            android:screenOrientation="user"
+            android:theme="@android:style/Theme.Dialog" >
+        </activity>
+        <activity
+            android:name=".tools.AppInfo"
+            android:label="@string/app_name" >
+        </activity>
+        <activity
+            android:name=".tools.LunarDatePicker"
+            android:configChanges="keyboardHidden|orientation"
+            android:screenOrientation="user"
+            android:theme="@android:style/Theme.Dialog" >
+        </activity>
+    </application>
 
-		<activity android:name=".tools.Prefs" android:label="@string/settings_title"
-			android:screenOrientation="user" android:configChanges="keyboardHidden|orientation">
-		</activity>
+    <supports-screens
+        android:anyDensity="true"
+        android:largeScreens="true"
+        android:normalScreens="true"
+        android:resizeable="true"
+        android:smallScreens="true" >
+    </supports-screens>
 
-		<activity android:name=".schedule.ScheduleEditor"
-			android:label="@string/schedule_viewer_label"
-			android:screenOrientation="user" android:configChanges="keyboardHidden|orientation">
-		</activity>
+    <uses-sdk
+        android:minSdkVersion="7"
+        android:targetSdkVersion="7" />
 
-		<activity android:name=".schedule.AlarmViewer" android:label="@string/schedule_viewer_label"
-			android:theme="@android:style/Theme.Dialog"
-			android:screenOrientation="user" android:configChanges="keyboardHidden|orientation">
-		</activity>
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <uses-permission android:name="android.permission.USE_CREDENTIALS" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_CALENDAR" />
+    <uses-permission android:name="android.permission.READ_CALENDAR" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WRITE_SETTINGS" />
+    <uses-permission android:name="android.permission.VIBRATE" />
 
-		<activity android:name=".schedule.ScheduleViewer"
-			android:screenOrientation="user" android:configChanges="keyboardHidden|orientation"
-			android:label="@string/schedule_viewer_label" android:theme="@android:style/Theme.Dialog">
-		</activity>
+    <!-- 주소록에서 사용자 생일정보 조회용. -->
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+    <uses-permission android:name="android.permission.WRITE_CONTACTS" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
 
-		<activity android:name=".tools.ContactSelector"
-			android:screenOrientation="user" android:configChanges="keyboardHidden|orientation"
-			android:label="@string/app_name">
-		</activity>
-
-		<activity android:name=".tools.SearchData"
-			android:screenOrientation="user" android:configChanges="keyboardHidden|orientation"
-			android:label="일정검색" android:theme="@android:style/Theme.Dialog">
-		</activity>
-
-		<activity android:name=".tools.AppInfo" android:label="@string/app_name">
-		</activity>
-
-		<activity android:name=".tools.LunarDatePicker"
-			android:screenOrientation="user" android:configChanges="keyboardHidden|orientation"
-			android:theme="@android:style/Theme.Dialog">
-		</activity>
-	</application>
-
-	<uses-sdk android:targetSdkVersion="7" android:minSdkVersion="7" />
-
-	<uses-permission android:name="android.permission.GET_ACCOUNTS" />
-	<uses-permission android:name="android.permission.USE_CREDENTIALS" />
-	<uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
-	<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
-	<uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
-	<uses-permission android:name="android.permission.WRITE_CALENDAR" />
-	<uses-permission android:name="android.permission.READ_CALENDAR" />
-	<uses-permission android:name="android.permission.INTERNET" />
-	<uses-permission android:name="android.permission.WRITE_SETTINGS" />
-	<uses-permission android:name="android.permission.VIBRATE" />
-
-	<!-- 주소록에서 사용자 생일정보 조회용. -->
-	<uses-permission android:name="android.permission.READ_CONTACTS" />
-	<uses-permission android:name="android.permission.WRITE_CONTACTS" />
-	<uses-permission android:name="android.permission.READ_PHONE_STATE" />
-
-	<!-- 네트워크 연결상태 확인을 위한 권한 -->
-	<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"></uses-permission>
-	<!--
+    <!-- 네트워크 연결상태 확인을 위한 권한 -->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" >
+    </uses-permission>
+    <!--
 		<uses-permission android:name="android.permission.BIND_APPWIDGET" />
 		<uses-permission
 		android:name="android.permission.READ_CONTACTS"></uses-permission>
@@ -184,5 +236,6 @@
 		android:name="android.permission.MASTER_CLEAR"></uses-permission>
 		<uses-permission
 		android:name="android.permission.ACCESS_COARSE_LOCATION"></uses-permission>
-	-->
+    -->
+
 </manifest>
